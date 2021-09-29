@@ -1,0 +1,576 @@
+.nav-bar {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    height: 54px;
+    min-height: 54px;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.nav-bar a {
+    transition: all ease-in-out 300ms;
+}
+
+.nav-bar a:hover span::after {
+    display: flex;
+    position: relative;
+    /*border-bottom: 2px solid #000;    content: "";
+*/
+    left: 0;
+    top: 0;
+    width: 100%;
+    right: 0;
+    bottom: -0.1rem;
+}
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.list-options li {
+    display: flex;
+    margin-left: 20px;
+    text-transform: capitalize;
+    white-space: nowrap;
+    font-size: 0.875rem;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.list-options li i {
+    margin-left: 5px;
+    margin-top: 2px;
+    font-size: 10px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+.nav-top {
+    border-top: 2px solid #e6e6e6;
+    align-items: center;
+    align-content: center;
+}
+
+.title-nav {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.125;
+    margin: 0;
+    padding: 0 0.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+a:hover {
+    color: black;
+}
+
+.nav-bar-item {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/*body {
+        font-family: "Lato";
+    }*/
+
+/** style pour header-filieres */
+#header-filiere {
+    min-height: 20ch;
+    border: 1px solid transparent;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    background-color: #243a5e !important;
+    outline-color: #fff !important;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+.header-title-description,
+.description-filiere {
+    color: #ffffff;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 17.4px;
+    text-align: left;
+    opacity: 0.8;
+    line-height: 2rem;
+    padding-left: 0px;
+    max-height: 100px;
+    overflow: hidden;
+}
+
+/** Styles pour la presentation des filieres */
+#content-filiere {
+    min-height: 100ch;
+    border: 1px solid transparent;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    background-image: url(../images/bg-section.png);
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    padding-top: 0;
+}
+
+.breadcrumb-item-first {
+    color: #000;
+    text-transform: capitalize !important;
+    font-weight: bold;
+}
+
+.breadcrumb-item {
+    text-transform: lowercase;
+    font-style: italic;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/**Style image filiere */
+.img-decor {
+    height: 150px;
+    border: 1px solid transparent;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    margin-left: 40px;
+    padding: 10px;
+    background-color: #deb857;
+}
+
+.img-filiere {
+    border-radius: 121px;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+/** Fin Style image filiere */
+
+/**Debut Style du contenu de la filiere */
+
+/** Style pour les cards */
+.card-condition-access {
+    box-shadow: rgb(185 182 173) 0px 2px 4px 0px inset;
+    border: none;
+    height: 100px;
+    cursor: pointer;
+    font-family: "Roboto Slab", serif;
+    transition: all ease-in-out 350ms;
+}
+.card-condition-access:hover {
+    box-shadow: rgba(185 182 173, 0.1) 0px 0px 0px 0px inset;
+    transform: scale(0.95);
+}
+.card-condition-access p {
+    font-size: 11px;
+    text-align: justify;
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.img-condition {
+    border-radius: 121px;
+    margin: 0px;
+    height: 40px;
+    width: 100%;
+}
+.decor-img-condition {
+    min-height: 50px;
+    border: 1px solid #243a5e;
+    align-items: center;
+    width: 50px;
+    background-color: #243a5e;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    padding: 3px;
+    height: 50px;
+}
+.divider-line {
+    border: 1px solid #243a5e;
+    width: 1px;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    opacity: 0.5;
+    text-align: center;
+    position: relative;
+}
+
+.divider-line span {
+    position: absolute;
+    color: #243a5e;
+    z-index: 1000;
+    width: 17px;
+    display: inline-block;
+    left: -8px;
+    background-color: #fff;
+}
+.bracket-group {
+    border-top: 0px;
+    border-bottom: 2px solid #243a5e;
+    border-left: 2px solid #243a5e;
+    border-right: 2px solid #243a5e;
+    min-width: 300px;
+    height: 15px;
+}
+.tiret {
+    border-right: 2px solid #243a5e;
+    height: 15px;
+}
+.content-structure-formation {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    min-height: 130px;
+}
+.item-structure-formation {
+    width: 95%;
+}
+
+.content-structure-formation .divider-line {
+    margin-left: -10px !important;
+}
+
+.content-structure-formation:last-child(.divider-line) {
+    display: none;
+    visibility: visible;
+}
+.text-condition-access {
+    font-weight: 500;
+    font-style: italic;
+}
+.btn-app-2 {
+    background-color: #deb857;
+}
+
+.card-structure-formation {
+    box-shadow: rgb(185 182 173) 0px 2px 4px 0px inset;
+    border: none;
+    height: 120px;
+    cursor: pointer;
+    font-family: "Roboto Slab", serif;
+    transition: all ease-in-out 350ms;
+}
+.card-structure-formation:hover {
+    box-shadow: rgba(185 182 173, 0.1) 0px 0px 0px 0px inset;
+    transform: scale(0.95);
+}
+.card-structure-formation p {
+    font-size: 11px;
+    text-align: justify;
+    max-height: 120px;
+    overflow: hidden;
+}
+.text-title-card {
+    margin-right: 20px !important;
+    opacity: 1;
+    font-weight: bold;
+    font-family: "Mate SC", serif;
+}
+.title-presentation {
+    font-family: "Mate SC", serif;
+    text-transform: uppercase;
+    font-size: x-large;
+}
+/** Fin styles pour les card*/
+
+/** Style tooltip1 structure */
+.tooltip1 {
+    display: inline-block;
+    position: relative;
+    border-bottom: 1px dotted #666;
+    text-align: left;
+}
+
+.tooltip1 h3 {
+    margin: 12px 0;
+}
+
+.tooltip1 .right {
+    min-width: 200px;
+    max-width: 400px;
+    top: 50%;
+    left: 100%;
+    margin-left: 20px;
+    transform: translate(0, -50%);
+    padding: 0;
+    color: #eeeeee;
+    background-color: #444444;
+    font-weight: normal;
+    font-size: 13px;
+    border-radius: 8px;
+    position: absolute;
+    z-index: 99999999;
+    box-sizing: border-box;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.8s;
+}
+
+.tooltip1:hover .right {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip1 .right img {
+    width: 400px;
+    border-radius: 8px 8px 0 0;
+}
+
+.tooltip1 .text-content {
+    padding: 10px 20px;
+    z-index: 4;
+}
+
+.tooltip1 .right i {
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -12px;
+    width: 12px;
+    height: 24px;
+    overflow: hidden;
+}
+.tooltip1 .right i::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 0;
+    top: 50%;
+    transform: translate(50%, -50%) rotate(-45deg);
+    background-color: #444444;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+/***/
+.tooltip2 {
+    display: inline-block;
+    position: relative;
+    border-bottom: 1px dotted #666;
+    text-align: left;
+    transition: all ease-in-out 350ms 100ms;
+}
+
+.tooltip2 h3 {
+    margin: 12px 0;
+}
+
+.tooltip2 .top {
+    min-width: 325px;
+    max-width: 400px;
+    top: -160px;
+    left: -25%;
+    transform: translate(-30%, -100%);
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: #009cdc;
+    font-weight: normal;
+    font-size: 14px;
+    border-radius: 8px;
+    position: absolute;
+    z-index: 99999999;
+    box-sizing: border-box;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+    display: block;
+    transform: scaleY(0);
+    visibility: hidden;
+    transition: all ease-in-out 350ms 100ms;
+}
+
+.tooltip2:hover .top {
+    transform: scaleY(1);
+    visibility: visible;
+}
+
+.tooltip2 .top i {
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    margin-left: -15px;
+    width: 30px;
+    height: 15px;
+    overflow: hidden;
+}
+
+.tooltip2 .top i::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background-color: #deb857;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+}
+.tooltip2 .top img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 8px 0 0;
+}
+.tooltip2 .text-content {
+    padding: 10px 0px;
+    z-index: 4;
+    position: relative;
+}
+.decor-box-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    align-items: flex-start;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+.decor-box {
+    position: absolute;
+    z-index: 3;
+    background: rgb(45 50 60 / 28%);
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.list-description-ecole{
+    columns: 2;
+    font-size: 11px;
+    font-style: italic;
+}
+/** Style tooltip1 structure */
+
+
+/** Style navbar top filiere*/
+
+    /*body {
+        font-family: "Lato";
+    }*/
+
+    /** style pour header-filieres */
+
+    /** Styles pour la presentation des filieres */
+    #content-filiere {
+        min-height: 100ch;
+        border: 1px solid transparent;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        background-image: url(../images/bg-section.png);
+        background-size: cover;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        padding-top: 0;
+    }
+
+    .breadcrumb-item-first {
+        color: #000;
+        text-transform: capitalize !important;
+        font-weight: bold;
+    }
+
+    .breadcrumb-item {
+        text-transform: lowercase;
+        font-style: italic;
+        font-size: 13px;
+        cursor: pointer;
+    }
+
+    /**Style image filiere */
+    .img-decor {
+        height: 150px;
+        border: 1px solid transparent;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        margin-left: 40px;
+        padding: 10px;
+        background-color: #deb857;
+    }
+
+    .img-filiere {
+        border-radius: 121px;
+        margin: 0px;
+        height: 100%;
+        width: 100%;
+    }
+
+    /** Fin Style image filiere */
+
+    /**Debut Style du contenu de la filiere */
+
+    .header-content-filiere .img-decor-1 {
+        height: 90px;
+        border: 1px solid transparent;
+        border-top-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        padding: 10px;
+        background-color: #243a5e;
+    }
+
+    .header-content-filiere {
+        max-height: 150px;
+        border: 1px solid transparent;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 0px 2.6px;
+        background-color: #e8eaec94;
+        border-bottom: 0;
+    }
+
+    .header-content-filiere span {
+        font-size: 11px;
+        font-style: italic;
+    }
+
+    .text-diplome {
+        text-transform: capitalize;
+    }
+
+    .img-decor-1>img {
+        height: 100%;
+        width: 100%;
+        border-radius: 121px;
+    }
+
+    .top-infos * {
+        margin-bottom: 0px;
+    }
+
+    .body-content-filiere {
+        border: 1px solid #e8eaec94;
+        min-height: 450px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-top: 0;
+        padding: 0;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+
+    .top-content {
+        background-color: #e8eaec94;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .top-content .nav-link {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+
+/** Style navbar top filiere*/

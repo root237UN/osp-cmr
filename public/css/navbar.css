@@ -1,0 +1,186 @@
+
+header {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
+    background-color:#fff;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+header::before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: .8;
+}
+#navbar-site{
+    background-image: url(../images/bg-section.png);
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.logo-welcome {
+    width: 100px;
+    height: 100%;
+    display: block;
+    background-size: 100%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 2;
+    transition: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 25px;
+    color: #56ca87;
+}
+
+#navbarSupportedContent li {
+    padding: 0;
+    transition: transform .1s linear;
+}
+#navbarSupportedContent a, #navbarSupportedContent li span {
+    padding: 10px 13px;
+    display: inline-block;
+    height: 43px;
+    border: 1px solid transparent;
+    color: #242738;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 13px;
+}
+#navbarSupportedContent a:hover, #navbarSupportedContent a:focus {
+    color: green;
+    font-weight: bold;
+}
+.new-dropdown-menu{
+    display: none;
+    visibility: hidden;
+}
+@media (min-width: 1100px)
+{
+    #navbarSupportedContent .dropdown>a {
+        border-radius: var(--border-radius)var(--border-radius)0 0;
+        position: relative;
+        z-index: 2;
+        border-bottom: 0;
+        transition-property: box-shadow,border,background-color;
+        transition-timing-function: ease;
+        transition-duration: 0s;
+    }
+
+    #navbarSupportedContent .new-dropdown:hover {
+        background:#fff;
+        box-shadow: 0 3px 15px rgba(127,127,127,.3);
+        border: 1px solid rgba(0,0,0,.1);
+        transform: translateY(-2px);
+    }
+    #navbarSupportedContent .new-dropdown:hover> .new-dropdown-menu{
+        visibility: visible;
+        opacity: 1;
+    }
+    #navbarSupportedContent .new-dropdown:hover .new-dropdown-menu {
+        display: flex;
+        padding: 10px 0;
+        position: absolute;
+        top: 40px;
+        flex-direction: column;
+        white-space: pre;
+        border-radius: 5px;
+        border: 1px solid rgba(0,0,0,.1);
+        border-top: 0;
+        box-shadow: 0 3px 15px rgba(127,127,127,.3);
+        z-index: 1;
+        transition: visibility 0s,opacity .3s ease;
+        background:#fff;
+        min-width: 150%;
+    }
+}
+
+.description-logo {
+    border: 1px solid transparent;
+    height: 400px;
+    width: 400px;
+    background-color: darkgrey;
+    border-radius: 400px;
+    /*background: url(images/description-logo.jpg)repeat;
+    background-position: auto ;
+    background-size: auto;*/
+}
+
+#banner-text {
+    padding: 80px 0;
+    margin: 0 50px;
+    text-shadow: 0 0 20px #000;
+}
+
+#banner-text h1 {
+    color: #fff;
+    font-weight: 400;
+    line-height: 1.4;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, .2);
+    margin-bottom: 23px;
+    font-size: 30px;
+}
+
+#banner-text p {
+    color: #fff;
+    line-height: 1.8;
+    font-size: 17.4px;
+    opacity: 1;
+}
+
+#banner-text h1 {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, .2);
+    margin-bottom: 23px;
+}
+
+#banner-text #documentation-link {
+    margin-left: .75em;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, .25);
+    box-shadow: inset 0 -0.43em rgba(0, 0, 0, .2), 0 2px 20px transparent;
+}
+
+#banner-text .btn:hover {
+    transform: translateY(2px)scaleY(.95);
+}
+
+#banner-text .btn {
+    width: 180px;
+    white-space: nowrap;
+    padding: 1.29em .71em;
+    transition: box-shadow .4s, transform .2s, background .4s, color .4s;
+    border-radius: .43em;
+}
+
+#banner-text #documentation-link:hover {
+    box-shadow: inset 0 -3px rgba(0, 0, 0, .2), 0 0 10px #fff;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-10px)scaleY(.8);
+    }
+
+    100% {
+        transform: translateY(10px)scaleY(1);
+    }
+}
+
+#arrow-down {
+    animation: bounce 1s cubic-bezier(.5, .05, 1, .5)infinite alternate;
+    transform-origin: right bottom;
+}
