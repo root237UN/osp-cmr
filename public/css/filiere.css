@@ -87,9 +87,15 @@
     }
 
     .header-title {
-        font-weight: bold;
-        font-family: 'Lato';
-        padding-left: 0;
+        color: #fff;
+        padding-left: 0;font-family: 'Gelasio', serif;
+    }
+    .header-title a {
+        color: #fff;
+        transition: all ease-in-out 350ms;
+    }
+    .header-title a:hover {
+        color: #fff;
     }
 
     .header-title-description {
@@ -211,7 +217,7 @@
         background-color: #f2f2f2;
         font-size: xx-small;
         height: 25px;
-        margin-right: 2px;
+        margin-right: 2px;        border-radius: 3px;
         text-transform: capitalize;
         text-align: left;
         transition: all ease-in-out 350ms;
@@ -223,9 +229,7 @@
     .card-formation-content .btn:active,
     .card-formation-content .btn:focus {
         box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.2) 0px 0px 0px 1px;
-        font-size: x-small;
-        transform: scalex(.9);
-        border-radius: 3px;
+        border: none;
     }
 
     .card-formation-header {
@@ -276,9 +280,9 @@
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         margin-left: -25px;
         min-width: 215px;
-        max-height: 600px;
         overflow-y: hidden;
         overflow-x: hidden;
+        max-height: 650px;
         font-family: 'Jost', sans-serif;
 
     }
@@ -322,10 +326,9 @@
     .item-filtre-title {}
 
     .content-item {
-        max-height: 200px;
+        max-height: 130px;
         overflow-y: scroll;
         overflow-x: hidden;
-        min-height: 150px;
         padding-left: 15px;
         font-family: 'Jost', sans-serif;
         font-weight: bold;

@@ -23,7 +23,7 @@
         <div class="col-10">
             <div class="m-4">
                 <h1 class="text-capitalize header-title">
-                    <a href="#presentation-filiere" style="color: #deb857;">{{$filiere->libelle}}</a>
+                    <a href="#presentation-filiere">{{$filiere->libelle}}</a>
                 </h1>
             </div>
             <div class="m-4">
@@ -43,7 +43,7 @@
 
     <div class="container">
         <div class="row d-flex justify-content-between" style="align-items: center;">
-            <nav class="col-md-10" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrum">
+            <nav class="col-md-12" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrum">
                 <ol class="breadcrumb my-1">
                     <li class="breadcrumb-item breadcrumb-item-first">Orientation</li>
                     <li class="breadcrumb-item">Enseignement</li>
@@ -53,10 +53,6 @@
                     <li class="breadcrumb-item active" aria-current="page">{{$filiere->libelle}}</li>
                 </ol>
             </nav>
-            <button class="btn btn-xs btn-save m-0 col-md-2">
-                <i class="fas fa-plus-square"></i>
-                Enregistrer
-            </button>
         </div>
     </div>
 
@@ -84,17 +80,17 @@
                         </div>
                         <div>
                             <span>Condition d'access</span>
-                            <p>@if($filiere->conditionAccess) {{$filiere->conditionAccess[0]->libelle}} @else Aucune condition @endif</p>
+                            <p>@if(count($filiere->conditionAccess)>0) {{$filiere->conditionAccess[0]->libelle}} @else Aucune condition @endif</p>
                         </div>
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-10">
                                 <span>Diplome</span>
                                 <p class="text-diplome">{{$filiere->cycleEnseignement->libelle}} / @if($filiere->diplome){{$filiere->diplome->libelle}} @else Aucune diplome !!! @endif</p>
                             </div>
-                            <div class="col-6">
+                            <!--<div class="col-6">
                                 <span>Notation</span>
                                 <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -120,10 +116,10 @@
                                 </div>
                             </nav>
                         </div>
-                        <div class="tab-content" id="nav-tabContent" style="    max-height: 600px; overflow-y: scroll;">
+                        <div class="tab-content" id="nav-tabContent">
                             <div class="tab-pane fade show active" id="nav-enseignement" role="tabpanel" aria-labelledby="nav-enseignement-tab">
                                 <div class="container">
-                                    <h4 class="title-content-1">Modules d'enseignements professionnels : {{$filiere->enseignements->count()}}</h4>
+                                    <h4 class="title-content-1">@if($filiere->enseignements->count()) Modules d'enseignements professionnels : {{$filiere->enseignements->count()}} @else Aucun module d'enseignement pour le moment !!! @endif</h4>
 
                                     <div class="row d-flex justify-content-center">
                                         <div class="col-md-7">
@@ -150,7 +146,7 @@
 
                             <div class="tab-pane fade" id="nav-debouche" role="tabpanel" aria-labelledby="nav-debouche-tab">
                                 <div class="container">
-                                    <h4 class="title-content-1">Debouches : {{$filiere->debouches->count()}}</h4>
+                                    <h4 class="title-content-1">@if($filiere->debouches->count()) Debouches : {{$filiere->debouches->count()}} @else Aucune debouchee pour le moment !!! @endif</h4>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="main-timeline12">
@@ -188,71 +184,9 @@
                             <div class="tab-pane fade" id="nav-metier" role="tabpanel" aria-labelledby="nav-metier-tab">
 
                                 <div class="container">
-                                    <h4 class="title-content-1">Metiers : {{$filiere->metiers->count()}}</h4>
+                                    <h4 class="title-content-1">@if($filiere->metiers->count()>0) Metiers : {{$filiere->metiers->count()}} @else Aucun metier pour le moment !!! @endif</h4>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <div class="main-timeline12">
-                                                <div class="col-md-2 col-sm-4 timeline">
-                                                    <span class="timeline-icon">
-                                                        <i class="fa fa-key"></i>
-                                                    </span>
-                                                    <div class="border"></div>
-                                                    <div class="timeline-content">
-                                                        <h4 class="title">Williamson</h4>
-                                                        <p class="description">Lorem ipsum dolor sit amet, consectetur.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-2 col-sm-4 timeline">
-                                                    <div class="timeline-content">
-                                                        <h4 class="title">Kristiana</h4>
-                                                        <p class="description">Lorem ipsum dolor sit amet, consectetur.</p>
-                                                    </div>
-                                                    <div class="border"></div>
-                                                    <span class="timeline-icon">
-                                                        <i class="fa fa-key"></i>
-                                                    </span>
-                                                </div>
-                                                <div class="col-md-2 col-sm-4 timeline">
-                                                    <span class="timeline-icon">
-                                                        <i class="fa fa-key"></i>
-                                                    </span>
-                                                    <div class="border"></div>
-                                                    <div class="timeline-content">
-                                                        <h4 class="title">Steve thomas</h4>
-                                                        <p class="description">Lorem ipsum dolor sit amet, consectetur.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-2 col-sm-4 timeline">
-                                                    <div class="timeline-content">
-                                                        <h4 class="title">Miranda joy</h4>
-                                                        <p class="description">Lorem ipsum dolor sit amet, consectetur.</p>
-                                                    </div>
-                                                    <div class="border"></div>
-                                                    <span class="timeline-icon">
-                                                        <i class="fa fa-key"></i>
-                                                    </span>
-                                                </div>
-                                                <div class="col-md-2 col-sm-4 timeline">
-                                                    <span class="timeline-icon">
-                                                        <i class="fa fa-key"></i>
-                                                    </span>
-                                                    <div class="border"></div>
-                                                    <div class="timeline-content">
-                                                        <h4 class="title">Williamson</h4>
-                                                        <p class="description">Lorem ipsum dolor sit amet, consectetur.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-2 col-sm-4 timeline">
-                                                    <div class="timeline-content">
-                                                        <h4 class="title">Kristiana</h4>
-                                                        <p class="description">Lorem ipsum dolor sit amet, consectetur.</p>
-                                                    </div>
-                                                    <div class="border"></div>
-                                                    <span class="timeline-icon">
-                                                        <i class="fa fa-key"></i>
-                                                    </span>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -260,8 +194,8 @@
 
                             <div class="tab-pane fade" id="nav-ecole" role="tabpanel" aria-labelledby="nav-ecole-tab">
                                 <div class="container">
-                                    <h4>Timeline Style : Demo-2</h4>
-                                    <div class="row">
+                                    <h4>Ecoles offrant cette filiere d'enseignement</h4>
+                                    <!--<div class="row">
                                         <div class="col-md-12">
                                             <div class="main-timeline2">
                                                 <div class="timeline">
@@ -302,7 +236,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>-->
                                 </div>
                                 <hr>
                             </div>

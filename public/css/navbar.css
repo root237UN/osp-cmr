@@ -39,7 +39,7 @@ header::before {
     transition: none;
     text-align: center;
     text-transform: uppercase;
-    font-weight: bold;
+    font-family: 'Gelasio', serif;
     font-size: 25px;
     color: #56ca87;
 }
@@ -51,7 +51,6 @@ header::before {
 #navbarSupportedContent a, #navbarSupportedContent li span {
     padding: 10px 13px;
     display: inline-block;
-    height: 43px;
     border: 1px solid transparent;
     color: #242738;
     text-transform: uppercase;

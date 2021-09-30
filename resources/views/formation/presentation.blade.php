@@ -3,34 +3,7 @@
 @section('content')
 
 
-<div class="container-fluid">
-    <div class="">
-        <nav class="nav-bar navbar navbar-expand-lg nav-top">
-
-            <a class="col-md-1 title-nav"><span>Formation</span></a>
-
-            <ul class="col-md-5 list-options navbar-nav">
-                <li class="dropdown nav-bar-item">
-                    <a><span>Type de formation</span></a>
-                    <i class="fas fa-chevron-down"></i>
-                </li>
-                <li class="dropdown nav-bar-item">
-                    <a><span>Formation</span></a>
-                    <i class="fas fa-chevron-down"></i>
-                </li>
-                <li class="dropdown nav-bar-item">
-                    <a><span>Structure de formation</span></a>
-                    <i class="fas fa-chevron-down"></i>
-                </li>
-                <li class="dropdown nav-bar-item">
-                    <a><span>Localites</span></a>
-                    <i class="fas fa-chevron-down"></i>
-                </li>
-            </ul>
-            <br />
-        </nav>
-    </div>
-</div>
+<livewire:top-navbar-formation />
 
 <div class="" id="header-formation">
     <div class="">
@@ -50,7 +23,7 @@
                 <ol class="breadcrumb my-1">
                     <li class="breadcrumb-item breadcrumb-item-first"><a href="{{route('orientation')}}">Orientation</a></li>
                     <li class="breadcrumb-item"><a href="{{route('formation')}}">Formation</a></li>
-                    <li class="breadcrumb-item active" aria-current="page"><a href="{{route('orientation')}}">{{$type->code}}</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><a href="{{route('orientation')}}">{{$type->libelle}}</a></li>
                 </ol>
             </nav>
         </div>

@@ -145,7 +145,7 @@ a:hover {
     border-bottom-right-radius: 100px;
     margin-left: 40px;
     padding: 10px;
-    background-color: #deb857;
+    background-color: #fff;
 }
 
 .img-filiere {
@@ -360,7 +360,7 @@ a:hover {
     position: relative;
     border-bottom: 1px dotted #666;
     text-align: left;
-    transition: all ease-in-out 350ms 100ms;
+    transition: all ease-in-out 150ms 0ms;
 }
 
 .tooltip2 h3 {
@@ -490,18 +490,6 @@ a:hover {
     }
 
     /**Style image filiere */
-    .img-decor {
-        height: 150px;
-        border: 1px solid transparent;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        border-top-left-radius: 100px;
-        border-bottom-left-radius: 100px;
-        border-bottom-right-radius: 100px;
-        margin-left: 40px;
-        padding: 10px;
-        background-color: #deb857;
-    }
 
     .img-filiere {
         border-radius: 121px;

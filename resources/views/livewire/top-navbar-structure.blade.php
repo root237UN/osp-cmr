@@ -73,45 +73,23 @@
 
 <nav class="nav-bar navbar navbar-expand-lg nav-top" id="dropmenu1">
 
-    <a class="col-md-1 title-nav"><span style="color: #38c172;">Filiere | </span></a>
+    <a class="col-md-1 title-nav"><span>Structure</span></a>
 
     <ul class="col-md-5 list-options navbar-nav">
         <li class="dropdown nav-bar-item">
-            <a><span>Enseignement</span></a>
-            <i class="fas fa-chevron-down"></i>
-            <ul class="dropdown" aria-label="submenu">
-                @forelse($enseignements as $enseignement)
-                <li><a href="#"><span>{{$enseignement->libelle}}</span></a></li>
-                @empty
-                @endforelse
-            </ul>
-        </li>
-        <li class="dropdown nav-bar-item">
-            <a><span>option</span></a>
-            <i class="fas fa-chevron-down"></i>
-            <ul class="dropdown" aria-label="submenu">
-                @forelse($options as $option)
-                <li><a href="#"><span>{{$option->libelle}}</span></a></li>
-                @empty
-                @endforelse
-            </ul>
-        </li>
-        <li class="dropdown nav-bar-item">
-            <a><span>parcours</span></a>
-            <i class="fas fa-chevron-down"></i>
-            <ul class="dropdown" aria-label="submenu" style="columns: 2;">
-                @forelse($sections as $section)
-                <li><a href="#"><span>{{$section->libelle}}</span></a></li>
-                @empty
-                @endforelse
-            </ul>
-        </li>
-        <li class="dropdown nav-bar-item">
-            <a><span>Etablissement</span></a>
+            <a><span>Ministere</span></a>
             <i class="fas fa-chevron-down"></i>
         </li>
         <li class="dropdown nav-bar-item">
-            <a><span>Localite</span></a>
+            <a><span>Programmes</span></a>
+            <i class="fas fa-chevron-down"></i>
+        </li>
+        <li class="dropdown nav-bar-item">
+            <a><span>Localites</span></a>
+            <i class="fas fa-chevron-down"></i>
+        </li>
+        <li class="dropdown nav-bar-item">
+            <a><span>Aide</span></a>
             <i class="fas fa-chevron-down"></i>
         </li>
     </ul>

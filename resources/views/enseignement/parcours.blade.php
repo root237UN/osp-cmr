@@ -76,17 +76,9 @@
     }
 
     .title-option {
-        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        font-family: 'Gelasio', serif;
     }
 
-    .title-type {
-        font-size: x-large;
-        font-weight: bold;
-        line-height: 25px;
-        font-family: monospace, Cochin, Georgia, Times, 'Times New Roman', serif;
-        text-align: center;
-        text-shadow: #323a2f52 5px 10px 7px;
-    }
 
     .card-parcours {
         transition: all ease-in-out 300ms;
@@ -194,13 +186,15 @@
 
     .title-parcours {
         color: #000000;
-        text-transform: uppercase;
-        font-size: 13px;
-        font-weight: bold;
-        font-style: normal;
-        text-align: center;
-        margin-left: -40px;
-        line-height: 1.5rem;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    font-style: normal;
+    text-align: left;
+    padding-left: 12px;
+    margin-left: -40px;
+    line-height: 1.2rem;
+    font-family: 'Gelasio', serif;
     }
 
     .description-parcours {
@@ -222,17 +216,6 @@
         padding: 2px;
         margin-bottom: 5px;
         color: #000;
-    }
-
-    .card-parcours ul li::before {
-        content: '\e64c';
-        top: 1px;
-        background: 0 0;
-        font-weight: 700;
-        margin-right: 5px;
-        opacity: 1;
-        color: inherit;
-        font-family: Georgia, 'Times New Roman', Times, serif;
     }
 
     .card-header {
@@ -268,154 +251,6 @@
         font-style: italic;
         text-shadow: #fcfdfe 5px 3px 7px;
     }
-
-    #actualites-parcours {
-        min-height: 90vh;
-        position: relative;
-        overflow: hidden;
-    }
-
-    #actualites-parcours .service-bg {
-        width: 250px;
-        padding: 55px;
-        position: absolute;
-        top: -10px;
-        right: -100px;
-        background-color: rgb(243 244 243);
-        transform: rotate(55deg);
-        -o-transform: rotate(55deg);
-        -ms-transform: rotate(55deg);
-        -moz-transform: rotate(55deg);
-        -webkit-transform: rotate(55deg);
-    }
-
-    #actualites-parcours .service-bg-50 {
-        width: 210px;
-        padding: 35px;
-        position: absolute;
-        top: -10px;
-        right: -100px;
-        opacity: 0.6;
-        background-color: rgb(243 244 243);
-        transform: rotate(55deg);
-        -o-transform: rotate(55deg);
-        -ms-transform: rotate(55deg);
-        -moz-transform: rotate(55deg);
-        -webkit-transform: rotate(55deg);
-    }
-
-    .title-actualites-parcours {
-        color: #242738;
-        font-weight: 700;
-        text-align: center;
-        text-transform: uppercase;
-        margin-top: 30px;
-        font-style: italic;
-    }
-
-    .divider {
-        width: 15%;
-        height: 3px !important;
-        color: #38c172;
-        text-align: center;
-    }
-
-    .rechercher-parcours {
-        background-color: rgba(106, 214, 216, 0.9);
-        max-width: 500px;
-        min-height: 400px;
-        position: relative;
-        overflow: hidden;
-        border-radius: 15px 0 15px 0 !important;
-    }
-
-    .title-rechercher {
-        font-size: 19px;
-        text-transform: uppercase;
-        margin-bottom: 15px;
-        text-align: left;
-        color: #fff;
-        font-weight: bold;
-    }
-
-    .rechercher-header {
-        background-color: rgba(106, 214, 216, 0.2);
-        padding: 35px 40px 0px 40px !important;
-    }
-
-    .rechercher-header p {
-        line-height: 28px;
-        font-weight: 400;
-        font-size: 17px;
-        color: #0a3546 !important;
-        text-align: center;
-        font-style: italic;
-    }
-
-    .rechercher-body {
-        background-color: #fff;
-        min-height: 100px;
-        padding: 10px;
-    }
-
-    .rechercher-body .content p {
-        font-size: 17px;
-        font-weight: 700;
-        /*font-family: Georgia, 'Times New Roman', Times, serif;*/
-        font-style: italic;
-        opacity: 0.9;
-        font-family: monospace;
-    }
-
-    input[name='metier'] {
-        border: 0 !important;
-        box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.2);
-    }
-
-    .carousel-item {
-        min-height: 90vh;
-        background-color: transparent;
-        position: relative;
-    }
-
-    .left-part {
-        position: absolute;
-        top: 90px;
-        bottom: 0;
-        z-index: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        background: none;
-        border: 0;
-        opacity: 5;
-        transition: opacity 0.15s ease;
-    }
-
-    #item-actualite {
-        margin-left: 25%;
-        position: relative;
-        top: 100px;
-        min-height: 250px;
-    }
-
-    .header-actualites {
-        position: absolute;
-        width: 100%;
-        height: 100px;
-        bottom: 0;
-        top: 0px;
-        right: 0;
-        left: 0;
-        margin-bottom: 20px;
-        margin-top: 0px;
-    }
-
-    .item-actualite {
-        position: relative;
-        top: 100px;
-    }
 </style>
 
 <section class="bg-cover">
@@ -431,10 +266,10 @@
                 <p class="text-description col-md-12 py-2">{{$option->description_full}}</p>
                 <div class="line-infos d-flex justify-content-between">
                     <a class="link-parcours" href="#parcours">Decouvrez les parcours</a>
-                    <a class="link-ensavoir">En savoir plus!</a>
+                    <a class="link-ensavoir" href="#" style="color:#38c172">En savoir plus!</a>
                 </div>
-                <hr>
-                <p>Des questions. Posez les ici !!!</p>
+                <hr style="color: #231515">
+                <p style="font-style: italic;font-family: 'Gelasio', serif;">Des questions. Posez les ici !!!</p>
             </div>
             <div class="col-8 d-flex justify-content-end" style="z-index: 10;">
                 <a id="arrow-down" href="#content-parcours">
@@ -449,7 +284,7 @@
 
     <div class="container">
         <div class="d-flex justify-content-center py-5">
-            <h1 class="title-option">Choisissez <span id='typed1' class="text-capitalize" style="font-weight: bold;">Un parcours fait pour vous ...</span></h1>
+            <h1 class="title-option">Choisissez <span class="text-capitalize" style="font-weight: bold;">Un parcours ...</span></h1>
         </div>
 
         <div class="row d-flex justify-content-center" id="parcours">
@@ -475,10 +310,12 @@
                                             <?php
                                             $tab = [];
                                             $tab = $parcours->filiereEnseignement;
-
+                                            $i = 0;
                                             if (count($tab) > 0) {
-                                                for ($i = 0; $i < 3; $i++) {
-                                                    echo "<li class='item'>" . $tab[$i]->libelle . "</li>";
+                                                foreach ($tab as $filiere) {
+                                                    $i+=1;
+                                                    echo "<li class='item'><i class='fas fa-check' style='margin-right:3px;font-size: 10px;'></i>" . $filiere->libelle . "</li>";
+                                                    if($i == 3) break;
                                                 }
                                             } else {
                                                 echo "<li>Aucune filiere !!!</li>";
@@ -510,7 +347,7 @@
     </div>
 </section>
 
-<section id="actualites-parcours">
+<!--<section id="actualites-parcours">
 
     <div id="carouselParcours" class="carousel slide" data-bs-ride="carousel">
 
@@ -593,4 +430,41 @@
 
 
 </section>
+                                        -->
+
+
+<section id="actualites-onglet">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="row">
+                <div class="col-md-9" id="item-actualite">
+                    <div class="col-10" style="margin-left: 50px;" id="description">
+                        <h2 class="my-2 py-4  d-flex justify-content-start" style="align-items: center;    font-family: 'Gelasio', serif;">
+                            <span class="text-uppercase m-2 text-actualite">Actualite</span>
+                        </h2>
+                        <p class="text-description-actualite col-md-12 py-2" style="color: #243a5e;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vero culpa, debitis ducimus atque aliquid beatae modi aut distinctio. Pariatur fugit expedita sit ipsum, quos praesentium maxime accusamus eius repudiandae!</p>
+                        <a class="lire-actualite" href="#">Lire l'actualite </a>
+                        <hr style="color: #38c172;">
+                        <time datetime="2021-06-01 00:00:00 +0000 UTC"><i class="ti-alarm-clock"></i>01 June 2021</time>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-actualites">
+        <div class="service-bg"></div>
+        <div class="row" style="justify-content: center;">
+            <h2 class="title-header-actualite">Actualites enseignements</h2>
+            <hr class="divider">
+        </div>
+    </div>
+
+    <livewire:searchbar-news />
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselParcours" style="padding-left: 11%;" data-bs-slide="next">
+        <span class="fa fa-chevron-right fa-2x text-dark"></span>
+    </button>
+</section>
+
 @endsection

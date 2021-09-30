@@ -76,7 +76,7 @@
     }
 
     .title-option {
-        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        font-family: 'Gelasio', serif;
     }
 
     .title-type {
@@ -269,155 +269,6 @@
         text-shadow: #fcfdfe 5px 3px 7px;
     }
 
-    #actualites-filieres {
-        min-height: 90vh;
-        position: relative;
-        overflow: hidden;
-    }
-
-    #actualites-filieres .service-bg {
-        width: 250px;
-        padding: 55px;
-        position: absolute;
-        top: -10px;
-        right: -100px;
-        background-color: rgb(243 244 243);
-        transform: rotate(55deg);
-        -o-transform: rotate(55deg);
-        -ms-transform: rotate(55deg);
-        -moz-transform: rotate(55deg);
-        -webkit-transform: rotate(55deg);
-    }
-
-    #actualites-filieres .service-bg-50 {
-        width: 210px;
-        padding: 35px;
-        position: absolute;
-        top: -10px;
-        right: -100px;
-        opacity: 0.6;
-        background-color: rgb(243 244 243);
-        transform: rotate(55deg);
-        -o-transform: rotate(55deg);
-        -ms-transform: rotate(55deg);
-        -moz-transform: rotate(55deg);
-        -webkit-transform: rotate(55deg);
-    }
-
-    .title-actualites-filieres {
-        color: #242738;
-        font-weight: 700;
-        text-align: center;
-        text-transform: uppercase;
-        margin-top: 30px;
-        font-style: italic;
-    }
-
-    .divider {
-        width: 15%;
-        height: 3px !important;
-        color: #38c172;
-        text-align: center;
-    }
-
-    .rechercher-filieres {
-        background-color: rgba(106, 214, 216, 0.9);
-        max-width: 500px;
-        min-height: 400px;
-        position: relative;
-        overflow: hidden;
-        border-radius: 15px 0 15px 0 !important;
-    }
-
-    .title-rechercher {
-        font-size: 19px;
-        text-transform: uppercase;
-        margin-bottom: 15px;
-        text-align: left;
-        color: #fff;
-        font-weight: bold;
-    }
-
-    .rechercher-header {
-        background-color: rgba(106, 214, 216, 0.2);
-        padding: 35px 40px 0px 40px !important;
-    }
-
-    .rechercher-header p {
-        line-height: 28px;
-        font-weight: 400;
-        font-size: 17px;
-        color: #0a3546 !important;
-        text-align: center;
-        font-style: italic;
-    }
-
-    .rechercher-body {
-        background-color: #fff;
-        min-height: 100px;
-        padding: 10px;
-    }
-
-    .rechercher-body .content p {
-        font-size: 17px;
-        font-weight: 700;
-        /*font-family: Georgia, 'Times New Roman', Times, serif;*/
-        font-style: italic;
-        opacity: 0.9;
-        font-family: monospace;
-    }
-
-    input[name='metier'] {
-        border: 0 !important;
-        box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.2);
-    }
-
-    .carousel-item {
-        min-height: 90vh;
-        background-color: transparent;
-        position: relative;
-    }
-
-    .left-part {
-        position: absolute;
-        top: 80px;
-        bottom: 0;
-        right: 0;
-        left: 10px;
-        z-index: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        background: none;
-        border: 0;
-        opacity: 5;
-        transition: opacity 0.15s ease;
-    }
-
-    #item-actualite {
-        margin-left: 25%;
-        position: relative;
-        top: 100px;
-        min-height: 250px;
-    }
-
-    .header-actualites {
-        position: absolute;
-        width: 100%;
-        height: 100px;
-        bottom: 0;
-        top: 0px;
-        right: 0;
-        left: 0;
-        margin-bottom: 20px;
-        margin-top: 0px;
-    }
-
-    .item-actualite {
-        position: relative;
-        top: 100px;
-    }
 
     /** Styles pour les cycles  */
     .cycle {
@@ -558,10 +409,13 @@
                 <h2 class="my-2 py-4  d-flex justify-content-start" style="align-items: center;">
                     <span class="text-uppercase m-2 title-type">{{$section->libelle}}</span>
                 </h2>
-                <p class="text-description col-md-12 py-2">{{$section->description_full}}</p>
-                <a class="link-filieres" href="#filieres">Decouvrez les filieres du parcours</a>
-                <hr>
-                <p>Des questions. Posez les ici !!!</p>
+                <p class="text-description col-md-12 py-2">@if($section->description_full){{$section->description_full}}@else Aucune description pour le moment !!! @endif</p>
+                <div class="line-infos d-flex justify-content-between">
+                    <a class="link-filieres" href="#filieres">Decouvrez les filieres du parcours</a>
+                    <a class="link-ensavoir" href="#" style="color:#38c172">En savoir plus!</a>
+                </div>
+                <hr style="color: #231515">
+                <p style="font-style: italic;font-family: 'Gelasio', serif;">Des questions. Posez les ici !!!</p>
             </div>
             <div class="col-8 d-flex justify-content-end" style="z-index: 10;">
                 <a id="arrow-down" href="#content-filieres">
@@ -576,7 +430,7 @@
 
     <div class="container-fluid">
         <div class="d-flex justify-content-center py-5">
-            <h1 class="title-option">Choisissez <span id="typed1" class="text-capitalize" style="font-weight: bold;">une filieres fait pour vous ...</span></h1>
+            <h1 class="title-option">Choisissez <span class="text-capitalize" style="font-weight: bold;">un cycle d'enseignement ...</span></h1>
         </div>
 
         <div class="row d-flex justify-content-center">
@@ -618,36 +472,18 @@
                 </div>
             </div>
 </section>
-
-<section id="actualites-filieres">
-
-    <div id="carouselfilieres" class="carousel slide" data-bs-ride="carousel">
-
-        <!--<div class="carousel-inner">
-            <div class="carousel-item ">
-                <div class="item-actualite">
-                    <img class=" img" src="../images/bg3.jpg" width="100%" height="500px">
-
-                    <div class="carousel-caption text-start" style="top: 0;left: 30%" >
-                        <h1 class="text-white">Example headline.</h1>
-                        <p class="text-description text-dark py-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis sequi minus nisi consequuntur, eum illo at laudantium quia quibusdam amet nemo aspernatur commodi unde doloremque inventore fugiat sit laborum saepe!</p>
-                        <a class="link-filieres" href="#">Lire l'actualite </a>
-                        <hr>
-                        <time datetime="2021-06-01 00:00:00 +0000 UTC"><i class="ti-alarm-clock"></i>01 June 2021</time>
-                    </div>
-                </div>
-</div>-->
-
+<section id="actualites-onglet">
+    <div class="carousel-inner">
         <div class="carousel-item active">
             <div class="row">
                 <div class="col-md-9" id="item-actualite">
                     <div class="col-10" style="margin-left: 50px;" id="description">
-                        <h2 class="my-2 py-4  d-flex justify-content-start" style="align-items: center;">
-                            <span class="text-uppercase m-2 title-type">Actualite</span>
+                        <h2 class="my-2 py-4  d-flex justify-content-start" style="align-items: center;    font-family: 'Gelasio', serif;">
+                            <span class="text-uppercase m-2 text-actualite">Actualite</span>
                         </h2>
-                        <p class="text-description col-md-12 py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vero culpa, debitis ducimus atque aliquid beatae modi aut distinctio. Pariatur fugit expedita sit ipsum, quos praesentium maxime accusamus eius repudiandae!</p>
-                        <a class="link-filieres" href="#">Lire l'actualite </a>
-                        <hr>
+                        <p class="text-description-actualite col-md-12 py-2" style="color: #243a5e;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vero culpa, debitis ducimus atque aliquid beatae modi aut distinctio. Pariatur fugit expedita sit ipsum, quos praesentium maxime accusamus eius repudiandae!</p>
+                        <a class="lire-actualite" href="#">Lire l'actualite </a>
+                        <hr style="color: #38c172;">
                         <time datetime="2021-06-01 00:00:00 +0000 UTC"><i class="ti-alarm-clock"></i>01 June 2021</time>
                     </div>
                 </div>
@@ -658,48 +494,15 @@
     <div class="header-actualites">
         <div class="service-bg"></div>
         <div class="row" style="justify-content: center;">
-            <h2 class="title-actualites-filieres">Actualites des filieres</h2>
+            <h2 class="title-header-actualite">Actualites enseignements</h2>
             <hr class="divider">
         </div>
     </div>
 
-    <div class="col-md-3 left-part">
-        <div class="rechercher-filieres">
-            <div class="service-bg-50"></div>
+    <livewire:searchbar-news />
 
-            <div class="rechercher-header">
-                <h2 class="title-rechercher">Ton filieres en main</h2>
-                <p>Les métiers ouvert sur marche Camerounais</p>
-            </div>
-            <div class="rechercher-body">
-                <div class="content">
-                    <p><span>Travailler dans</span> <span id="typed2"></span> </p>
-                    <form class="form-inline form row m-1">
-                        @csrf
-                        <div class="form-group col-10 p-0">
-                            <input type="text" class="form-control" value="" name="metier">
-                        </div>
-                        <button type="submit" class="p-0 btn btn-xs text-white btn-success col d-flex" style="justify-content: center;align-items: center;">
-                            <i class="fa fa-search fa-2x"></i>
-                        </button>
-                    </form>
-                </div>
-                <div class="content">
-                    <p><span>Decouvrir les metiers </span> </p>
-                    <a class="p-0 btn btn-xs text-white btn-success col d-flex" style="justify-content: center;align-items: center;">
-                        <span class="text-uppercase m-2">Decouvrir</span>
-                        <i class="fa fa-chevron-right fa-1x"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselfilieres" style="padding-left: 11%;" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselParcours" style="padding-left: 11%;" data-bs-slide="next">
         <span class="fa fa-chevron-right fa-2x text-dark"></span>
     </button>
-    </div>
-
-
-
 </section>
 @endsection

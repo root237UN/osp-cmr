@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [WebSiteController::class, 'index'])->name('welcome');
-Route::get('/orientation', [WebSiteController::class, 'orientation'])->name('orientation');
+Route::get('/enseignement', [WebSiteController::class, 'enseignement'])->name('enseignement');
 
-Route::get('/orientation/{code}', [WebSiteController::class, 'showTypeEnseignement'])->name('orientation.show');
+Route::get('/enseignement/{code}', [WebSiteController::class, 'showTypeEnseignement'])->name('enseignement.view');
 Route::get('/parcours/{code}', [WebSiteController::class, 'showParcours'])->name('parcours.show');
 
 /** Route pour les formations */
@@ -40,7 +40,7 @@ Route::get('/filiere/{code}',[WebSiteController::class, 'showFiliere'])->name('s
 Route::get('/etablissement', [WebSiteController::class, 'etablissement'])->name('etablissement');
 Route::get('/contact', [WebSiteController::class, 'contact'])->name('contact');
 
-Route::get('/enseignement', [WebSiteController::class, 'enseignement'])->name('enseignement');
+Route::get('/orientation', [WebSiteController::class, 'orientation'])->name('orientation');
 
 /** Routes pour les pages en developpement */
 

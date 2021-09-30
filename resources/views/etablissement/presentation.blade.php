@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Orientation | Etablissements</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -304,7 +304,7 @@
                                 <p style="text-align: left;" class="p body">Decouvrer et consulter les etablissements d'enseignement secondaire prets de votre localite. Acceder en un clic a un vaste catalogue d'etablissements. </p>
                             </div>
                             <div class="d-flex justify-content-center">
-                                <a id="documentation-link" class="btn btn-success text-light text-uppercase" style="font-weight: bold;" href="{{route('orientation')}}">Orientation <i class="ti-book"></i></a>
+                                <a id="documentation-link" class="btn btn-success text-light text-uppercase" style="font-weight: bold;" href="{{route('orientation')}}">Decouvrir les etablissements <i class="ti-book"></i></a>
                             </div>
                         </div>
                     </div>

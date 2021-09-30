@@ -2,39 +2,14 @@
 
 @section('content')
 
-<div class="container-fluid">
-    <div class="">
-        <nav class="nav-bar navbar navbar-expand-lg nav-top">
-            <a class="col-md-1 title-nav"><span>Formation</span></a>
-            <ul class="col-md-5 list-options navbar-nav">
-                <li class="dropdown nav-bar-item">
-                    <a><span>Type de formation</span></a>
-                    <i class="fas fa-chevron-down"></i>
-                </li>
-                <li class="dropdown nav-bar-item">
-                    <a><span>Formation</span></a>
-                    <i class="fas fa-chevron-down"></i>
-                </li>
-                <li class="dropdown nav-bar-item">
-                    <a><span>Structure de formation</span></a>
-                    <i class="fas fa-chevron-down"></i>
-                </li>
-                <li class="dropdown nav-bar-item">
-                    <a><span>Localites</span></a>
-                    <i class="fas fa-chevron-down"></i>
-                </li>
-            </ul>
-            <br>
-        </nav>
-    </div>
-</div>
+<livewire:top-navbar-formation />
 
 <div id="header-filiere">
     <div class="row">
         <div class="col-10">
             <div class="m-4">
                 <h1 class="text-capitalize header-title">
-                    <a href="#presentation-filiere" style="color: #deb857;">{{$formation->libelle}}</a>
+                    <a href="#presentation-filiere" style="color: #fff;font-family: 'Gelasio', serif;">{{$formation->libelle}}</a>
                 </h1>
             </div>
             <div class="m-4">
@@ -63,10 +38,6 @@
                     <li class="breadcrumb-item active" aria-current="page">{{$formation->libelle}}</li>
                 </ol>
             </nav>
-            <button class="btn btn-xs btn-save m-0 col-md-2">
-                <i class="fas fa-plus-square"></i>
-                Enregistrer
-            </button>
         </div>
     </div>
 
@@ -92,6 +63,7 @@
                         </button>
                     </div>
                 </div>
+                @if(count($formation->Structure)>0)
                 @if($formation->Structure[0]->conditionAccess->count() > 1)
                 <div class="row py-3 d-flex justify-content-center content-structure-formation">
                     <div class="item-condition-access d-flex justify-content-center col-4" style="margin-right: 13px;">
@@ -138,6 +110,29 @@
                 </div>
                 @else
                 @endif
+                @else
+                <div class="row py-3 d-flex justify-content-center content-structure-formation">
+                    <div class="item-condition-access d-flex justify-content-center col-4" style="margin-right: 13px;">
+                        <div class="card col-12 card-condition-access">
+                            <div class="card-body p-2 ">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="decor-img-condition mx-3 d-flex flex-row justify-content-center">
+                                            <div style="background-color: white; border-radius: 100px;">
+                                                <img class="img img-condition" height="40px" src="../images/bg2.jpg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-9">
+                                        <span style=" text-transform: uppercase;font-size: 13px;line-height: 10px;font-weight:bold;">Aucune condition</span>
+                                        <p>Aucune condition pour le moment</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endif
             </div>
 
             <div class="d-flex flex-column justify-content-center" style="align-items: center;opacity: .5;">
@@ -159,6 +154,7 @@
             </div>
 
             <div class="row py-2 d-flex justify-content-center content-structure-formation">
+                @if(count($structures) > 0)
                 @forelse($structures as $structure)
                 <div class="col-3">
                     <div class="item-structure-formation tooltip2 d-flex justify-content-center">
@@ -227,6 +223,29 @@
                 </div>
                 @empty
                 @endforelse
+                @else
+                <div class="col-3">
+                    <div class="item-structure-formation tooltip2 d-flex justify-content-center">
+                        <div class="card col-12 card-structure-formation">
+                            <div class="card-body d-flex flex-column justify-content-between p-2">
+                                <a class="row">
+                                    <div class="col-3">
+                                        <div class="decor-img-condition mx-2 d-flex flex-row justify-content-center">
+                                            <div style="background-color: white; border-radius: 100px;">
+                                                <img class="img img-condition" height="40px" src="../images/bg2.jpg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-9">
+                                        <span style=" text-transform: uppercase;font-size: 13px;line-height: 10px;font-weight:bold;">Vide !!</span>
+                                        <p class="m-0">Aucune structure de formation pour le moment !!!</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endif
             </div>
 
             <div class="d-flex flex-column justify-content-center" style="align-items: center;opacity: .5;">

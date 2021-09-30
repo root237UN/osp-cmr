@@ -28,15 +28,8 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/header.css') }}" rel="stylesheet">
     <style>
-        .container-header {
-            max-width: 1600px;
-            width: 100%;
-            padding-left: 5%;
-            padding-right: 5%;
-            margin-left: auto;
-            margin-right: auto;
-        }
 
         .logo-welcome {
             text-align: center;
@@ -307,13 +300,16 @@
                 .card-cover:hover .decor-card {
                     border: 20px solid #38c17205;
                 }
+                .card-header{
+                    font-family: 'Gelasio', serif;
+                }
             </style>
 
             <section id="platform-highlights" class="bg-light">
                 <div class="container">
                     <div class="row">
                         <div class="d-flex justify-content-center mb-5">
-                            <h1 class="col-8 text-capitalize text-center" style="font-weight: 700;">Un guide pour un avenir meilleur</h1>
+                            <h1 class="col-8 text-capitalize text-center" style="font-family: 'Gelasio', serif;">Un guide pour un avenir meilleur</h1>
                         </div>
                     </div>
                     <div class="d-flex justify-content-center">

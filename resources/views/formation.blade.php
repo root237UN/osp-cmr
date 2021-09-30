@@ -79,15 +79,6 @@
         font-family: "Trebuchet MS", Helvetica, sans-serif;
     }
 
-    .title-type {
-        font-size: x-large;
-        font-weight: bold;
-        line-height: 25px;
-        font-family: monospace, Cochin, Georgia, Times, 'Times New Roman', serif;
-        text-align: center;
-        text-shadow: #323a2f52 5px 10px 7px;
-    }
-
     .card-parcours {
         transition: all ease-in-out 300ms;
         border: none;
@@ -130,7 +121,7 @@
         font-size: 15px;
         line-height: 1.5rem;
     }
-    
+
 </style>
 
 <section class="bg-cover">
@@ -140,15 +131,16 @@
                 <img class="img img-thumbnail m-2" src="../images/bg3.jpg" style="border-radius:50%;border:none" />
             </div>
             <div class="col-8" id="description">
-                <h2 class="my-2 py-4  d-flex justify-content-start" style="align-items: center;">
-                    <span class="text-uppercase m-2 title-type">{{$formation->libelle}}</span>
+                <h2 class="my-2 py-4  d-flex justify-content-start">
+                    <span class="text-uppercase m-2 title-type" style="text-align: center;">{{$formation->libelle}}</span>
                 </h2>
                 <p class="text-description col-md-12 py-2">{{$formation->description_full}}</p>
                 <div class="line-infos d-flex justify-content-between">
                     <a class="link-parcours" href="{{route('formation.all',['code' => $formation->code])}}">Decouvrez les formations</a>
-                    <a class="link-ensavoir" href="{{ route('formation.infos',['code' => $formation->code]) }}">En savoir plus!</a>
+                    <a class="link-ensavoir" href="#">En savoir plus!</a>
                 </div>
                 <hr>
+                <p style="font-style: italic;font-family: 'Gelasio', serif;color:#fff;">Des questions. Posez les ici !!!</p>
             </div>
             <div class="col-8 d-flex justify-content-end" style="z-index: 10;">
                 <a id="arrow-down" href="#content-parcours">

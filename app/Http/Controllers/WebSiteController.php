@@ -22,18 +22,18 @@ class WebSiteController extends Controller
         return view('welcome');
     }
 
-    public function orientation()
+    public function enseignement()
     {
         $type_enseignements =  TypeEnseignement::all();
         $type_formation = TypeFormation::all();
 
-        return view('orientation', ['type_enseignements' => $type_enseignements, "type_formations" => $type_formation]);
+        return view('enseignement/presentation', ['type_enseignements' => $type_enseignements, "type_formations" => $type_formation]);
     }
 
     public function showTypeEnseignement($code)
     {
         $type = TypeEnseignement::where('code', '=', $code)->firstorfail();
-        return view('types',['type' => $type]);
+        return view('enseignement/types',['type' => $type]);
     }
 
     public function showFormation(Request $request)
@@ -71,22 +71,22 @@ class WebSiteController extends Controller
     public function showParcours($code)
     {
         $option = optionEnseignement::where('code', '=', $code)->firstorfail();
-        return view('parcours',['option' => $option]);
+        return view('enseignement/parcours',['option' => $option]);
     }
 
     public function formation()
     {
-        return view('formation');
+        return view('formation/view');
     }
 
     public function structure()
     {
-        return view('structure');
+        return view('structure/view');
     }
 
     public function etablissement()
     {
-        return view('etablissement/presentation');
+        return view('etablissement/view');
     }
 
     public function contact()
@@ -109,7 +109,7 @@ class WebSiteController extends Controller
     {
         $section = sectionEnseignement::findorFail(intval($code));
         $cycles = cycleEnseignement::all();
-        return view('section', ['section' => $section, 'cycles'=>$cycles]);
+        return view('enseignement/section', ['section' => $section, 'cycles'=>$cycles]);
         //dd($section);
     }
 
@@ -125,7 +125,7 @@ class WebSiteController extends Controller
         $localites = Localite::all();
 
         $filieres = filiereEnseignement::where('cycle_enseignement_id',$id_cycle)->where('section_enseignement_id',$id_section)->paginate(10);
-        return view('filiere/presentation', ["section" => $section, "cycle" =>$cycle, "filieres" =>$filieres, "localites" =>$localites ]);
+        return view('filiere/view', ["section" => $section, "cycle" =>$cycle, "filieres" =>$filieres, "localites" =>$localites ]);
         //dd($filieres);
     }
 
@@ -137,8 +137,8 @@ class WebSiteController extends Controller
 
 
     /** Enseignement */
-    public function enseignement()
+    public function orientation()
     {
-        return view('enseignement/presentation');
+        return view('orientation/presentation');
     }
 }

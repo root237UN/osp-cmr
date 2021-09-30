@@ -1,0 +1,188 @@
+/**Stylee rechercher */
+.rechercher-parcours {
+    background-color:#243a5e;
+    max-width: 500px;
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px 0 15px 0 !important;
+}
+
+.title-rechercher {
+    font-size: 17px;
+text-transform: uppercase;
+margin-bottom: 15px;
+text-align: center;
+color: #fff;
+font-family: 'Gelasio', serif;
+}
+
+.rechercher-header {
+    background-color: #243a5e;
+    padding: 35px 40px 0px 40px !important;
+}
+
+.rechercher-header p {
+    line-height: 22px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff !important;
+    font-family: 'Gelasio', serif;
+    text-align: center;
+    font-style: italic;
+}
+
+.rechercher-body {
+    background-color: #fff;
+    min-height: 100px;
+    padding: 10px;
+}
+
+.rechercher-body .content p {
+    font-size: 15px;
+    font-weight: 700;
+    font-style: italic;
+    opacity: 0.9;
+    font-family: monospace;
+}
+
+input[name='metier'] {
+    border: 0 !important;
+    box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-item {
+    min-height: 90vh;
+    background-color: transparent;
+    position: relative;
+}
+
+.left-part {
+    position: absolute;
+    top: 90px;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: none;
+    border: 0;
+    opacity: 1;
+    left: 20px;
+    top: 10px;
+    transition: opacity 0.15s ease;
+}
+
+#item-actualite {
+    margin-left: 25%;
+    position: relative;
+    top: 100px;
+    min-height: 250px;
+}
+
+.header-actualites {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    top: 0px;
+    right: 0;
+    left: 0;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+.item-actualite{
+    position: relative;
+    top: 100px;
+}
+
+.title-header-actualite{
+    color: #242738;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 30px;
+    font-style: italic;
+    font-size: 22px;
+        font-family: 'Gelasio', serif;
+}
+
+.divider {
+    width: 15%;
+    height: 3px !important;
+    color: #38c172;
+    text-align: center;
+}
+
+p.text-description-actualite {
+    font-weight: 200;
+    font-style: italic;
+    font-size: 17.4px;
+    text-align: left;
+    opacity: .8;
+    line-height: 2rem;
+    color: #243a5e;
+}
+
+    .text-actualite {
+        font-size: x-large;
+        font-weight: bold;
+        line-height: 25px;
+        font-family: monospace, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-align: center;
+        text-shadow: #323a2f52 5px 10px 7px;
+    }
+
+    a.lire-actualite{
+        color: #38c172;
+        font-size: 26px;
+        text-transform: capitalize;
+        text-decoration: none;
+        font-style: italic;
+        cursor: pointer;
+    }
+
+    .lire-actualite::after {
+        content: "";
+        display: inline-block;
+        margin-left: 0.2em;
+        will-change: transform;
+        transition: transform 0.15s linear 0s;
+    }
+/**Stylee rechercher */
+
+#actualites-onglet {
+    min-height: 90vh;
+    position: relative;
+    overflow: hidden;
+    background-color: #f8fafc;
+}
+
+#actualites-onglet .service-bg {
+    width: 250px;
+    padding: 55px;
+    position: absolute;
+    top: -10px;
+    right: -100px;
+    background-color: rgb(243 244 243);
+    transform: rotate(55deg);
+    -o-transform: rotate(55deg);
+    -ms-transform: rotate(55deg);
+    -moz-transform: rotate(55deg);
+    -webkit-transform: rotate(55deg);
+}
+
+#actualites-onglet .service-bg-50 {
+    width: 210px;
+    padding: 35px;
+    position: absolute;
+    top: -10px;
+    right: -100px;
+    opacity: 0.6;
+    background-color: rgb(243 244 243);
+    transform: rotate(55deg);
+    -o-transform: rotate(55deg);
+    -ms-transform: rotate(55deg);
+    -moz-transform: rotate(55deg);
+    -webkit-transform: rotate(55deg);
+}

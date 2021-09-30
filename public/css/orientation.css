@@ -7,7 +7,6 @@
     #orientations-types {
         /*padding-bottom: max(60vh, 200px);
         min-height: 100px;*/
-        background-image: url(images/bg-section.png);
     }
 
     #orientations-types h1 {
@@ -38,7 +37,7 @@
 
     .card-image {
         min-height: 150px;
-        border-radius: 15px 0 15px 0 !important;
+        border-radius: 13px 0 13px 0 !important;
     }
 
     .btn-discover {
@@ -68,7 +67,7 @@
         margin-left: 3px;
         text-indent: -999px;
         cursor: pointer;
-        background-color: #000;
+        background-color: #fff;
         background-clip: padding-box;
         border: 0;
         border-top: 10px solid transparent;
@@ -80,11 +79,11 @@
     .description-header-type {}
 
     .title-type {
-        font-size: 17px;
-        font-weight: bold;
+        font-size: x-large;
         line-height: 25px;
-        font-family: monospace, Cochin, Georgia, Times, 'Times New Roman', serif;
-        text-align: center;
+        text-align: left;
+        font-family: 'Gelasio', serif;
+        text-shadow: #323a2f52 5px 10px 7px;
     }
 
     .description-type {
@@ -102,6 +101,7 @@
         overflow: hidden;
         height: 90hv;
         position: relative;
+        background-color: #fff;
     }
 
     .service-bg {
@@ -120,11 +120,11 @@
 
     .title-orientations {
         color: #242738;
-        font-weight: 700;
         text-align: center;
         text-transform: uppercase;
         margin-top: 0px;
         font-style: italic;
+        font-family: 'Gelasio', serif;
     }
 
     .title-orientation-item {
@@ -143,14 +143,14 @@
     }
 
     .text-orientation {
-        color: #000;
-        font-weight: 200;
+        color: #fff;
         font-style: italic;
         text-align: left;
-        opacity: .8;
+        opacity: 1;
         line-height: 2rem;
         padding-left: 0px;
         max-height: 100px;
+        font-family: 'Gelasio', serif;
     }
 
     /**Style pour les formations */

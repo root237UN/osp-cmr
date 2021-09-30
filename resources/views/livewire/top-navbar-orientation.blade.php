@@ -9,7 +9,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 px-4 mx-auto mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{{ route('orientation') }}">Orientation</a>
+                    <a class="nav-link" aria-current="page" href="#">Orientation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('enseignement')}}">Enseignement</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('formation') }}">Formation</a>
@@ -21,12 +24,14 @@
                     <a class="nav-link" href="{{ route('etablissement') }}">Etablissement</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('contact') }}">Contact</a>
+                    <a class="nav-link" href="#">Contact</a>
                 </li>
             </ul>
 
             <form class="d-flex">
-                <button class="btn btn-outline-success text-white btn-connect" type="submit">Connexion</button>
+                <a class="btn btn-outline-success text-white btn-success btn-connect" type="button" href="{{route('login')}}">
+                    <span style="font-family: 'Gelasio', serif;font-style:italic;">Connexion</span>
+                </a>
             </form>
         </div>
     </div>
