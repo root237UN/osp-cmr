@@ -136,7 +136,7 @@
                 </h2>
                 <p class="text-description col-md-12 py-2">{{$formation->description_full}}</p>
                 <div class="line-infos d-flex justify-content-between">
-                    <a class="link-parcours" href="{{route('formation.all',['code' => $formation->code])}}">Decouvrez les formations</a>
+                    <a class="link-parcours" href="#">Decouvrez les formations</a>
                     <a class="link-ensavoir" href="#">En savoir plus!</a>
                 </div>
                 <hr>

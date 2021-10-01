@@ -102,7 +102,7 @@
                                             <p class="description-formation">@if($formation->description == NULL)Description de la formation ... @else{{$formation->description}}@endif</p>
                                         </div>
                                         <h3 class="mt-2 libelle-formation">{{$formation->libelle}}</h3>
-                                        <p class="diplome-formation">@if($formation->diplome){{$formation->diplome->libelle}} @else 2 Certificats associe !!! @endif</p>
+                                        <p class="diplome-formation">@if($formation->Diplome){{$formation->Diplome->libelle}} @else 2 Certificats associe !!! @endif</p>
                                     </div>
                                     <div class="card-formation-content">
                                         <button class="btn btn-xs my-1">@if($formation->Structure){{$formation->Structure->count()}} structures de formations @else Vide !!! @endif</button>
@@ -124,8 +124,8 @@
                                             $c = 0;
                                             if ($formation->Structure) {
                                                 foreach ($formation->Structure as $structure) {
-                                                    if ($structure->conditionAccess) {
-                                                        $c += count($structure->conditionAccess);
+                                                    if ($structure->ConditionAccess) {
+                                                        $c += count($structure->ConditionAccess);
                                                     }
                                                 }
                                                 echo $c . " Condition d'access ";

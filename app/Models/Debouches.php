@@ -9,8 +9,8 @@ class Debouches extends Model
 {
     use HasFactory;
 
-    public function filiereEnseignement()
+    public function FiliereEnseignement()
     {
-        return $this->belongsToMany(filiereEnseignement::class);
+        return $this->belongsToMany(FiliereEnseignement::class);
     }
 }

@@ -9,7 +9,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 px-4 mx-auto mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Orientation</a>
+                    <a class="nav-link" aria-current="page" href="#">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Orientation</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('enseignement')}}">Enseignement</a>

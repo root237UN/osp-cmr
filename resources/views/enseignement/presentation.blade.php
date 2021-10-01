@@ -34,7 +34,13 @@
 
     <link href="{{ asset('css/search.css') }}" rel="stylesheet">
 
-
+    <style>
+        .btn-check:focus+.btn,
+        .btn:focus {
+            outline: 0;
+            box-shadow: 0 0 0 0.1rem rgb(56 193 114 / 6%);
+        }
+    </style>
 </head>
 
 <body>
@@ -53,13 +59,13 @@
                             <div id="orientations-types">
                                 <div id="orientations-types__cards" class="container">
                                     <div class="row d-flex py-3 mb-2 px-0 justify-content-center">
-                                        <div class="col-6">
-                                            <h2 class="text-orientation text-center">Choisissez <span  style="font-weight: bold;">un enseignement ...</span></h2>
+                                        <div class="col-8">
+                                            <h2 class="text-orientation text-center">Choisissez <span style="font-weight: bold;">une catégorie d’enseignement ...</span></h2>
                                         </div>
                                     </div>
                                     <div class="row d-flex justify-content-center px-3">
                                         @forelse($type_enseignements as $type)
-                                        <div class="card-cover item card shadow-sm col-4 card-enseignement" data-aos="flip-left">
+                                        <a href="{{ route('enseignement.view', ['code' => $type->code ])}}" class="card-cover item card shadow-sm col-4 mr-3 card-enseignement" style="margin-right: 20px;margin-left:20px;" data-aos="flip-left">
                                             @if($type->id % 2 != 0)
                                             <div class="row p-2 card-image description-header-type" style="background-color: #dfdfdf;align-items:center;">
                                                 <div class="col-4 d-flex justify-content-center ">
@@ -81,11 +87,11 @@
                                             @endif
                                             <p class="card-body card-text text-decoration-none description-type">{{$type->description}}</p>
                                             <div class="d-flex justify-content-center">
-                                                <a href="{{ route('enseignement.view', ['code' => $type->code ])}}" class="btn text-dark col-5 p-2 btn-sm rounded-5 text-uppercase btn-discover mb-5">
+                                                <button class="btn text-dark col-5 p-2 btn-sm rounded-5 text-uppercase btn-discover mb-4">
                                                     Decouvrir
-                                                </a>
+                                                </button>
                                             </div>
-                                        </div>
+                                        </a>
                                         @empty
                                         <div class="alert alert-warning">
                                             <span>Aucune donnee !!!</span>
@@ -103,14 +109,14 @@
                             <div id="orientations-types">
                                 <div id="orientations-types__cards" class="container">
                                     <div class="row d-flex py-3 mb-2 px-0 justify-content-center">
-                                        <div class="col-6">
-                                            <h2 class="text-orientation text-center">Choisissez <span class="" style="font-weight: bold;">une formation ...</span></h2>
+                                        <div class="col-8">
+                                            <h2 class="text-orientation text-center">Choisissez <span class="" style="font-weight: bold;"> catégorie de formation ...</span></h2>
                                         </div>
                                     </div>
 
                                     <div class="row d-flex justify-content-center px-3">
                                         @forelse($type_formations as $type_formation)
-                                        <div class="card-cover item card shadow-sm col-4 card-enseignement" data-aos="flip-left">
+                                        <a href="{{ route('formation.show', ['code' => $type_formation->code])}}" class="card-cover item card shadow-sm col-4 card-enseignement" data-aos="flip-left">
                                             @if($type_formation->id % 2 == 0)
                                             <div class="row p-2 card-image description-header-type" style="background-color: #dfdfdf;align-items:center;">
                                                 <div class="col-4 d-flex justify-content-center ">
@@ -132,11 +138,11 @@
                                             @endif
                                             <p class="card-body card-text text-decoration-none description-type">{{$type_formation->description}}</p>
                                             <div class="d-flex justify-content-center">
-                                                <a href="{{ route('formation.show', ['code' => $type_formation->code])}}" class="btn text-dark col-5 p-2 btn-sm rounded-5 text-uppercase btn-discover mb-5">
+                                                <button class="btn text-dark col-5 p-2 btn-sm rounded-5 text-uppercase btn-discover mb-5">
                                                     Decouvrir
-                                                </a>
+                                                </button>
                                             </div>
-                                        </div>
+                                        </a>
                                         @empty
                                         <div class="alert alert-warning">
                                             <span>Aucune donnee !!!</span>
@@ -172,7 +178,7 @@
             <div class="header-actualites">
                 <div class="service-bg"></div>
                 <div class="row" style="justify-content: center;">
-                    <h2 class="title-header-actualite">Actualites  enseignements</h2>
+                    <h2 class="title-header-actualite">Actualites enseignements</h2>
                     <hr class="divider">
                 </div>
             </div>

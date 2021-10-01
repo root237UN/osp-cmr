@@ -5,18 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class cycleEnseignement extends Model
+class CycleEnseignement extends Model
 {
     use HasFactory;
 
-    public function conditionAccess()
+    public function ConditionAccess()
     {
         return $this->morphMany(ConditionAccess::class, 'table');
     }
 
-    public function filiereEnseignement()
+    public function FiliereEnseignement()
     {
-        return $this->hasMany(filiereEnseignement::class);
+        return $this->hasMany(FiliereEnseignement::class);
     }
 
 }

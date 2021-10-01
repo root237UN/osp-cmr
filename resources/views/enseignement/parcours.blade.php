@@ -83,7 +83,7 @@
     .card-parcours {
         transition: all ease-in-out 300ms;
         border: none;
-        min-height: 250px;
+        min-height: 380px;
         margin: 10px;
         background-color: #fff;
         background: linear-gradient(45deg, #f3f4f3, #f3f4f3);
@@ -186,15 +186,16 @@
 
     .title-parcours {
         color: #000000;
-    text-transform: uppercase;
-    font-size: 13px;
-    font-weight: bold;
-    font-style: normal;
-    text-align: left;
-    padding-left: 12px;
-    margin-left: -40px;
-    line-height: 1.2rem;
-    font-family: 'Gelasio', serif;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-style: normal;
+        text-align: left;
+        padding-left: 12px;
+        margin-left: -40px;
+        line-height: 1.2rem;
+        font-family: 'Gelasio', serif;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 
     .description-parcours {
@@ -227,17 +228,29 @@
     .card-header-1 {
         background-color: #f2d9e3;
     }
+    .card-header-5 * {
+        color: #243a5e  !important;
+    }
 
     .card-header-2 {
-        background-color: #f2e8d9;
+        background-color: #deb857;
+    }
+    .card-header-2 * {
+        color: #243a5e  !important;
     }
 
     .card-header-3 {
-        background-color: rgba(106, 214, 216, 0.9);
+        background-color: rgb(56 193 114);
+    }
+    .card-header-3 * {
+        color: #243a5e  !important;
     }
 
     .card-header-4 {
-        background-color: #c5fff4;
+        background-color: #243a5e;
+    }
+    .card-header-4 * {
+        color: #fff !important;
     }
 
     .card-header-5 {
@@ -261,7 +274,7 @@
             </div>
             <div class="col-8" id="description">
                 <h2 class="my-2 py-4  d-flex justify-content-start" style="align-items: center;">
-                    <span class="text-uppercase m-2 title-type">{{$option->libelle}}</span>
+                    <span class="text-uppercase title-type">{{$option->libelle}}</span>
                 </h2>
                 <p class="text-description col-md-12 py-2">{{$option->description_full}}</p>
                 <div class="line-infos d-flex justify-content-between">
@@ -288,7 +301,7 @@
         </div>
 
         <div class="row d-flex justify-content-center" id="parcours">
-            @forelse($option->sectionEnseignement as $parcours)
+            @forelse($option->SectionEnseignement as $parcours)
 
             <div class="col-4">
                 <a class="card card-cover card-parcours" href="{{ route('section',  ['code' => $parcours->id ]) }}">
@@ -309,13 +322,13 @@
                                         <ul class="list-group">
                                             <?php
                                             $tab = [];
-                                            $tab = $parcours->filiereEnseignement;
+                                            $tab = $parcours->FiliereEnseignement;
                                             $i = 0;
                                             if (count($tab) > 0) {
                                                 foreach ($tab as $filiere) {
-                                                    $i+=1;
+                                                    $i += 1;
                                                     echo "<li class='item'><i class='fas fa-check' style='margin-right:3px;font-size: 10px;'></i>" . $filiere->libelle . "</li>";
-                                                    if($i == 3) break;
+                                                    if ($i == 3) break;
                                                 }
                                             } else {
                                                 echo "<li>Aucune filiere !!!</li>";

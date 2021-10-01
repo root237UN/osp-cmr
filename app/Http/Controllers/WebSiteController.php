@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\cycleEnseignement;
-use App\Models\filiereEnseignement;
-use App\Models\optionEnseignement;
-use App\Models\sectionEnseignement;
+use App\Models\CycleEnseignement;
+use App\Models\FiliereEnseignement;
+use App\Models\OptionEnseignement;
+use App\Models\SectionEnseignement;
 use App\Models\TypeEnseignement;
 use Illuminate\Http\Request;
 use App\Models\TypeFormation;
 use App\Models\Localite;
 use App\Models\Structure;
 use App\Models\Formation;
-
+use App\Models\MenuVisite;
+use App\Models\StructureInsertionPro;
 
 class WebSiteController extends Controller
 {
@@ -70,7 +71,7 @@ class WebSiteController extends Controller
 
     public function showParcours($code)
     {
-        $option = optionEnseignement::where('code', '=', $code)->firstorfail();
+        $option = OptionEnseignement::where('code', '=', $code)->firstorfail();
         return view('enseignement/parcours',['option' => $option]);
     }
 
@@ -79,9 +80,11 @@ class WebSiteController extends Controller
         return view('formation/view');
     }
 
-    public function structure()
+    public function viewMenuStructure()
     {
-        return view('structure/view');
+        $menuStructure = MenuVisite::where('titre',"Structure d'aide")->firstorfail();
+        $structures = StructureInsertionPro::all();
+        return view('structure/view',['menu' => $menuStructure, 'structures' => $structures]);
     }
 
     public function etablissement()
@@ -99,16 +102,11 @@ class WebSiteController extends Controller
         return view('teacher');
     }
 
-    public function dev()
-    {
-        return view('dev');
-    }
-
     /** Rendu des sections pour chaque option d'enseignement */
     public function section($code)
     {
-        $section = sectionEnseignement::findorFail(intval($code));
-        $cycles = cycleEnseignement::all();
+        $section = SectionEnseignement::findorFail(intval($code));
+        $cycles = CycleEnseignement::all();
         return view('enseignement/section', ['section' => $section, 'cycles'=>$cycles]);
         //dd($section);
     }
@@ -119,19 +117,19 @@ class WebSiteController extends Controller
         $id_cycle = intval($request->cycle);
         $id_section = intval($request->section);
 
-        $section = sectionEnseignement::findorFail($id_section);
-        $cycle = cycleEnseignement::findorFail($id_cycle);
+        $section = SectionEnseignement::findorFail($id_section);
+        $cycle = CycleEnseignement::findorFail($id_cycle);
 
         $localites = Localite::all();
 
-        $filieres = filiereEnseignement::where('cycle_enseignement_id',$id_cycle)->where('section_enseignement_id',$id_section)->paginate(10);
+        $filieres = FiliereEnseignement::where('cycle_enseignement_id',$id_cycle)->where('section_enseignement_id',$id_section)->paginate(10);
         return view('filiere/view', ["section" => $section, "cycle" =>$cycle, "filieres" =>$filieres, "localites" =>$localites ]);
         //dd($filieres);
     }
 
     public function showFiliere(Request $request)
     {
-        $filiere = filiereEnseignement::find(intval($request->code));
+        $filiere = FiliereEnseignement::find(intval($request->code));
         return view('filiere/detail', ["filiere" => $filiere]);
     }
 

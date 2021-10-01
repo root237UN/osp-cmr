@@ -5,46 +5,46 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class filiereEnseignement extends Model
+class FiliereEnseignement extends Model
 {
     use HasFactory;
 
-    public function diplome()
+    public function Diplome()
     {
-        return $this->hasOne(diplome::class);
+        return $this->hasOne(Diplome::class);
     }
 
-    public function sectionEnseignement()
+    public function SectionEnseignement()
     {
-        return $this->belongsTo(sectionEnseignement::class);
+        return $this->belongsTo(SectionEnseignement::class);
     }
 
-    public function cycleEnseignement()
+    public function CycleEnseignement()
     {
-        return $this->belongsTo(cycleEnseignement::class);
+        return $this->belongsTo(CycleEnseignement::class);
     }
 
-    public function enseignements()
+    public function Enseignements()
     {
         return $this->hasMany(EnseignementProfessionnel::class);
     }
 
-    public function competences()
+    public function Competences()
     {
         return $this->hasMany(CompetenceProfessionnelle::class);
     }
 
-    public function metiers()
+    public function Metiers()
     {
         return $this->belongsToMany(Metiers::class);
     }
 
-    public function debouches()
+    public function Debouches()
     {
         return $this->belongsToMany(Debouches::class);
     }
 
-    public function conditionAccess()
+    public function ConditionAccess()
     {
         return $this->morphMany(ConditionAccess::class, 'table');
     }

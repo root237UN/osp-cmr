@@ -64,7 +64,7 @@
                     </div>
                 </div>
                 @if(count($formation->Structure)>0)
-                @if($formation->Structure[0]->conditionAccess->count() > 1)
+                @if($formation->Structure[0]->ConditionAccess->count() > 1)
                 <div class="row py-3 d-flex justify-content-center content-structure-formation">
                     <div class="item-condition-access d-flex justify-content-center col-4" style="margin-right: 13px;">
                         <div class="card col-12 card-condition-access">
@@ -79,7 +79,7 @@
                                     </div>
                                     <div class="col-9">
                                         <span style=" text-transform: uppercase;font-size: 13px;line-height: 10px;font-weight:bold;">Conditon 1</span>
-                                        <p>{{$formation->Structure[0]->conditionAccess[0]->libelle}}</p>
+                                        <p>{{$formation->Structure[0]->ConditionAccess[0]->libelle}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -101,7 +101,7 @@
                                     </div>
                                     <div class="col-9">
                                         <span style=" text-transform: uppercase;font-size: 13px;line-height: 10px;font-weight:bold;">Conditon 2</span>
-                                        <p>{{$formation->Structure[0]->conditionAccess[1]->libelle}} </p>
+                                        <p>{{$formation->Structure[0]->ConditionAccess[1]->libelle}} </p>
                                     </div>
                                 </div>
                             </div>
@@ -164,8 +164,8 @@
                                 <ul class="list-description-ecole">
                                     <?php
                                     $txt = "";
-                                    if (count($structure->conditionAccess) > 0) {
-                                        echo "<li>" . count($structure->conditionAccess) . " condition d'access</li>";
+                                    if (count($structure->ConditionAccess) > 0) {
+                                        echo "<li>" . count($structure->ConditionAccess) . " condition d'access</li>";
                                     } else {
                                         echo "<li>Aucune condition  !!!</li>";
                                     }

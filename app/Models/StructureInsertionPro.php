@@ -5,12 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Metiers extends Model
+class StructureInsertionPro extends Model
 {
     use HasFactory;
-
-    public function FiliereEnseignement()
+    public function Programmes()
     {
-        return $this->belongsToMany(FiliereEnseignement::class);
+        return $this->hasMany(ProgrammeInsertionPro::class);
     }
 }

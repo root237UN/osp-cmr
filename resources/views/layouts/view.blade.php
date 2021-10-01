@@ -199,11 +199,13 @@
                     <div class="col-6" data-aos="zoom-in-down">
                         <div id="banner-text">
                             <div>
-                                <h1 style="text-transform: capitalize;">La meilleure plateforme<br>d'aide a l'orientation</h1>
-                                <p style="text-align: justify;" class="p body">Une plateforme concue pour palier au deficite de conseillers d'orientation au sein de nos institutions scolaire et professionnelle enfin de renforcer la prise de decision strategique pour l'accomplissement d'une carriere. </p>
+                                <h1 style="text-transform: capitalize;">La meilleure plateforme d’aide à l’orientation </h1>
+                                <p style="text-align: justify;" class="p body">
+                                Une plateforme conçue pour pallier le déficit de conseillers d’orientation au sein de nos institutions scolaires et professionnelles afin de renforcer la prise de décision stratégique pour l’accomplissement d’une carrière.
+                            </p>
                             </div>
                             <div class="d-flex justify-content-center">
-                                <a id="documentation-link" class="btn btn-success text-light text-uppercase" style="font-weight: bold;" href="{{route('orientation')}}">Orientation <i class="ti-book"></i></a>
+                                <a id="documentation-link" class="btn btn-success text-light text-uppercase" style="font-weight: bold;" href="#">Orientation <i class="ti-book"></i></a>
                             </div>
                         </div>
                     </div>
@@ -309,23 +311,23 @@
                 <div class="container">
                     <div class="row">
                         <div class="d-flex justify-content-center mb-5">
-                            <h1 class="col-8 text-capitalize text-center" style="font-family: 'Gelasio', serif;">Un guide pour un avenir meilleur</h1>
+                            <h1 class="col-8 text-capitalize text-center" style="font-family: 'Gelasio', serif;">Un guide pour un meilleur avenir.</h1>
                         </div>
                     </div>
                     <div class="d-flex justify-content-center">
-                        <h3 class="col-8 text-capitalize text-center" data-aos="zoom-out-down" style="font-weight: 400;">Une plateforme qui vous accompagne en fonction de vos besoins comme un veritable <strong>conseiller</strong>.</h3>
+                        <h3 class="col-8 text-capitalize text-center" data-aos="zoom-out-down" style="font-weight: 400;">Une plateforme qui vous accompagne en fonction des besoins d’avenir pour une meilleure insertion professionnelle </strong>.</h3>
                     </div>
                     <ul>
                         <li class="item card-cover h-100 overflow-hidden rounded-5" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                             <a href="#">
-                                <h4 class="card-header text-capitalize">Decouvrer vos atouts</h4>
+                                <h4 class="card-header text-capitalize">Découvrez vos atouts </h4>
                             </a>
                             <p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda fuga porro vitae distinctio, repellendus dolores sed. Repudiandae eum perferendis corrupti maxime consequuntur vitae qui, dicta nam, explicabo voluptate, recusandae exercitationem. </p>
                             <div class="decor-card"></div>
                         </li>
                         <li class="item card-cover h-100 overflow-hidden rounded-5">
                             <a href="#">
-                                <h4 class="card-header text-capitalize">Evaluez les opportunites</h4>
+                                <h4 class="card-header text-capitalize">Evaluez les opportunités</h4>
                             </a>
                             <p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit officia officiis, neque laborum id impedit incidunt quia corporis ducimus magnam. Adipisci enim a totam, ratione at aperiam libero doloremque dignissimos!</p>
                             <div class="decor-card"></div>
@@ -339,7 +341,7 @@
                         </li>
                         <li class="item  card-cover h-100 overflow-hidden rounded-5" data-aos="zoom-out-right">
                             <a href="#">
-                                <h4 class="card-header text-capitalize">Decouvrez un metier </h4>
+                                <h4 class="card-header text-capitalize">Découvrir un métier</h4>
                             </a>
                             <p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit officia officiis, neque laborum id impedit incidunt quia corporis ducimus magnam. Adipisci enim a totam, ratione at aperiam libero doloremque dignissimos!</p>
                             <div class="decor-card"></div>

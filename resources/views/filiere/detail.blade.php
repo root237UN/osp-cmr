@@ -47,9 +47,9 @@
                 <ol class="breadcrumb my-1">
                     <li class="breadcrumb-item breadcrumb-item-first">Orientation</li>
                     <li class="breadcrumb-item">Enseignement</li>
-                    <li class="breadcrumb-item">{{$filiere->sectionEnseignement->optionEnseignement->libelle}}</li>
-                    <li class="breadcrumb-item">{{$filiere->sectionEnseignement->libelle}}</li>
-                    <li class="breadcrumb-item">{{$filiere->cycleEnseignement->libelle}}</li>
+                    <li class="breadcrumb-item">{{$filiere->SectionEnseignement->OptionEnseignement->libelle}}</li>
+                    <li class="breadcrumb-item">{{$filiere->SectionEnseignement->libelle}}</li>
+                    <li class="breadcrumb-item">{{$filiere->CycleEnseignement->libelle}}</li>
                     <li class="breadcrumb-item active" aria-current="page">{{$filiere->libelle}}</li>
                 </ol>
             </nav>
@@ -76,16 +76,16 @@
                     </div>
                     <div class="d-flex col-10 mx-4 top-infos flex-column justify-content-between">
                         <div>
-                            <h3>{{$filiere->libelle}}</h3>
+                            <h3 style="font-size: 23px;">{{$filiere->libelle}}</h3>
                         </div>
                         <div>
                             <span>Condition d'access</span>
-                            <p>@if(count($filiere->conditionAccess)>0) {{$filiere->conditionAccess[0]->libelle}} @else Aucune condition @endif</p>
+                            <p>@if(count($filiere->ConditionAccess)>0) {{$filiere->ConditionAccess[0]->libelle}} @else Aucune condition @endif</p>
                         </div>
                         <div class="row">
                             <div class="col-10">
                                 <span>Diplome</span>
-                                <p class="text-diplome">{{$filiere->cycleEnseignement->libelle}} / @if($filiere->diplome){{$filiere->diplome->libelle}} @else Aucune diplome !!! @endif</p>
+                                <p class="text-diplome">{{$filiere->CycleEnseignement->libelle}} / @if($filiere->Diplome){{$filiere->Diplome->libelle}} @else Aucune diplome !!! @endif</p>
                             </div>
                             <!--<div class="col-6">
                                 <span>Notation</span>
@@ -119,13 +119,13 @@
                         <div class="tab-content" id="nav-tabContent">
                             <div class="tab-pane fade show active" id="nav-enseignement" role="tabpanel" aria-labelledby="nav-enseignement-tab">
                                 <div class="container">
-                                    <h4 class="title-content-1">@if($filiere->enseignements->count()) Modules d'enseignements professionnels : {{$filiere->enseignements->count()}} @else Aucun module d'enseignement pour le moment !!! @endif</h4>
+                                    <h4 class="title-content-1">@if($filiere->Enseignements->count()) Modules d'enseignements professionnels : {{$filiere->Enseignements->count()}} @else Aucun module d'enseignement pour le moment !!! @endif</h4>
 
                                     <div class="row d-flex justify-content-center">
                                         <div class="col-md-7">
                                             <div class="main-timeline5">
                                                 <!--{{$i=0}}-->
-                                                @forelse($filiere->enseignements as $enseignement)
+                                                @forelse($filiere->Enseignements as $enseignement)
                                                 <div class="timeline">
                                                     <div class="timeline-icon"><span class="year">{{$i+=1}}</span></div>
                                                     <div class="timeline-content">
@@ -146,11 +146,11 @@
 
                             <div class="tab-pane fade" id="nav-debouche" role="tabpanel" aria-labelledby="nav-debouche-tab">
                                 <div class="container">
-                                    <h4 class="title-content-1">@if($filiere->debouches->count()) Debouches : {{$filiere->debouches->count()}} @else Aucune debouchee pour le moment !!! @endif</h4>
+                                    <h4 class="title-content-1">@if($filiere->Debouches->count()) Debouches : {{$filiere->Debouches->count()}} @else Aucune debouchee pour le moment !!! @endif</h4>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="main-timeline12">
-                                                @forelse($filiere->debouches as $debouche)
+                                                @forelse($filiere->Debouches as $debouche)
                                                 @if($debouche->id%2==0)
 
                                                 <div class="col-md-2 col-sm-4 timeline">
@@ -184,7 +184,7 @@
                             <div class="tab-pane fade" id="nav-metier" role="tabpanel" aria-labelledby="nav-metier-tab">
 
                                 <div class="container">
-                                    <h4 class="title-content-1">@if($filiere->metiers->count()>0) Metiers : {{$filiere->metiers->count()}} @else Aucun metier pour le moment !!! @endif</h4>
+                                    <h4 class="title-content-1">@if($filiere->Metiers->count()>0) Metiers : {{$filiere->Metiers->count()}} @else Aucun metier pour le moment !!! @endif</h4>
                                     <div class="row">
                                         <div class="col-md-12">
                                         </div>

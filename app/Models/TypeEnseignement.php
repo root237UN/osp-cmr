@@ -9,8 +9,8 @@ class TypeEnseignement extends Model
 {
     use HasFactory;
 
-    public function optionEnseignements()
+    public function OptionEnseignements()
     {
-        return $this->hasMany(optionEnseignement::class);
+        return $this->hasMany(OptionEnseignement::class);
     }
 }

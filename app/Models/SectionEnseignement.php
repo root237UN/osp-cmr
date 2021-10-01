@@ -5,17 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class sectionEnseignement extends Model
+class SectionEnseignement extends Model
 {
     use HasFactory;
 
-    public function optionEnseignement()
+    public function OptionEnseignement()
     {
-        return $this->belongsTo(optionEnseignement::class);
+        return $this->belongsTo(OptionEnseignement::class);
     }
 
-    public function filiereEnseignement()
+    public function FiliereEnseignement()
     {
-        return $this->hasMany(filiereEnseignement::class);
+        return $this->hasMany(FiliereEnseignement::class);
     }
 }

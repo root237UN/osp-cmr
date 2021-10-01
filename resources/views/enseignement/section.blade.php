@@ -407,7 +407,7 @@
             </div>
             <div class="col-8" id="description">
                 <h2 class="my-2 py-4  d-flex justify-content-start" style="align-items: center;">
-                    <span class="text-uppercase m-2 title-type">{{$section->libelle}}</span>
+                    <span class="text-uppercase title-type">{{$section->libelle}}</span>
                 </h2>
                 <p class="text-description col-md-12 py-2">@if($section->description_full){{$section->description_full}}@else Aucune description pour le moment !!! @endif</p>
                 <div class="line-infos d-flex justify-content-between">
@@ -444,30 +444,30 @@
             @if($cycle->id == 1)
             <div class="col-md-6 p-4 item-cycle item-cycle-1">
                 <div class="cycle left-cycle  p-4">
-            @else
-            <div class="col-md-6 p-4 item-cycle item-cycle-2">
-                <div class="cycle rigth-cycle  p-4">
-                    @endif
-                    <p class="p-3 title-cycle"><span>filieres</span> du @if($cycle->id == 1) premier cycle @else second cycle @endif </p>
-                    <p class="p-3">{{$cycle->conditionAccess[0]->libelle}}</p>
-                    <div class="p-3 d-flex justify-content-center">
-                        <form method="POST" action="{{ route('filiere')}}">
-                            @csrf
-                            <input type="text" value="{{$cycle->id}}" name="cycle" hidden>
-                            <input type="text" value="{{$section->id}}" name="section" hidden>
-                            <button type="submit" class="btn btn-xs btn-success text-white"> decouvrir les filieres</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="decor-cycle-image">
-                    @if($cycle->id == 1)
-                    <img class="img img-fluid" src="../images/bg2.jpg">
                     @else
-                    <img class="img img-fluid" src="../images/bg3.jpg">
-                    @endif
-                </div>
-                <div class="decor-cycle"></div>
-            </div>
+                    <div class="col-md-6 p-4 item-cycle item-cycle-2">
+                        <div class="cycle rigth-cycle  p-4">
+                            @endif
+                            <p class="p-3 title-cycle"><span>filieres</span> du @if($cycle->id == 1) premier cycle @else second cycle @endif </p>
+                            <p class="p-3">{{$cycle->ConditionAccess[0]->libelle}}</p>
+                            <div class="p-3 d-flex justify-content-center">
+                                <form method="POST" action="{{ route('filiere')}}">
+                                    @csrf
+                                    <input type="text" value="{{$cycle->id}}" name="cycle" hidden>
+                                    <input type="text" value="{{$section->id}}" name="section" hidden>
+                                    <button type="submit" class="btn btn-xs btn-success text-white"> decouvrir les filieres</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="decor-cycle-image">
+                            @if($cycle->id == 1)
+                            <img class="img img-fluid" src="../images/bg2.jpg">
+                            @else
+                            <img class="img img-fluid" src="../images/bg3.jpg">
+                            @endif
+                        </div>
+                        <div class="decor-cycle"></div>
+                    </div>
                     @endforeach
                 </div>
             </div>
@@ -479,7 +479,7 @@
                 <div class="col-md-9" id="item-actualite">
                     <div class="col-10" style="margin-left: 50px;" id="description">
                         <h2 class="my-2 py-4  d-flex justify-content-start" style="align-items: center;    font-family: 'Gelasio', serif;">
-                            <span class="text-uppercase m-2 text-actualite">Actualite</span>
+                            <span class="text-uppercase text-actualite">Actualite</span>
                         </h2>
                         <p class="text-description-actualite col-md-12 py-2" style="color: #243a5e;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vero culpa, debitis ducimus atque aliquid beatae modi aut distinctio. Pariatur fugit expedita sit ipsum, quos praesentium maxime accusamus eius repudiandae!</p>
                         <a class="lire-actualite" href="#">Lire l'actualite </a>

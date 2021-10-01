@@ -44,7 +44,7 @@
         color: #ffffff;
         font-weight: 200;
         font-style: italic;
-        font-size: 17.4px;
+        font-size: 14.4px;
         text-align: left;
         opacity: .8;
         line-height: 2rem;
@@ -52,30 +52,25 @@
 
     section.bg-cover img {
         border: 1px solid transparent;
-        height: 250px;
-        width: 250px;
+        height: 60px;
+        width: 60px;
         background-color: whitesmoke;
-        border-radius: 400px;
         opacity: .8;
     }
 
     #description {
         z-index: 10;
+        box-shadow: 0 0 15px rgba(0, 0, 0, .1);
     }
 
     #content-option {
         box-shadow: 0 0 15px rgba(0, 0, 0, .1);
-        background-color: #f8fafc;
-        min-height: 100vh;
-        background-image: url(../images/bg-section.png);
-        background-size: cover;
-        background-position: 50%;
-        background-repeat: no-repeat;
+        background-color: transparent;
+        padding-bottom: 50px;
     }
 
     .title-option {
-        color: #000;
-        font-weight: 200;
+        color: #fff;
         font-style: italic;
         text-align: left;
         opacity: .8;
@@ -85,46 +80,41 @@
         font-family: 'Gelasio', serif;
     }
 
-    .title-type {
-        font-size: x-large;
-        font-weight: bold;
-        line-height: 25px;
-        font-family: monospace, Cochin, Georgia, Times, 'Times New Roman', serif;
-        text-align: center;
-        text-shadow: #323a2f52 5px 10px 7px;
-    }
 
     .card-option {
         transition: all ease-in-out 300ms;
         border: none;
         min-height: 250px;
         width: 300px;
-        margin: 10px;
         text-align: center;
-        background-color: #fff;
-        background: linear-gradient(45deg, #00000096, #38c17252);
-        /*background: linear-gradient(45deg, #56ca87, #56ca87);
-        background: linear-gradient(45deg, #242738, #38c172);*/
+        border: 1px inset #3cad7442;
+    text-align: center;
+    background-color: #f8fafc0f;
     }
 
     .card-option:hover {
 
         box-shadow: 0 5px 20px rgba(0, 0, 0, .15), 0 4px 4px -2px rgba(0, 0, 0, .1) !important;
         opacity: 1;
-        background: linear-gradient(45deg, #38c17252, #00000096);
+        background: linear-gradient(45deg, #38c17252, #38c17252);
         transform: translateY(-5px)scale(1);
     }
 
     .option-text {
-        color: #fff;
-        font-size: 15px;
+        color: #ffffff;
+        font-weight: 200;
+        font-style: italic;
+        font-size: 14.4px;
+        text-align: center;
+        opacity: .8;
+        line-height: 1.5rem;
     }
 
     .option-text::after {
         position: absolute;
         bottom: -20px;
         left: 50%;
-        content: '\e623 Decouvrir';
+        content: 'Decouvrir';
         transform: translateX(-50%);
     }
 
@@ -137,8 +127,6 @@
         padding: 5px 20px;
         font-size: 14px;
         color: #00000096 !important;
-        font-family: themify, Georgia, 'Times New Roman', Times, serif, sans-serif;
-        border: 1px solid rgba(0, 0, 0, .2);
         transition: transform .2s;
         white-space: nowrap;
         font-family: 'Gelasio', serif;
@@ -186,14 +174,11 @@
 </style>
 
 <section class="bg-cover">
-    <div class="container">
+    <div class="container-fluid" style="padding-left:6%;padding-right:6%;">
         <div class="row py-4">
-            <div class="col-4 d-flex justify-content-center" style="align-items: center;" data-aos="zoom-in-down">
-                <img class="img img-thumbnail m-2" src="../images/bg3.jpg" style="border-radius:50%;border:none" />
-            </div>
-            <div class="col-8" id="description">
+            <div class="col-6" id="description">
                 <h2 class="my-2 py-4  d-flex justify-content-start" style="align-items: center;">
-                    <span class="text-uppercase m-2 title-type">{{$type->libelle}}</span>
+                    <span class="title-type" style="font-style: italic;text-transform: capitalize;">{{$type->libelle}}</span>
                 </h2>
                 <p class="text-description col-md-12">{{ $type->description_full }}</p>
                 <div class="line-infos d-flex justify-content-between">
@@ -203,8 +188,40 @@
                 <hr>
                 <p style="font-style: italic;font-family: 'Gelasio', serif;color: #fff;">Des questions. Posez les ici !!!</p>
             </div>
-            <div class="col-8 d-flex justify-content-end" style="z-index: 10;">
-                <a id="arrow-down" href="#options">
+            <div class="col-6 pt-4" id="content-option">
+                <div class="">
+                    <div class="d-flex justify-content-center pt-0 py-3">
+                        <h2 class="title-option">Choisissez <span class="" style="font-weight: bold;">une option ...</span></h2>
+                    </div>
+
+                    <div class="row d-flex justify-content-between" id='options'>
+
+                        @forelse($type->OptionEnseignements as $option)
+                        <div class="col-6 d-flex justify-content-center">
+                            <a class="card card-option rounded-3" href="{{ route('parcours.show', ['code' => $option->code ]) }}">
+                                <div class="card-body">
+                                    <img class="img img-fluid img-option " src="../images/bg2.jpg" />
+                                    <h3 class="py-4">{{$option->libelle}}</h3>
+                                    <p class="option-text">{{$option->description}}</p>
+                                </div>
+                            </a>
+                        </div>
+                        @empty
+                        <div class='row d-flex justify-content-center'>
+                            <div class="col-5 d-flex justify-content-center">
+                                <a class="card card-option rounded-3" style="min-height: 150px;">
+                                    <div class="card-body">
+                                        <h3 class="py-4 mt-4">Aucune option trouvee !!!</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        @endforelse
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 my-4 d-flex justify-content-center" style="z-index: 10;">
+                <a id="arrow-down" href="#actualites-onglet">
                     <i data-feather="arrow-down" class="text-light"></i>
                 </a>
             </div>
@@ -212,7 +229,7 @@
     </div>
 </section>
 
-<section id="content-option">
+<!--<section id="content-option">
     <div class="container">
         <div class="d-flex justify-content-center py-5">
             <h1 class="title-option">Choisissez <span class="" style="font-weight: bold;">une option ...</span></h1>
@@ -243,14 +260,14 @@
             @endforelse
         </div>
     </div>
-</section>
+</section>-->
 
 <section id="actualites-onglet">
     <div class="carousel-inner">
         <div class="carousel-item active">
             <div class="row">
                 <div class="col-md-9" id="item-actualite">
-                    <div class="col-10" style="margin-left: 50px;" id="description">
+                    <div class="col-10" id="description" style="box-shadow: none;margin-left: 50px;">
                         <h2 class="my-2 py-4  d-flex justify-content-start" style="align-items: center;    font-family: 'Gelasio', serif;">
                             <span class="text-uppercase m-2 text-actualite">Actualite</span>
                         </h2>

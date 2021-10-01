@@ -26,7 +26,7 @@
                 <ol class="breadcrumb my-1">
                     <li class="breadcrumb-item breadcrumb-item-first"><a href="{{route('orientation')}}">Orientation</a></li>
                     <li class="breadcrumb-item"><a href="{{route('enseignement')}}">Enseignement</a></li>
-                    <li class="breadcrumb-item"><a href="{{route('orientation')}}">{{$section->optionEnseignement->libelle}}</a></li>
+                    <li class="breadcrumb-item"><a href="{{route('orientation')}}">{{$section->OptionEnseignement->libelle}}</a></li>
                     <li class="breadcrumb-item"><a href="{{route('orientation')}}">{{$section->libelle}}</a></li>
                     <li class="breadcrumb-item active" aria-current="page">{{$cycle->libelle}}</li>
                 </ol>
@@ -135,13 +135,13 @@
                                             <p class="description-formation">@if($filiere->description == NULL)Description de la filiere ... @else{{$filiere->description}}@endif</p>
                                         </div>
                                         <h3 class="mt-2 libelle-formation">{{$filiere->libelle}} ({{$filiere->code}})</h3>
-                                        <p class="diplome-formation">@if($filiere->diplome){{$filiere->diplome->libelle}} @else Aucun diplome associe !!! @endif</p>
+                                        <p class="diplome-formation">@if($filiere->Diplome){{$filiere->Diplome->libelle}} @else Aucun diplome associe !!! @endif</p>
                                     </div>
                                     <div class="card-formation-content row">
-                                        <button class="btn btn-xs my-1">@if($filiere->enseignements){{$filiere->enseignements->count()}} enseignements professionnelles @else Vide !!! @endif</button>
-                                        <button class="btn btn-xs">@if($filiere->competences){{$filiere->competences->count()}} competences techniques @else Vide !!! @endif</button>
-                                        <button class="btn btn-xs">@if($filiere->metier){{$filiere->metier->count()}} metiers ouverts @else Vide !!! @endif</button>
-                                        <button class="btn btn-xs">@if($filiere->debouches){{$filiere->debouches->count()}} opportunites @else Vide !!! @endif</button>
+                                        <button class="btn btn-xs my-1">@if($filiere->Enseignements){{$filiere->Enseignements->count()}} enseignements professionnelles @else Vide !!! @endif</button>
+                                        <button class="btn btn-xs">@if($filiere->Competences){{$filiere->Competences->count()}} competences techniques @else Vide !!! @endif</button>
+                                        <button class="btn btn-xs">@if($filiere->Metier){{$filiere->Metier->count()}} metiers ouverts @else Vide !!! @endif</button>
+                                        <button class="btn btn-xs">@if($filiere->Debouches){{$filiere->Debouches->count()}} opportunites @else Vide !!! @endif</button>
                                     </div>
                                 </a>
                                 <hr style="margin-bottom: 0px;color: #243a5e;">

@@ -11,6 +11,9 @@
     .title-content-1 {
         font-family: 'Mate SC', serif;
     }
+    #list-structure{
+    border: 1px solid red;
+    }
 </style>
 <div class="container-fluid">
     <div class="">
@@ -23,12 +26,12 @@
         <div class="col-12">
             <div class="m-4">
                 <h1 class="text-capitalize header-title">
-                    <a href="#presentation-filiere" style="color: #fff;font-family: 'Gelasio', serif;">Structure d'aide et d'accompagnement</a>
+                    <a href="#presentation-filiere" style="color: #fff;font-family: 'Gelasio', serif;">{{$menu->libelle}}</a>
                 </h1>
             </div>
             <div class="m-4">
                 <p class="header-title-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Feugiat sed lectus vestibulum mattis ullamcorper velit.
+                    {{$menu->description}}
                 </p>
             </div>
         </div>
@@ -45,6 +48,24 @@
                     <li class="breadcrumb-item active" aria-current="page">Structures d’aide à l’insertion professionnelle</li>
                 </ol>
             </nav>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row px-5">
+        <div class="col-3">
+            <div id="filtre-structure">
+                <p>Filtre</p>
+            </div>
+        </div>
+        <div class="col-9">
+            <div id="list-structure">
+                <livewire:search-structure-visitor />
+                <div>
+
+                </div>
+            </div>
+        </div>
         </div>
     </div>
 </section>
