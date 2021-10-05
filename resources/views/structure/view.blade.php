@@ -11,9 +11,6 @@
     .title-content-1 {
         font-family: 'Mate SC', serif;
     }
-    #list-structure{
-    border: 1px solid red;
-    }
 </style>
 <div class="container-fluid">
     <div class="">
@@ -53,19 +50,44 @@
 
     <div class="container-fluid">
         <div class="row px-5">
-        <div class="col-3">
-            <div id="filtre-structure">
-                <p>Filtre</p>
-            </div>
-        </div>
-        <div class="col-9">
-            <div id="list-structure">
-                <livewire:search-structure-visitor />
-                <div>
-
+            <div class="col-3 py-3 px-4">
+                <div id="filtre-structure">
+                    <h3>Filtre</h3>
                 </div>
             </div>
-        </div>
+            <div class="col-9 mt-3">
+                <div id="list-structure">
+                    <livewire:search-structure-visitor />
+                    <div class="row d-flex justify-content-between px-3">
+                        <p class="result-count px-0 my-2">{{$structures->count()}} resultats</p>
+
+                        @forelse($structures as $structure)
+                        @if($structure->Programmes()->count() >=2)
+                        <div class="card card-formation my-2 py-4">
+                            <div class="card-formation-header">
+                                <div class="card-formation-img">
+                                    <img class="img -img-fluid" src="../images/bg2.jpg">
+                                    <p class="description-formation">@if($structure->objectif){{$structure->objectif}} @else Aucun objectif défini pour le moment !!! @endif</p>
+                                </div>
+                            </div>
+                            <div class="card-body px-0">
+                                <p class="libelle-formation mb-0">{{$structure->libelle}}</p>
+                            </div>
+                            <div class="card-footer bg-white d-flex justify-content-end">
+                                <a class="btn btn-xs btn-save">
+                                    <i class="fas fa-plus-square"></i>
+                                    Visiter
+                                </a>
+                            </div>
+                        </div>
+                        @else
+                        @endif
+
+                        @empty
+                        @endforelse
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

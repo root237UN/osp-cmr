@@ -2,7 +2,11 @@
 
 use App\Http\Controllers\SecondaryController;
 use App\Http\Controllers\WebSiteController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
+
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,9 +36,9 @@ Route::get('/structrure/formation/{code}', [SecondaryController::class, 'present
 
 Route::get('/structure', [WebSiteController::class, 'viewMenuStructure'])->name('structure');
 /** Routes pour les sections et les filieres */
-Route::get('/section/{code}',[WebSiteController::class, 'section'])->name('section');
-Route::post('/filiere',[WebSiteController::class, 'filiere'])->name('filiere');
-Route::get('/filiere/{code}',[WebSiteController::class, 'showFiliere'])->name('showFiliere');
+Route::get('/section/{code}', [WebSiteController::class, 'section'])->name('section');
+Route::post('/filiere', [WebSiteController::class, 'filiere'])->name('filiere');
+Route::get('/filiere/{code}', [WebSiteController::class, 'showFiliere'])->name('showFiliere');
 
 /** Routes pour les etablissement proposant des parcours */
 Route::get('/etablissement', [WebSiteController::class, 'etablissement'])->name('etablissement');
@@ -42,18 +46,16 @@ Route::get('/contact', [WebSiteController::class, 'contact'])->name('contact');
 
 Route::get('/orientation', [WebSiteController::class, 'orientation'])->name('orientation');
 
-/** Routes pour les pages en developpement */
-
-Route::get('/dev', [WebSiteController::class, 'dev'])->name('dev');
-
-Auth::routes();
-
-Route::group(['prefix' => 'admin', 'middleware'=>['isAdmin','auth']],function(){
-    Route::get('dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
-    Route::get('profile', [AdminController::class, 'profile'])->name('admin.profile');
-    Route::get('settings', [AdminController::class, 'setting'])->name('admin.settings');
+Route::middleware(['middleware' => 'PreventBackHistory'])->group(function () {
+    Auth::routes();
 });
-Route::group(['prefix' => 'user', 'middleware'=>['isUser', 'auth']],function(){
+
+Route::group(['prefix' => 'admin', 'middleware' => ['isAdmin', 'auth', 'PreventBackHistory']], function () {
+    Route::get('dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+    Route::get('ecole', [AdminController::class, 'ecole'])->name('admin.ecole');
+    Route::get('structure', [AdminController::class, 'structure'])->name('admin.structure');
+});
+Route::group(['prefix' => 'user', 'middleware' => ['isUser', 'auth', 'PreventBackHistory']], function () {
     Route::get('dashboard', [UserController::class, 'index'])->name('user.dashboard');
     Route::get('profile', [UserController::class, 'profile'])->name('user.profile');
     Route::get('settings', [UserController::class, 'setting'])->name('user.settings');

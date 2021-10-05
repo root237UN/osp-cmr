@@ -12,91 +12,121 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <!-- Icons -->
-
-    <script src="https://unpkg.com/feather-icons"></script>
-
-    <!-- AOS Animate -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <!-- Icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
-    <style>
-        .sidebar-left{
-            height: auto;
-            min-height: 600px;
-            border: 1px solid red;
-        }
-        .sidebar-left *{
-            border: 1px solid green;
-        }
-    </style>
+    <link href="{{ asset('css/wrapper.css') }}" rel="stylesheet">
 </head>
 
 <body>
     <div id="app">
         <div class="container-fluid p-0">
-            <div class="col-md-2">
-                <div class="sidebar-left">
-                    <div class="header-sidebar-left">
-                        <p class="text-center">
-                            <span>Orientation</span>
-                        </p>
+            <div class="row m-0">
+
+                <div class="col-md-2">
+                    <div class="btn-close-sidebar">
+                        <i class="fas fa-bars"></i>
                     </div>
-                    <div class="body-sidebar-left">
-                        <div class="body-content-left">
-                            <nav class="sidebar-menu">
+                    @include('partials.sidebar')
+                </div>
+                <main class="py-2 col-md-8 ">
+                    @yield('content')
+                </main>
+
+                <div class="col-md-2">
+                    <div class="sidebar-right">
+                        <div class="header-sidebar-right">
+                            <div class="d-flex justify-content-end">
+                                <a class="btn btn-xs btn-logout" onclick="event.preventDefault();  document.getElementById('logout-form').submit();">
+                                    Deconnexion
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="user-profil my-4">
+                            <div class="user-img d-flex flex-row justify-content-center">
+                                <img class="img img-fluid" src="../images/bg6.jpg" />
+                            </div>
+                            <div class="user-name text-center my-2">
+                                <p class="my-0">Emmanuel Ivan</p>
+                                <span>Admin</span>
+                            </div>
+                        </div>
+
+                        <div class="remainder mb-3 px-2">
+                            <div class="flex-row d-flex justify-content-between">
+                                <p class="remainder-title">Rappels</p>
+                                <i class="fas fa-tags"></i>
+                            </div>
+                            <div class="remainder-list">
                                 <ul>
-                                    <li>
-                                        <a href="#">Dashboard</a>
+                                    <li class="flex-row d-flex">
+                                        <span class="alert alert-warning">
+                                            <i class="fas fa-tag"></i>
+                                        </span>
+                                        <div class="flex-column d-flex justify-content-between">
+                                            <p class="mb-0">Titre du rappel</p>
+                                            <span class="remainder-day">Lundi 14 Mars 2020</span>
+                                        </div>
                                     </li>
-                                    <li>
-                                        <a href="#">Orientation</a>
+                                    <li class="flex-row d-flex">
+                                        <span class="alert alert-danger">
+                                            <i class="fas fa-tag"></i>
+                                        </span>
+                                        <div class="flex-column d-flex justify-content-between">
+                                            <p class="mb-0">Titre du rappel</p>
+                                            <span class="remainder-day">Lundi 14 Mars 2020</span>
+                                        </div>
                                     </li>
-                                    <li>
-                                        <a href="#">Enseignement</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Formation</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Etablissement</a>
-                                        <ul>
-                                            <li><a href="#">Ecole</a></li>
-                                            <li><a href="#">Structure</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-comment-alt"></i>
-                                        <a href="#">Forum</a>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-cogs"></i>
-                                        <a href="#">Parametre</a>
+                                    <li class="flex-row d-flex">
+                                        <span class="alert alert-success">
+                                            <i class="fas fa-tag"></i>
+                                        </span>
+                                        <div class="flex-column d-flex justify-content-between">
+                                            <p class="mb-0">Titre du rappel</p>
+                                            <span class="remainder-day">Lundi 14 Mars 2020</span>
+                                        </div>
                                     </li>
                                 </ul>
-                            </nav>
+                            </div>
+                        </div>
+                        <div class="result px-2">
+                            <div class="flex-row d-flex justify-content-between">
+                                <p class="remainder-title">Resultats</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <main class="py-4">
-
-            </main>
-                <div class="col-md-3">
-
-
-                </div>
-            </div>
         </div>
     </div>
+    <script>
+        $('.btn-close-sidebar').click(function() {
+            $(this).toggleClass('click');
+            $('.sidebar-left').toggleClass('show');
+        });
+        $('.btn-etablissement').click(function() {
+            $('.sidebar-menu  ul .sub-menu-etablissement').toggleClass("show");
+            $('.sidebar-menu  ul .caret').toggleClass("rotate");
+        });
+        $('.sidebar-menu ul li').click(function() {
+            $(this).addClass("active").siblings().removeClass("active");
+        });
+        $('.close-card').click(function(){
+            $('.card-welcome').toggleClass('hidden');
+        })
+    </script>
 </body>
 
 </html>

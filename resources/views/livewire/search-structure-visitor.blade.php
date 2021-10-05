@@ -1,13 +1,15 @@
-<div>
+<div class="mb-3">
     <form class="form form-inline">
         <div class="row">
             <div class="col-10">
-                <input class="form-control " type="text" placeholder="Nom de la structure, nom du programme, ...." />
+                <input class="form-control" style="margin-left: 5px;" type="text" placeholder="Nom de la structure, nom du programme, ...." />
             </div>
-            <button class="btn btn-success text-white col-2">
-                <i class="fas fa-search"></i>
-                <span>Rechercher</span>
-            </button>
+            <div class="col-2">
+                <button class="btn btn-success text-white ">
+                    <i class="fas fa-search"></i>
+                    <span>Rechercher</span>
+                </button>
+            </div>
         </div>
     </form>
 </div>

@@ -38,12 +38,7 @@
 
         <div class="row">
             <div class="col-md-2 py-2" id="filtre">
-                <p class="title-filtre d-flex justify-content-between">Filtre
-                    <button class="btn  btn-validate-filtre">
-                        <i class="fas fa-check text-dark mr-2"></i>
-                        Valide
-                    </button>
-                </p>
+                <p class="title-filtre d-flex justify-content-between">Filtre </p>
                 <div class="content-filtre">
                     <form>
                         <div class="item-filtre my-2">
@@ -125,7 +120,7 @@
                     </div>
                     <div class="content-body">
                         <p class="result-count my-2">{{$filieres->count()}} resultats</p>
-                        <div class="content-card row">
+                        <div class="content-card px-3 row">
                             @forelse($filieres as $filiere)
                             <div class="card card-formation my-2 py-4">
                                 <a href="{{ route('showFiliere', ['code' => $filiere->id ]) }}">
