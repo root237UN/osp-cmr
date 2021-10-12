@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\CycleEnseignement;
+use App\Models\Ecole;
 use App\Models\FiliereEnseignement;
 use App\Models\OptionEnseignement;
 use App\Models\SectionEnseignement;
@@ -14,13 +15,14 @@ use App\Models\Structure;
 use App\Models\Formation;
 use App\Models\MenuVisite;
 use App\Models\StructureInsertionPro;
+use Illuminate\Support\Facades\DB;
 
 class WebSiteController extends Controller
 {
     //
     public function index()
     {
-        return view('welcome');
+        return view('layouts.view');
     }
 
     public function enseignement()
@@ -89,7 +91,10 @@ class WebSiteController extends Controller
 
     public function etablissement()
     {
-        return view('etablissement/view');
+        $ecoles = Ecole::all();
+        $nbres = DB::select("SELECT COUNT(*) AS total, `regions`.libelle FROM `ecoles` INNER JOIN `localites` ON `ecoles`.localite_id=`localites`.id INNER JOIN `arrondissements` ON `localites`.arrondissement_id=`arrondissements`.id INNER JOIN `departements` ON `arrondissements`.departement_id=`departements`.id INNER JOIN `regions` ON `departements`.region_id=`regions`.id GROUP BY `regions`.id ");
+        //dd($nbres[0]->total);
+        return view('etablissement/view', ['nbres' => $nbres, "ecoles" =>$ecoles ]);
     }
 
     public function contact()

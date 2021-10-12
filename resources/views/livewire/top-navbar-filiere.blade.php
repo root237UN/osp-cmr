@@ -73,7 +73,7 @@
 
 <nav class="nav-bar navbar navbar-expand-lg nav-top" id="dropmenu1">
 
-    <a class="col-md-1 title-nav"><span style="color: #38c172;">Filiere | </span></a>
+    <a class="col-md-1 title-nav"><span style="color: #38c172;">Filiere  </span></a>
 
     <ul class="col-md-5 list-options navbar-nav">
         <li class="dropdown nav-bar-item">

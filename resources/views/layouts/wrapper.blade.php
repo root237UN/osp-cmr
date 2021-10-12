@@ -8,22 +8,27 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Admin | Orientation</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gelasio&display=swap" rel="stylesheet">
     <!-- Icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}?_={{rand(1000,2000)}}" rel="stylesheet">
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
     <link href="{{ asset('css/wrapper.css') }}" rel="stylesheet">
+
+
+<link rel="stylesheet" href="{{asset('datatable/datatables.net-bs4/css/dataTables.bootstrap4.min.css')}}">
+    <link rel="stylesheet" href="{{asset('datatable/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css')}}">
+    @livewireStyles
+    @yield('css')
 </head>
 
 <body>
@@ -67,13 +72,13 @@
                         <div class="remainder mb-3 px-2">
                             <div class="flex-row d-flex justify-content-between">
                                 <p class="remainder-title">Rappels</p>
-                                <i class="fas fa-tags"></i>
+                                <i class="fas fa-bell"></i>
                             </div>
                             <div class="remainder-list">
                                 <ul>
                                     <li class="flex-row d-flex">
                                         <span class="alert alert-warning">
-                                            <i class="fas fa-tag"></i>
+                                            <i class="fas fa-envelope-open-text"></i>
                                         </span>
                                         <div class="flex-column d-flex justify-content-between">
                                             <p class="mb-0">Titre du rappel</p>
@@ -82,7 +87,7 @@
                                     </li>
                                     <li class="flex-row d-flex">
                                         <span class="alert alert-danger">
-                                            <i class="fas fa-tag"></i>
+                                            <i class="fas fa-users"></i>
                                         </span>
                                         <div class="flex-column d-flex justify-content-between">
                                             <p class="mb-0">Titre du rappel</p>
@@ -91,7 +96,7 @@
                                     </li>
                                     <li class="flex-row d-flex">
                                         <span class="alert alert-success">
-                                            <i class="fas fa-tag"></i>
+                                            <i class="fas fa-envelope-open-text"></i>
                                         </span>
                                         <div class="flex-column d-flex justify-content-between">
                                             <p class="mb-0">Titre du rappel</p>
@@ -111,6 +116,12 @@
             </div>
         </div>
     </div>
+    @livewireScripts
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
     <script>
         $('.btn-close-sidebar').click(function() {
             $(this).toggleClass('click');
@@ -123,10 +134,30 @@
         $('.sidebar-menu ul li').click(function() {
             $(this).addClass("active").siblings().removeClass("active");
         });
-        $('.close-card').click(function(){
+        $('.close-card').click(function() {
             $('.card-welcome').toggleClass('hidden');
-        })
+        });
+
+        window.livewire.on('EcoleAjouter', () => {
+            $('#addEcoleModal').modal('hide');
+        });
+        window.livewire.on('EcoleMisAJour', () => {
+            $('#updateEcoleModal').modal('hide');
+        });
+        window.livewire.on('LocaliteAjouter', () => {
+            $('#addLocaliteModal').modal('hide');
+        });
     </script>
+    @stack('scripts')
+
+<script src="{{asset('datatable/datatables.net/js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('datatable/datatables.net-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('datatable/datatables.net-buttons/js/dataTables.buttons.min.js')}}"></script>
+    <script src="{{asset('datatable/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('datatable/datatables.net-buttons/js/buttons.html5.min.js')}}"></script>
+    <script src="{{asset('datatable/datatables.net-buttons/js/buttons.print.min.js')}}"></script>
+    <script src="{{asset('datatable/datatables.net-buttons/js/buttons.colVis.min.js')}}"></script>
+    <script src="{{asset('datatable/datatables-init.js')}}"></script>
 </body>
 
 </html>

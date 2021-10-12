@@ -52,7 +52,7 @@ class LoginController extends Controller
         $input = $request->all();
         $this->validate($request,['email' => 'required|email','password' => 'required']);
 
-        if(Auth()->attempt(array('email'=>$input['email'], 'password'=>$input['password'])))
+        if(auth()->attempt(array('email'=>$input['email'], 'password'=>$input['password'])))
         {
             if(auth()->user()->role == 1)
             {

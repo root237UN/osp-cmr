@@ -16,6 +16,9 @@ class CreateEcolesTable extends Migration
         Schema::create('ecoles', function (Blueprint $table) {
             $table->id();
             $table->string('libelle')->default("Nouvelle ecole ...");
+            $table->boolean('cycle_1');
+            $table->boolean('cycle_2');
+            $table->foreignId('type_ecole_id')->constrained()->onDelete('cascade');
             $table->foreignId('localite_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });

@@ -1,15 +1,18 @@
 @extends('layouts.wrapper')
 
+@section('css')
+@endsection
+
 @section('content')
-<div class="container">
+<div class="">
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="">
-                <div class="p-3 d-flex justify-content-between">
-                    <span>Ecole</span>
-                    <p class="mb-0">
-                        <span>Time</span>
-                        <span class="alert m-0 p-2 alert-success">
+                <div class="p-3 pb-0 d-flex justify-content-between">
+                    <span class="text-menu text-uppercase">Ecole</span>
+                    <p class="mb-0 ">
+                        <span class="text-day">{{$date->toFormattedDateString()}}</span>
+                        <span class="alert m-0 p-2 ps-3 pe-3 btn-search alert-app">
                             <i class="fas fa-search"></i>
                         </span>
                     </p>
@@ -19,56 +22,45 @@
                     <div class="card-body">
                         <div class="col-7">
                             <h4 class="welcome-text mt-2">Hello {{Auth::user()->name}} !</h4>
-                            <p class="text-white welcome-text-description">Administrez et gérez les écoles d’enseignement secondaire technique et général du système !!!</p>
+                            <p class="text-white welcome-text-description">Administrez et gérez les écoles d’enseignement secondaire technique et général ainsi que les localités du système !!!</p>
                         </div>
                         <div class="col-5"></div>
                     </div>
                     <div class="close-card">
-                        <span class="fas fa-tag"></span>
+                        <span class="fas fa-times-circle"></span>
                     </div>
                 </div>
 
-                <div class="px-3 py-2 d-flex justify-content-between">
-                    <span>Actions</span>
-                </div>
-                <div class="flex-row">
-                    <div class="box-actions  row mx-3">
-                        <div class="btn-add btn-action d-flex justify-content-center" data-toggle="modal" data-target="#addEcole">
-                            <i class="fas fa-plus-circle"></i>
-                            <span>Ajouter</span>
-                        </div>
-                        <div class="btn-add btn-action d-flex justify-content-center">
-                            <i class="fas fa-plus-circle"></i>
-                            <span>Ajouter des ecoles</span>
-                        </div>
+                <div class="px-3 pb-2 pe-3 d-flex justify-content-between">
+                    <p class="mb-0 mt-2"><span class="text-menu">Actions</span></p>
+                    <div class="flex-row d-flex justify-content-center">
+                        <button class="btn btn-carousel" type="button" data-bs-target="#carouselEcole" data-bs-slide="prev">
+                            <i class="fas fa-chevron-left mx-2"></i>
+                        </button>
+                        <button class="btn btn-carousel" type="button" data-bs-target="#carouselEcole" data-bs-slide="next">
+                            <i class="fas fa-chevron-right mx-2"></i>
+                        </button>
                     </div>
                 </div>
 
-                <div class="px-3 py-2 d-flex justify-content-between">
-                    <span>Listes des ecoles</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="addEcole" class="modal fade" role="dialog">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Deconnexion </h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="form mb-0">
-                <div class="modal-body text-center">
-                    <h3>Confirmer la deconnexion !!! </h3>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-white btn-app-secondary" data-dismiss="modal">Fermer</button>
-                    <button type="button" class="btn btn-app text-white">
-
-                    </button>
+                <div id="carouselEcole" class="carousel slide " data-bs-interval="10000000" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="px-3 py-0 col-12">
+                                <livewire:ecoles />
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="px-3 py-0 col-12">
+                                <livewire:localites />
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="px-3 py-0 col-12">
+                                <livewire:ecole-specialite />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -76,3 +68,6 @@
 </div>
 
 @endsection
+
+@push('scripts')
+@endpush

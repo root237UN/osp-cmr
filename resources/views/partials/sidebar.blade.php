@@ -1,7 +1,7 @@
-<div class="sidebar-left">
+<div class="sidebar-left show">
     <div class="header-sidebar-left">
-        <p class="text-center">
-            <span>Orientation</span>
+        <p class="text-left">
+            <span class="" style="margin-left: 10px;">Orientation</span>
         </p>
     </div>
     <div class="body-sidebar-left">
@@ -9,19 +9,19 @@
             <nav class="sidebar-menu">
                 <ul>
                     <li>
-                        <a href="{{route('admin.dashboard')}}">Dashboard</a>
+                        <a href="{{route('admin.dashboard')}}"><i class="fas fa-tachometer-alt icon"></i>Dashboard</a>
                     </li>
                     <li>
-                        <a href="#">Orientation</a>
+                        <a href="#"><i class="fas fa-tag icon"></i>Orientation</a>
                     </li>
                     <li>
-                        <a href="#">Enseignement</a>
+                        <a href="#"><i class="fas fa-tag icon"></i>Enseignement</a>
                     </li>
                     <li>
-                        <a href="#">Formation</a>
+                        <a href="#"><i class="fas fa-tag icon"></i>Formation</a>
                     </li>
                     <li>
-                        <a href="#" class="btn-etablissement">Etablissement
+                        <a href="#" class="btn-etablissement"><i class="fas fa-school icon"></i>Etablissement
                             <i class="fas fa-caret-down caret"></i>
                         </a>
                         <ul class="sub-menu-etablissement">
