@@ -91,10 +91,16 @@ class WebSiteController extends Controller
 
     public function etablissement()
     {
-        $ecoles = Ecole::all();
+        //$ecoles = Ecole::all();
         $nbres = DB::select("SELECT COUNT(*) AS total, `regions`.libelle FROM `ecoles` INNER JOIN `localites` ON `ecoles`.localite_id=`localites`.id INNER JOIN `arrondissements` ON `localites`.arrondissement_id=`arrondissements`.id INNER JOIN `departements` ON `arrondissements`.departement_id=`departements`.id INNER JOIN `regions` ON `departements`.region_id=`regions`.id GROUP BY `regions`.id ");
         //dd($nbres[0]->total);
-        return view('etablissement/view', ['nbres' => $nbres, "ecoles" =>$ecoles ]);
+        return view('etablissement/view', ['nbres' => $nbres ]);
+    }
+
+    public function showEcoleByRegion(Request $request)
+    {
+        $ecoles = DB::select("SELECT * FROM `ecoles` INNER JOIN `localites` ON `ecoles`.localite_id=`localites`.id INNER JOIN `arrondissements` ON `localites`.arrondissement_id=`arrondissements`.id INNER JOIN `departements` ON `arrondissements`.departement_id=`departements`.id INNER JOIN `regions` ON `departements`.region_id=`regions`.id WHERE `regions`.libelle='$request->region' ");
+        dd($ecoles);
     }
 
     public function contact()

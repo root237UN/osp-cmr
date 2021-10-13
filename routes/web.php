@@ -42,6 +42,7 @@ Route::get('/filiere/{code}', [WebSiteController::class, 'showFiliere'])->name('
 
 /** Routes pour les etablissement proposant des parcours */
 Route::get('/etablissement', [WebSiteController::class, 'etablissement'])->name('etablissement');
+Route::get('/ecoles-visitor', [WebSiteController::class, 'showEcoleByRegion']);
 Route::get('/contact', [WebSiteController::class, 'contact'])->name('contact');
 
 Route::get('/orientation', [WebSiteController::class, 'orientation'])->name('orientation');
