@@ -41,8 +41,10 @@ Route::post('/filiere', [WebSiteController::class, 'filiere'])->name('filiere');
 Route::get('/filiere/{code}', [WebSiteController::class, 'showFiliere'])->name('showFiliere');
 
 /** Routes pour les etablissement proposant des parcours */
-Route::get('/etablissement', [WebSiteController::class, 'etablissement'])->name('etablissement');
+Route::get('/etablissement', [WebSiteController::class, 'showMenuEtablissement'])->name('etablissement');
 Route::get('/ecoles-visitor', [WebSiteController::class, 'showEcoleByRegion']);
+Route::get('/ecoles', [WebSiteController::class, 'showEcole']);
+
 Route::get('/contact', [WebSiteController::class, 'contact'])->name('contact');
 
 Route::get('/orientation', [WebSiteController::class, 'orientation'])->name('orientation');

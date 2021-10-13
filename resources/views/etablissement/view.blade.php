@@ -109,6 +109,34 @@
         font-weight: bold;
         color: #deb857;
     }
+
+    .link-consulter-filiere {
+        font-size: 13px;
+        text-align: center;
+        color: #243a5e;
+        font-style: italic;
+    }
+
+    #data-ecoles-visitor tbody tr {
+        font-size: 12px;
+        cursor: initial;
+    }
+
+    .accordion-item {
+        border: none;
+    }
+
+    .accordion-button:not(.collapsed) {
+        color: #fff !important;
+        background-color: #243a5e !important;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px !important;
+    }
+
+    .accordion-button {
+        background-color: #fff !important;
+        color: #243a5e !important;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px !important;
+    }
 </style>
 @endsection
 
@@ -124,12 +152,12 @@
         <div class="col-12">
             <div class="m-4">
                 <h1 class="text-capitalize header-title">
-                    <a href="#presentation-filiere" style="color: #fff;font-family: 'Gelasio', serif;">Etablissement d'enseignement secondaire</a>
+                    <a href="#presentation-filiere" style="color: #fff;font-family: 'Gelasio', serif;">{{$menu->libelle}}</a>
                 </h1>
             </div>
             <div class="m-4">
                 <p class="header-title-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Feugiat sed lectus vestibulum mattis ullamcorper velit.
+                    {{$menu->description}}
                 </p>
             </div>
         </div>
@@ -137,7 +165,7 @@
 </div>
 
 <section id="content-filiere" style="min-height: 80ch;">
-    <div class="container">
+    <div class="container mt-2">
         <div class="row d-flex justify-content-between" style="align-items: center;">
             <nav class="col-md-10" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrum">
                 <ol class="breadcrumb my-1">
@@ -164,46 +192,46 @@
                     <div class="col-5 map-list" style="margin-top: 145px">
                         <ul>
                             <li class="d-flex justify-content-between">
-                                <span id="link_sud">
-                                    <i class="fas mx-2 fa-check"></i>Region du Sud
-                                </span>
-                                <span class="badge mx-2 bg-secondary">4</span>
-                            </li>
-                            <li class="d-flex justify-content-between">
-                                <span id="link_nord"><i class="fas mx-2 fa-check"></i>Region du Nord </span>
-                                <span class="badge mx-2 bg-secondary">4</span>
-                            </li>
-                            <li class="d-flex justify-content-between">
-                                <span id="link_littoral"><i class="fas mx-2 fa-check"></i>Region du Littoral</span>
-                                <span class="badge mx-2 bg-secondary">4</span>
+                                <span id="link_adamaoua"><i class="fas mx-2 fa-check"></i>Region de l'adamaoua </span>
+                                <span class="badge mx-2 bg-secondary">{{$nbres[0]->total}} <i class="fas fa-chart-line"></i></span>
                             </li>
                             <li class="d-flex justify-content-between">
                                 <span id="link_centre"><i class="fas mx-2 fa-check"></i>Region du Centre</span>
-                                <span class="badge mx-2 bg-secondary">4</span>
+                                <span class="badge mx-2 bg-secondary">@if($nbres[1]->libelle == 'Centre') {{$nbres[1]->total}} @else 0 @endif</span>
                             </li>
                             <li class="d-flex justify-content-between">
                                 <span id="link_est"><i class="fas mx-2 fa-check"></i>Region du Est</span>
-                                <span class="badge mx-2 bg-secondary">4</span>
-                            </li>
-                            <li class="d-flex justify-content-between">
-                                <span id="link_ouest"><i class="fas mx-2 fa-check"></i>Region du Ouest </span>
-                                <span class="badge mx-2 bg-secondary">4</span>
-                            </li>
-                            <li class="d-flex justify-content-between">
-                                <span id="link_nord_ouest"><i class="fas mx-2 fa-check"></i>Region du Nord-Ouest </span>
-                                <span class="badge mx-2 bg-secondary">4</span>
-                            </li>
-                            <li class="d-flex justify-content-between">
-                                <span id="link_sud_ouest"><i class="fas mx-2 fa-check"></i>Region du Sud-Ouest </span>
-                                <span class="badge mx-2 bg-secondary">4</span>
-                            </li>
-                            <li class="d-flex justify-content-between">
-                                <span id="link_adamaoua"><i class="fas mx-2 fa-check"></i>Region de l'adamaoua </span>
-                                <span class="badge mx-2 bg-secondary">{{$nbres[0]->total}}</span>
+                                <span class="badge mx-2 bg-secondary">@if($nbres[1]->libelle == 'Est') {{$nbres[1]->total}} @else 0 @endif</span>
                             </li>
                             <li class="d-flex justify-content-between">
                                 <span id="link_extreme_nord"><i class="fas mx-2 fa-check"></i>Region du Extreme-Nord</span>
-                                <span class="badge mx-2 bg-secondary">{{$nbres[1]->total}}</span>
+                                <span class="badge mx-2 bg-secondary">{{$nbres[1]->total}} <i class="fas fa-chart-line"></i></span>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <span id="link_littoral"><i class="fas mx-2 fa-check"></i>Region du Littoral</span>
+                                <span class="badge mx-2 bg-secondary">@if($nbres[1]->libelle == 'Littoral') {{$nbres[1]->total}} @else 0 @endif</span>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <span id="link_nord"><i class="fas mx-2 fa-check"></i>Region du Nord </span>
+                                <span class="badge mx-2 bg-secondary"> {{$nbres[2]->total}} <i class="fas fa-chart-line"></i></span>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <span id="link_nord_ouest"><i class="fas mx-2 fa-check"></i>Region du Nord-Ouest </span>
+                                <span class="badge mx-2 bg-secondary">@if($nbres[1]->libelle == 'Nord-Ouest') {{$nbres[1]->total}} @else 0 @endif</span>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <span id="link_ouest"><i class="fas mx-2 fa-check"></i>Region du Ouest </span>
+                                <span class="badge mx-2 bg-secondary">@if($nbres[1]->libelle == 'Ouest') {{$nbres[1]->total}} @else 0 @endif</span>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <span id="link_sud">
+                                    <i class="fas mx-2 fa-check"></i>Region du Sud
+                                </span>
+                                <span class="badge mx-2 bg-secondary">@if($nbres[1]->libelle == 'Sud') {{$nbres[1]->total}} @else 0 @endif</span>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <span id="link_sud_ouest"><i class="fas mx-2 fa-check"></i>Region du Sud-Ouest </span>
+                                <span class="badge mx-2 bg-secondary">@if($nbres[1]->libelle == 'Sud-Ouest') {{$nbres[1]->total}} @else 0 @endif</span>
                             </li>
                         </ul>
                     </div>
@@ -216,8 +244,17 @@
 <livewire:carte-etablissement />
 
 @push('script-carte')
+
+<script src="{{asset('datatable/datatables.net/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('datatable/datatables.net-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
+<script src="{{asset('datatable/datatables.net-buttons/js/dataTables.buttons.min.js')}}"></script>
+<script src="{{asset('datatable/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js')}}"></script>
+<script src="{{asset('datatable/datatables.net-buttons/js/buttons.html5.min.js')}}"></script>
+<script src="{{asset('datatable/datatables.net-buttons/js/buttons.print.min.js')}}"></script>
+<script src="{{asset('datatable/datatables.net-buttons/js/buttons.colVis.min.js')}}"></script>
+<script src="{{asset('datatable/datatables-init.js')}}"></script>
 <script>
-    $(function() {
+    (function($) {
         $('[id*=region_').on('click', function(e) {
             e.preventDefault();
             //On recupere l'ID de la region
@@ -231,35 +268,33 @@
             regions.css('fill', '#fcfcfd');
             region.css('fill', '#deb857');
 
+            let url = location.href; //Save down the URL without hash.
+            location.href = "#list-ecoles"; //Go to the target element.
+            history.replaceState(null, null, url);
+
             let libelle = " de la région " + txt;
             $('.text-ecole-region').html(libelle);
 
-            /*$(document).on({
-                ajaxStart: function() {
-                    $('.accordion-body').addClass('loading');
-                },
-                ajaxStop: function() {
-                    $('.accordion-body').removeClass('loading');
-                },
+            let txt2 = txt.charAt(0).toUpperCase() + txt.slice(1);
 
-            })*/console
-            let txt2 = txt.charAt(0).toUpperCase()+txt.slice(1);
+            let table = $('#data-ecoles-visitor').DataTable();
+            table.ajax.url('ecoles-visitor/?region=' + txt2).load()
 
-            $.ajax({
+            /*$.ajax({
                 global: false,
                 type: "GET",
-                url: 'ecoles-visitor/?region='+txt2,
+                url: 'ecoles-visitor/?region=' + txt2,
                 dataType: 'json',
-                beforeSend: function(){
+                beforeSend: function() {
                     $('.accordion-body').addClass('loading');
                 },
-                success:function(data){
+                success: function(data) {
                     alert('ok');
                 },
-                complete: function(){
+                complete: function() {
                     $('.accordion-body').removeClass('loading');
                 }
-            });
+            });*/
 
         });
 
@@ -300,18 +335,8 @@
         map.addEventListener('mouseover', function() {
             activeArea();
         })
-
-    });
+    })(jQuery);
 </script>
-
-<script src="{{asset('datatable/datatables.net/js/jquery.dataTables.min.js')}}"></script>
-<script src="{{asset('datatable/datatables.net-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
-<script src="{{asset('datatable/datatables.net-buttons/js/dataTables.buttons.min.js')}}"></script>
-<script src="{{asset('datatable/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js')}}"></script>
-<script src="{{asset('datatable/datatables.net-buttons/js/buttons.html5.min.js')}}"></script>
-<script src="{{asset('datatable/datatables.net-buttons/js/buttons.print.min.js')}}"></script>
-<script src="{{asset('datatable/datatables.net-buttons/js/buttons.colVis.min.js')}}"></script>
-<script src="{{asset('datatable/datatables-init.js')}}"></script>
 </body>
 @endpush
 

@@ -73,7 +73,7 @@
 
 <nav class="nav-bar navbar navbar-expand-lg nav-top" id="dropmenu1">
 
-    <a class="col-md-1 title-nav"><span style="font-size: 14px;">Etablissements</span></a>
+    <a class="col-md-1 title-nav"><span style=" font-size: 15px;color: #38c172; font-weight: 500;">Etablissements</span></a>
 
     <ul class="col-md-5 list-options navbar-nav">
         <li class="dropdown nav-bar-item">

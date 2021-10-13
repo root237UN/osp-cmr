@@ -55,11 +55,9 @@ header::before {
     color: #242738;
     text-transform: uppercase;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 12px;
 }
 #navbarSupportedContent a:hover, #navbarSupportedContent a:focus {
-    color: green;
-    font-weight: bold;
 }
 .new-dropdown-menu{
     display: none;

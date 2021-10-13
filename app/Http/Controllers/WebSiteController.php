@@ -36,7 +36,7 @@ class WebSiteController extends Controller
     public function showTypeEnseignement($code)
     {
         $type = TypeEnseignement::where('code', '=', $code)->firstorfail();
-        return view('enseignement/types',['type' => $type]);
+        return view('enseignement/types', ['type' => $type]);
     }
 
     public function showFormation(Request $request)
@@ -52,7 +52,7 @@ class WebSiteController extends Controller
 
         $localites = Localite::all();
         $structures = Structure::all();
-        return view('formation/presentation', ["localites" => $localites,"structures" => $structures, "type" => $type, "formations" => $formations]);
+        return view('formation/presentation', ["localites" => $localites, "structures" => $structures, "type" => $type, "formations" => $formations]);
     }
 
     public function detailsFormation(Request $Request)
@@ -74,7 +74,7 @@ class WebSiteController extends Controller
     public function showParcours($code)
     {
         $option = OptionEnseignement::where('code', '=', $code)->firstorfail();
-        return view('enseignement/parcours',['option' => $option]);
+        return view('enseignement/parcours', ['option' => $option]);
     }
 
     public function formation()
@@ -84,23 +84,32 @@ class WebSiteController extends Controller
 
     public function viewMenuStructure()
     {
-        $menuStructure = MenuVisite::where('titre',"Structure d'aide")->firstorfail();
+        $menuStructure = MenuVisite::where('titre', "Structure d'aide")->firstorfail();
         $structures = StructureInsertionPro::all();
-        return view('structure/view',['menu' => $menuStructure, 'structures' => $structures]);
+        return view('structure/view', ['menu' => $menuStructure, 'structures' => $structures]);
     }
 
-    public function etablissement()
+    public function showMenuEtablissement()
     {
         //$ecoles = Ecole::all();
-        $nbres = DB::select("SELECT COUNT(*) AS total, `regions`.libelle FROM `ecoles` INNER JOIN `localites` ON `ecoles`.localite_id=`localites`.id INNER JOIN `arrondissements` ON `localites`.arrondissement_id=`arrondissements`.id INNER JOIN `departements` ON `arrondissements`.departement_id=`departements`.id INNER JOIN `regions` ON `departements`.region_id=`regions`.id GROUP BY `regions`.id ");
-        //dd($nbres[0]->total);
-        return view('etablissement/view', ['nbres' => $nbres ]);
+        $menu = MenuVisite::where('titre', "Etablissement")->firstorfail();
+        $nbres = DB::select("SELECT COUNT(*) AS total, `regions`.libelle FROM `ecoles` INNER JOIN `localites` ON `ecoles`.localite_id=`localites`.id INNER JOIN `arrondissements` ON `localites`.arrondissement_id=`arrondissements`.id INNER JOIN `departements` ON `arrondissements`.departement_id=`departements`.id INNER JOIN `regions` ON `departements`.region_id=`regions`.id GROUP BY `regions`.id order by libelle asc ");
+        return view('etablissement/view', ['nbres' => $nbres,"menu"=>$menu]);
     }
 
     public function showEcoleByRegion(Request $request)
     {
-        $ecoles = DB::select("SELECT * FROM `ecoles` INNER JOIN `localites` ON `ecoles`.localite_id=`localites`.id INNER JOIN `arrondissements` ON `localites`.arrondissement_id=`arrondissements`.id INNER JOIN `departements` ON `arrondissements`.departement_id=`departements`.id INNER JOIN `regions` ON `departements`.region_id=`regions`.id WHERE `regions`.libelle='$request->region' ");
-        dd($ecoles);
+        $ecoles = DB::select("SELECT `ecoles`.id,`ecoles`.libelle, `ecoles`.cycle_1,`ecoles`.cycle_2, `type_ecoles`.libelle AS 'type' ,`localites`.libelle AS 'localite' FROM `ecoles` inner JOIN `type_ecoles` ON `ecoles`.type_ecole_id=`type_ecoles`.id  INNER JOIN `localites` ON `ecoles`.localite_id=`localites`.id INNER JOIN `arrondissements` ON `localites`.arrondissement_id=`arrondissements`.id INNER JOIN `departements` ON `arrondissements`.departement_id=`departements`.id INNER JOIN `regions` ON `departements`.region_id=`regions`.id  WHERE `regions`.libelle='$request->region' ORDER BY `ecoles`.libelle asc ");
+        $json_data['data'] = $ecoles;
+        return json_encode($json_data);
+    }
+
+    public function showEcole()
+    {
+        $ecoles = DB::select("SELECT `ecoles`.id,`ecoles`.libelle, `ecoles`.cycle_1,`ecoles`.cycle_2, `type_ecoles`.libelle AS 'type' ,`localites`.libelle AS 'localite' FROM `ecoles` inner JOIN `type_ecoles` ON `ecoles`.type_ecole_id=`type_ecoles`.id  INNER JOIN `localites` ON `ecoles`.localite_id=`localites`.id INNER JOIN `arrondissements` ON `localites`.arrondissement_id=`arrondissements`.id INNER JOIN `departements` ON `arrondissements`.departement_id=`departements`.id INNER JOIN `regions` ON `departements`.region_id=`regions`.id ORDER BY `ecoles`.libelle asc ");
+        $json_data['data'] = $ecoles;
+        return json_encode($json_data);
+        //dd("Ecoles");
     }
 
     public function contact()
@@ -118,7 +127,7 @@ class WebSiteController extends Controller
     {
         $section = SectionEnseignement::findorFail(intval($code));
         $cycles = CycleEnseignement::all();
-        return view('enseignement/section', ['section' => $section, 'cycles'=>$cycles]);
+        return view('enseignement/section', ['section' => $section, 'cycles' => $cycles]);
         //dd($section);
     }
 
@@ -133,8 +142,8 @@ class WebSiteController extends Controller
 
         $localites = Localite::all();
 
-        $filieres = FiliereEnseignement::where('cycle_enseignement_id',$id_cycle)->where('section_enseignement_id',$id_section)->paginate(10);
-        return view('filiere/view', ["section" => $section, "cycle" =>$cycle, "filieres" =>$filieres, "localites" =>$localites ]);
+        $filieres = FiliereEnseignement::where('cycle_enseignement_id', $id_cycle)->where('section_enseignement_id', $id_section)->paginate(10);
+        return view('filiere/view', ["section" => $section, "cycle" => $cycle, "filieres" => $filieres, "localites" => $localites]);
         //dd($filieres);
     }
 
