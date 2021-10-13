@@ -34,7 +34,8 @@ Route::get('/presentationdelaformation/{code}', [WebSiteController::class, 'deta
 
 Route::get('/structrure/formation/{code}', [SecondaryController::class, 'presentationStructure'])->name('structure.formation');
 
-Route::get('/structure', [WebSiteController::class, 'viewMenuStructure'])->name('structure');
+Route::get('/structure', [WebSiteController::class, 'showMenuStructure'])->name('structure');
+
 /** Routes pour les sections et les filieres */
 Route::get('/section/{code}', [WebSiteController::class, 'section'])->name('section');
 Route::post('/filiere', [WebSiteController::class, 'filiere'])->name('filiere');

@@ -36,7 +36,7 @@
 </div>
 
 <section id="content-filiere">
-    <div class="container">
+    <div class="container mt-2">
         <div class="row d-flex justify-content-between" style="align-items: center;">
             <nav class="col-md-10" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrum">
                 <ol class="breadcrumb my-1">
@@ -55,36 +55,42 @@
                     <h3>Filtre</h3>
                 </div>
             </div>
-            <div class="col-9 mt-3">
+            <div class="col-9 mt-3 mb-3">
                 <div id="list-structure">
                     <livewire:search-structure-visitor />
                     <div class="row d-flex justify-content-between px-3">
-                        <p class="result-count px-0 my-2">{{$structures->count()}} resultats</p>
 
-                        @forelse($structures as $structure)
-                        @if($structure->Programmes()->count() >=2)
-                        <div class="card card-formation my-2 py-4">
-                            <div class="card-formation-header">
-                                <div class="card-formation-img">
-                                    <img class="img -img-fluid" src="../images/bg2.jpg">
-                                    <p class="description-formation">@if($structure->objectif){{$structure->objectif}} @else Aucun objectif défini pour le moment !!! @endif</p>
+                        <?php
+                        $tab = json_decode($structures);
+
+                        echo "<p class='result-count px-0 my-2'> " . count($tab) . " resultats</p>";
+                        foreach ($tab as $structure ) {
+                            echo "
+                                <div class='card card-formation my-2 py-4'>
+                                    <div class='card-formation-header'>
+                                        <div class='card-formation-img'>
+                                            <img class='img -img-fluid' src='../images/bg2.jpg'>
+                                            <p class='description-formation'>";
+                                            if($structure->objectif) echo $structure->objectif;
+                                            else  echo "Aucun objectif défini pour le moment !!! </p>";
+                                            echo "
+                                        </div>
+                                    </div>
+                                    <div class='card-body px-0'>
+                                        <p class='libelle-formation mb-0'>".$structure->libelle."</p>
+                                    </div>
+                                    <div class='card-footer bg-white d-flex justify-content-end'>
+                                        <a class='btn btn-xs btn-save'>
+                                            <i class='fas fa-plus-square'></i>
+                                            Visiter
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="card-body px-0">
-                                <p class="libelle-formation mb-0">{{$structure->libelle}}</p>
-                            </div>
-                            <div class="card-footer bg-white d-flex justify-content-end">
-                                <a class="btn btn-xs btn-save">
-                                    <i class="fas fa-plus-square"></i>
-                                    Visiter
-                                </a>
-                            </div>
-                        </div>
-                        @else
-                        @endif
+                                "
+                            ;
+                        };
 
-                        @empty
-                        @endforelse
+                        ?>
                     </div>
                 </div>
             </div>

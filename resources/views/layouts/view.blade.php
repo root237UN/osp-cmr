@@ -85,7 +85,14 @@
             border: 1px solid transparent;
             text-transform: uppercase;
             cursor: pointer;
-            font-size: 13px;
+            font-size: 12px;
+        }
+        header.bg-cover #navbarSupportedContent li{
+            padding-left: 5px ;
+            padding-right: 5px;
+        }
+        header.bg-cover #navbarSupportedContent li:hover a{
+            color: #38c172;
         }
 
         #description {

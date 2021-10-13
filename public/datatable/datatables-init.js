@@ -5,6 +5,8 @@
     /*  Data Table
     -------------*/
 
+    $.fn.dataTable.ext.errMode = 'throw';
+
     $('#bootstrap-data-table').DataTable({
         lengthMenu: [[10, 20, 50, -1], [10, 20, 50, "All"]],
     });
@@ -32,7 +34,7 @@
             "infoEmpty": "Aucune donnée trouvée !!!",
             "infoFiltered": "(filtered from _MAX_ total records)"
         },
-        "processing": true,
+        "processing": false,
         "ajax": {
             url: "/ecoles", type: 'GET',
             complete: function (response) {
@@ -54,7 +56,10 @@
             { data: 'type' },
             {
                 data: 'localite',
-                searchable: true, orderable: true
+                searchable: true, orderable: true,
+                render: function(data){
+                    return '<span class="flex-row d-flex justify-content-between">'+data+'<i class="fas fa-map-marked"></i></span>';
+                }
             },
             {
                 data: 'cycle_1',

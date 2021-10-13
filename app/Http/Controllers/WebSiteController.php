@@ -82,11 +82,12 @@ class WebSiteController extends Controller
         return view('formation/view');
     }
 
-    public function viewMenuStructure()
+    public function showMenuStructure()
     {
         $menuStructure = MenuVisite::where('titre', "Structure d'aide")->firstorfail();
-        $structures = StructureInsertionPro::all();
-        return view('structure/view', ['menu' => $menuStructure, 'structures' => $structures]);
+        $structures = DB::select("SELECT DISTINCT `structure_insertion_pros`.id, `structure_insertion_pros`.libelle,`structure_insertion_pros`.code,`structure_insertion_pros`.objectif  FROM `structure_insertion_pros` right join `programme_insertion_pros`  ON `structure_insertion_pros`.id=`programme_insertion_pros`.structure_insertion_pro_id ");
+        //dd($structures);
+        return view('structure/view', ['menu' => $menuStructure, 'structures' => json_encode($structures)]);
     }
 
     public function showMenuEtablissement()

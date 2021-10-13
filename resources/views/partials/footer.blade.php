@@ -33,7 +33,7 @@
 
     <div class="sub-footer py-2" id="sub-footer">
         <div class="u-wrapper" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
-            <p class="copyright">©&nbsp;KCorp Systems&nbsp;2021&nbsp;|&nbsp;<a href="/mentions-legales.php">Mentions légales</a>&nbsp;|&nbsp;<a href="/plan-du-site.php">Plan du site</a>&nbsp;|&nbsp;<a href="/index?tpl=2" target="_blank" rel="nofollow">Imprimer</a>&nbsp;|&nbsp;Mise à jour :&nbsp;21/07/2021</p>
+            <p class="copyright">©&nbsp;KCorp Systems&nbsp;2021&nbsp;|&nbsp;<a href="#">Mentions légales</a>&nbsp;|&nbsp;<a href="#">Plan du site</a>&nbsp;|&nbsp;<a href="#" target="_blank" rel="nofollow">Imprimer</a>&nbsp;|&nbsp;Mise à jour :&nbsp;21/09/2021</p>
             <div class="production">
                 <div class="production-text">Réalisé par&nbsp;KCop</div>
             </div>

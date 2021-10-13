@@ -48,6 +48,14 @@ header::before {
     padding: 0;
     transition: transform .1s linear;
 }
+
+#navbarSupportedContent li:hover {
+    background-color: #f2f2f2;
+}
+#navbarSupportedContent li:hover a {
+    color: #38c172 !important;
+}
+
 #navbarSupportedContent a, #navbarSupportedContent li span {
     padding: 10px 13px;
     display: inline-block;
@@ -57,8 +65,10 @@ header::before {
     cursor: pointer;
     font-size: 12px;
 }
+
 #navbarSupportedContent a:hover, #navbarSupportedContent a:focus {
 }
+
 .new-dropdown-menu{
     display: none;
     visibility: hidden;
