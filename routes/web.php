@@ -20,13 +20,13 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', [WebSiteController::class, 'index'])->name('welcome');
-Route::get('/enseignement', [WebSiteController::class, 'enseignement'])->name('enseignement');
+Route::get('/enseignement', [WebSiteController::class, 'showMenuEnseignement'])->name('enseignement');
 
 Route::get('/enseignement/{code}', [WebSiteController::class, 'showTypeEnseignement'])->name('enseignement.view');
 Route::get('/parcours/{code}', [WebSiteController::class, 'showParcours'])->name('parcours.show');
 
 /** Route pour les formations */
-Route::get('/formation', [WebSiteController::class, 'formation'])->name('formation');
+Route::get('/formation', [WebSiteController::class, 'showMenuFormation'])->name('formation');
 Route::get('/formation/{code}', [WebSiteController::class, 'showFormation'])->name('formation.show');
 Route::get('/formation-description/{code}', [WebSiteController::class, 'InfosTypeFormation'])->name('formation.infos');
 Route::get('/formation-presentation/{code}', [WebSiteController::class, 'presentationFormation'])->name('formation.all');

@@ -184,7 +184,7 @@
             </div>
             <div class="col-8" id="description">
                 <h2 class="my-2 py-4  d-flex justify-content-start" style="align-items: center;">
-                    <span class="text-uppercase m-2 title-type">Formation</span>
+                    <span class="text-uppercase title-type">Formation</span>
                 </h2>
                 <p class="text-description col-md-12"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet luctus venenatis lectus magna fringilla urna. Dictum sit amet justo donec enim. Dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a. Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo. Feugiat sed lectus vestibulum mattis ullamcorper velit. Amet venenatis urna cursus eget. Sodales ut eu sem integer vitae. Duis ut diam quam nulla porttitor massa id neque aliquam. </p>
                 <div class="line-infos d-flex justify-content-between">
@@ -206,7 +206,7 @@
 <section id="content-option">
     <div class="container">
         <div class="d-flex justify-content-center py-5">
-            <h1 class="title-option">Choisissez <span id='typed' class="" style="font-weight: bold;">une formation</span></h1>
+            <h1 class="title-option">Choisissez <span class="" style="font-weight: bold;">une formation ...</span></h1>
         </div>
 
         <div class="row d-flex justify-content-center" id='options'>

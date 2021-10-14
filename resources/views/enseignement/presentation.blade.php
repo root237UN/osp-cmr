@@ -34,6 +34,8 @@
 
     <link href="{{ asset('css/search.css') }}" rel="stylesheet">
 
+    <link href="{{ asset('css/header.css') }}" rel="stylesheet">
+
     <style>
         .btn-check:focus+.btn,
         .btn:focus {

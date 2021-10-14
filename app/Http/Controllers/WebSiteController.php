@@ -25,7 +25,7 @@ class WebSiteController extends Controller
         return view('layouts.view');
     }
 
-    public function enseignement()
+    public function showMenuEnseignement()
     {
         $type_enseignements =  TypeEnseignement::all();
         $type_formation = TypeFormation::all();
@@ -77,7 +77,7 @@ class WebSiteController extends Controller
         return view('enseignement/parcours', ['option' => $option]);
     }
 
-    public function formation()
+    public function showMenuFormation()
     {
         return view('formation/view');
     }
@@ -85,7 +85,7 @@ class WebSiteController extends Controller
     public function showMenuStructure()
     {
         $menuStructure = MenuVisite::where('titre', "Structure d'aide")->firstorfail();
-        $structures = DB::select("SELECT DISTINCT `structure_insertion_pros`.id, `structure_insertion_pros`.libelle,`structure_insertion_pros`.code,`structure_insertion_pros`.objectif  FROM `structure_insertion_pros` right join `programme_insertion_pros`  ON `structure_insertion_pros`.id=`programme_insertion_pros`.structure_insertion_pro_id ");
+        $structures = DB::select("SELECT * FROM `structure_insertion_pros` where (SELECT COUNT(*) FROM `programme_insertion_pros` where `structure_insertion_pros`.id=`programme_insertion_pros`.structure_insertion_pro_id ) >= 2 ");
         //dd($structures);
         return view('structure/view', ['menu' => $menuStructure, 'structures' => json_encode($structures)]);
     }
