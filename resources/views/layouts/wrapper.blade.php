@@ -24,8 +24,16 @@
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
     <link href="{{ asset('css/wrapper.css') }}" rel="stylesheet">
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="{{asset('datatable/datatables.net-bs4/css/dataTables.bootstrap4.min.css')}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.1.1/dist/select2-bootstrap-5-theme.min.css" />
+
+
+
+    <link rel="stylesheet" href="{{asset('datatable/datatables.net-bs4/css/dataTables.bootstrap4.min.css')}}">
     <link rel="stylesheet" href="{{asset('datatable/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css')}}">
     @livewireStyles
     @yield('css')
@@ -87,7 +95,7 @@
                                     </li>
                                     <li class="flex-row d-flex">
                                         <span class="alert alert-danger">
-                                            <i class="fas fa-users"></i>
+                                            <i class="fas fa-user"></i>
                                         </span>
                                         <div class="flex-column d-flex justify-content-between">
                                             <p class="mb-0">Titre du rappel</p>
@@ -120,7 +128,6 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <script>
         $('.btn-close-sidebar').click(function() {
@@ -148,9 +155,10 @@
             $('#addLocaliteModal').modal('hide');
         });
     </script>
+
     @stack('scripts')
 
-<script src="{{asset('datatable/datatables.net/js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('datatable/datatables.net/js/jquery.dataTables.min.js')}}"></script>
     <script src="{{asset('datatable/datatables.net-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
     <script src="{{asset('datatable/datatables.net-buttons/js/dataTables.buttons.min.js')}}"></script>
     <script src="{{asset('datatable/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js')}}"></script>

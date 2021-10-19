@@ -2,6 +2,7 @@
 
 @section('content')
 
+
 <style>
     section.bg-cover {
         /*--nav-text-shadow: 0 0 20px rgba(0, 0, 0, .5);*/
@@ -44,7 +45,7 @@
         color: #ffffff;
         font-weight: 200;
         font-style: italic;
-        font-size: 17.4px;
+        font-size: 14.4px;
         text-align: left;
         opacity: .8;
         line-height: 2rem;
@@ -52,30 +53,25 @@
 
     section.bg-cover img {
         border: 1px solid transparent;
-        height: 250px;
-        width: 250px;
+        height: 60px;
+        width: 60px;
         background-color: whitesmoke;
-        border-radius: 400px;
         opacity: .8;
     }
 
     #description {
         z-index: 10;
+        box-shadow: 0 0 15px rgba(0, 0, 0, .1);
     }
 
     #content-option {
         box-shadow: 0 0 15px rgba(0, 0, 0, .1);
-        background-color: #f8fafc;
-        min-height: 100vh;
-        background-image: url(../images/bg-section.png);
-        background-size: cover;
-        background-position: 50%;
-        background-repeat: no-repeat;
+        background-color: transparent;
+        padding-bottom: 50px;
     }
 
     .title-option {
-        color: #000;
-        font-weight: 200;
+        color: #fff;
         font-style: italic;
         text-align: left;
         opacity: .8;
@@ -91,32 +87,35 @@
         border: none;
         min-height: 250px;
         width: 300px;
-        margin: 10px;
         text-align: center;
-        background-color: #fff;
-        background: linear-gradient(45deg, #00000096, #38c17252);
-        /*background: linear-gradient(45deg, #56ca87, #56ca87);
-        background: linear-gradient(45deg, #242738, #38c172);*/
+        border: 1px inset #3cad7442;
+        text-align: center;
+        background-color: #f8fafc0f;
     }
 
     .card-option:hover {
 
         box-shadow: 0 5px 20px rgba(0, 0, 0, .15), 0 4px 4px -2px rgba(0, 0, 0, .1) !important;
         opacity: 1;
-        background: linear-gradient(45deg, #38c17252, #00000096);
+        background: linear-gradient(45deg, #38c17252, #38c17252);
         transform: translateY(-5px)scale(1);
     }
 
     .option-text {
-        color: #fff;
-        font-size: 15px;
+        color: #ffffff;
+        font-weight: 200;
+        font-style: italic;
+        font-size: 14.4px;
+        text-align: center;
+        opacity: .8;
+        line-height: 1.5rem;
     }
 
     .option-text::after {
         position: absolute;
         bottom: -20px;
         left: 50%;
-        content: '\e623 Decouvrir';
+        content: 'Decouvrir';
         transform: translateX(-50%);
     }
 
@@ -129,10 +128,9 @@
         padding: 5px 20px;
         font-size: 14px;
         color: #00000096 !important;
-        font-family: themify, Georgia, 'Times New Roman', Times, serif, sans-serif;
-        border: 1px solid rgba(0, 0, 0, .2);
         transition: transform .2s;
         white-space: nowrap;
+        font-family: 'Gelasio', serif;
     }
 
     .img-option {
@@ -153,6 +151,7 @@
         color: #fff;
         font-size: 15px;
         line-height: 1.5rem;
+        font-family: 'Gelasio', serif;
     }
 
 
@@ -173,20 +172,21 @@
         will-change: transform;
         transition: transform 0.15s linear 0s;
     }
-
 </style>
 
 <section class="bg-cover">
     <div class="container">
         <div class="row py-4">
-            <div class="col-4 d-flex justify-content-center" style="align-items: center;" data-aos="zoom-in-down">
+            <!--<div class="col-4 d-flex justify-content-center" style="align-items: center;" data-aos="zoom-in-down">
                 <img class="img img-thumbnail m-2" src="../images/bg3.jpg" style="border-radius:50%;border:none" />
-            </div>
-            <div class="col-8" id="description">
+            </div>-->
+            <div class="col-6" id="description">
                 <h2 class="my-2 py-4  d-flex justify-content-start" style="align-items: center;">
                     <span class="text-uppercase title-type">Formation</span>
                 </h2>
-                <p class="text-description col-md-12"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet luctus venenatis lectus magna fringilla urna. Dictum sit amet justo donec enim. Dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a. Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo. Feugiat sed lectus vestibulum mattis ullamcorper velit. Amet venenatis urna cursus eget. Sodales ut eu sem integer vitae. Duis ut diam quam nulla porttitor massa id neque aliquam. </p>
+                <p class="text-description col-md-12">
+                Une plateforme conçue pour pallier le déficit de conseillers d’orientation au sein de nos institutions scolaires et professionnelles afin de renforcer la prise de décision stratégique pour l’accomplissement d’une carrière.
+                </p>
                 <div class="line-infos d-flex justify-content-between">
                     <a class="link-parcours" href="#">Des questions !</a>
                     <a class="link-ensavoir" href="#">En savoir plus!</a>
@@ -194,6 +194,40 @@
                 <hr>
                 <p style="font-style: italic;font-family: 'Gelasio', serif;color: #fff;">Des questions. Posez les ici !!!</p>
             </div>
+
+            <div class="col-6 pt-4" id="content-option">
+                <div class="">
+                    <div class="d-flex justify-content-center pt-0 py-3">
+                    <h2 class="title-option">Choisissez <span class="" style="font-weight: bold;">une formation ...</span></h2>
+                    </div>
+
+                    <div class="row d-flex justify-content-center" id='options'>
+
+                        @forelse($typesFormation as $type)
+                        <div class="col-8 d-flex justify-content-center">
+                            <a class="card card-option rounded-3" href="{{route('formation.show', ['code' => $type->code]) }}">
+                                <div class="card-body">
+                                    <img class="img img-fluid img-option " src="{{$type->image}}" />
+                                    <h3 class="py-4 mb-0">{{$type->libelle}}</h3>
+                                    <p class="option-text">{{$type->description}}</p>
+                                </div>
+                            </a>
+                        </div>
+                        @empty
+                        <div class='row d-flex justify-content-center'>
+                            <div class="col-5 d-flex justify-content-center">
+                                <a class="card card-option rounded-3" style="min-height: 150px;">
+                                    <div class="card-body">
+                                        <h3 class="py-4 mt-4">Aucune option trouvee !!!</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        @endforelse
+                    </div>
+                </div>
+            </div>
+
             <div class="col-8 d-flex justify-content-end" style="z-index: 10;">
                 <a id="arrow-down" href="#options">
                     <i data-feather="arrow-down" class="text-light"></i>
@@ -203,32 +237,18 @@
     </div>
 </section>
 
-<section id="content-option">
-    <div class="container">
-        <div class="d-flex justify-content-center py-5">
-            <h1 class="title-option">Choisissez <span class="" style="font-weight: bold;">une formation ...</span></h1>
-        </div>
-
-        <div class="row d-flex justify-content-center" id='options'>
-        </div>
-    </div>
-</section>
-
-
 <section id="actualites-onglet">
-
     <div id="carouselParcours" class="carousel slide" data-bs-ride="carousel">
-
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="row">
                     <div class="col-md-9" id="item-actualite">
-                        <div class="col-10" style="margin-left: 50px;" id="description">
+                        <div class="col-10"  id="description" style="box-shadow: none;margin-left: 50px;">
                             <h2 class="my-2 py-4  d-flex justify-content-start" style="align-items: center;    font-family: 'Gelasio', serif;">
-                                <span class="text-uppercase m-2 text-actualite">Actualite</span>
+                                <span class="text-uppercase m-2 text-actualite">Actualité</span>
                             </h2>
-                            <p class="text-description-actualite col-md-12 py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vero culpa, debitis ducimus atque aliquid beatae modi aut distinctio. Pariatur fugit expedita sit ipsum, quos praesentium maxime accusamus eius repudiandae!</p>
-                            <a class="link-parcours" href="#">Lire l'actualite </a>
+                            <p class="text-description-actualite col-md-12 py-2">Actualité sur les formations ...</p>
+                            <a class="link-parcours" href="#">Lire l'actualité </a>
                             <hr style="color: #38c172;">
                             <time datetime="2021-06-01 00:00:00 +0000 UTC"><i class="ti-alarm-clock"></i>01 June 2021</time>
                         </div>
@@ -240,7 +260,7 @@
         <div class="header-actualites">
             <div class="service-bg"></div>
             <div class="row" style="justify-content: center;">
-                <h2 class="title-header-actualite">Actualites formation</h2>
+                <h2 class="title-header-actualite">Actualités formation</h2>
                 <hr class="divider">
             </div>
         </div>

@@ -46,7 +46,7 @@
             <div class="col-8 d-flex flex-column">
                 <hr style="color: #deb857;">
                 <div class="d-flex justify-content-center">
-                    <h3 class="title-presentation my-3">Presentation detaillee de la formation </h3>
+                    <h3 class="title-presentation my-3">Présentation détaillée de la formation </h3>
                 </div>
             </div>
         </div>
@@ -54,12 +54,12 @@
             <div class="condition-access">
                 <div class="row d-flex justify-content-between" style="align-items: center;">
                     <div class="col-7 d-flex justify-content-end">
-                        <h6 class=" my-2  text-condition-access text-title-card">Conditons d'access generaux </h6>
+                        <h6 class=" my-2  text-condition-access text-title-card">Conditions d’accès générales</h6>
                     </div>
                     <div class="col-2 d-flex justify-content-end">
                         <button class="btn btn-app-2 btn-xs btn-save">
                             <i class="fas fa-eye"></i>
-                            <span style="font-size: xx-small;">Consulter toute les condition</span>
+                            <span style="font-size: xx-small;">Consulter toutes les condition</span>
                         </button>
                     </div>
                 </div>

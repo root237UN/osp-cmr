@@ -297,7 +297,7 @@
 
     <div class="container">
         <div class="d-flex justify-content-center py-5">
-            <h1 class="title-option">Choisissez <span class="text-capitalize" style="font-weight: bold;">Un parcours ...</span></h1>
+            <h1 class="title-option">Optez pour un <span class="text-capitalize" style="font-weight: bold;"> parcours ...</span></h1>
         </div>
 
         <div class="row d-flex justify-content-center" id="parcours">

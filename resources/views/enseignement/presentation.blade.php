@@ -35,6 +35,7 @@
     <link href="{{ asset('css/search.css') }}" rel="stylesheet">
 
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/home.css') }}" rel="stylesheet">
 
     <style>
         .btn-check:focus+.btn,
@@ -50,115 +51,78 @@
         <header class="bg-cover">
             <livewire:top-navbar-orientation />
 
-            <div class="container" id="description">
-                <div id="myCarousel" class="carousel  slide" data-bs-interval="90000" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <div class="container-fluid pb-1" id="description">
+                <div class="row">
+                    <div class="col-6 " data-aos="zoom-in-down">
+                        <div class="flex-column d-flex justify-content-between" id="banner-text">
+                            <h1 class="mb-0 mt-4" style="text-transform: capitalize;">Enseignement secondaire au cameroun </h1>
+                            <p style="text-align: justify;" class="p my-5 body">
+                                Une plateforme conçue pour pallier le déficit de conseillers d’orientation au sein de nos institutions scolaires et professionnelles afin de renforcer la prise de décision stratégique pour l’accomplissement d’une carrière.
+                            </p>
+                            <div class="d-flex justify-content-start bounce" style="align-items: center;">
+                                <a id="documentation-link" class="btn bounce text-uppercase" style="font-weight: bold;" href="#"> <i class="fas fa-2x fa-book"></i></a>
+                                <a id='arrow-down' href="#" class="text-orientation ml-5 bounce text-white">Orientation - En clique</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div id="orientations-types">
-                                <div id="orientations-types__cards" class="container">
-                                    <div class="row d-flex py-3 mb-2 px-0 justify-content-center">
-                                        <div class="col-8">
-                                            <h2 class="text-orientation text-center">Choisissez <span style="font-weight: bold;">une catégorie d’enseignement ...</span></h2>
-                                        </div>
+
+                    <div class="col-6">
+                        <div id="orientations-types">
+                            <div id="orientations-types__cards">
+                                <div class="row d-flex pb-3 px-0 justify-content-center">
+                                    <div class="col-12">
+                                        <h2 class="text-orientation text-center">Optez pour <span style="font-weight: 200;">une catégorie d’enseignement ...</span></h2>
                                     </div>
-                                    <div class="row d-flex justify-content-center px-3">
-                                        @forelse($type_enseignements as $type)
-                                        <a href="{{ route('enseignement.view', ['code' => $type->code ])}}" class="card-cover item card shadow-sm col-4 mr-3 card-enseignement" style="margin-right: 20px;margin-left:20px;" data-aos="flip-left">
+                                </div>
+                                <div class="flex-row d-flex justify-content-center">
+                                    @forelse($type_enseignements as $type)
+                                    <div class="card-cover item card shadow-sm  card-enseignement" style="margin-right: 20px;margin-left:20px;" data-aos="flip-left">
+
+                                        <a href="{{ route('enseignement.view', ['code' => $type->code ])}}">
                                             @if($type->id % 2 != 0)
-                                            <div class="row p-2 card-image description-header-type" style="background-color: #dfdfdf;align-items:center;">
+                                            <div class="flex-row p-2 d-flex justify-content-between card-image description-header-type" style="background-color: #515151;align-items:center;">
                                                 <div class="col-4 d-flex justify-content-center ">
-                                                    <div style="height: 100px; width: 100px; background-color: #fff;border-radius:50px;">
+                                                    <div style="height: 60px; width: 60px; background-color: #fff;border-radius:50px;">
                                                         <img src="{{$type->image}}" style="height: 100%;width: 100%;border-radius: 50%;">
                                                     </div>
                                                 </div>
-                                                <h4 class="col-8 justify-content-center title-type" style="font-size: 15px;text-align:center;">{{$type->libelle}}</h4>
+                                                <h4 class="col-8 justify-content-center title-type text-white" style="font-size: 15px;text-align:center;">{{$type->libelle}}</h4>
                                             </div>
                                             @else
-                                            <div class="row p-2 card-image description-header-type" style="background-color: #243a5e;align-items:center;">
+                                            <div class="flex-row p-2 d-flex justify-content-between card-image description-header-type" style="background-color: #515151;align-items:center;">
                                                 <div class="col-4 d-flex justify-content-center">
-                                                    <div style="height: 100px; width: 100px; background-color: #fff;border-radius:50px;">
+                                                    <div style="height: 60px; width: 60px; background-color: #fff;border-radius:50px;">
                                                         <img src="{{$type->image}}" style="height: 100%;width: 100%;border-radius: 50%;">
                                                     </div>
                                                 </div>
                                                 <h4 class="col-8 justify-content-center title-type text-white" style="font-size: 15px;text-align:center;">{{$type->libelle}}</h4>
                                             </div>
                                             @endif
-                                            <p class="card-body card-text text-decoration-none description-type">{{$type->description}}</p>
+                                            <p class="card-body mb-0 card-text text-decoration-none description-type">{{$type->description}}</p>
                                             <div class="d-flex justify-content-center">
-                                                <button class="btn text-dark col-5 p-2 btn-sm rounded-5 text-uppercase btn-discover mb-4">
+                                                <button class="btn text-dark col-5 p-2 btn-sm rounded-5 text-uppercase text-white btn-discover mb-4">
                                                     Decouvrir
                                                 </button>
                                             </div>
                                         </a>
-                                        @empty
-                                        <div class="alert alert-warning">
-                                            <span>Aucune donnee !!!</span>
-                                        </div>
-                                        @endforelse
                                     </div>
-
-                                    <div class="break"></div>
+                                    @empty
+                                    <div class="alert alert-warning">
+                                        <span>Aucune donnée !!!</span>
+                                    </div>
+                                    @endforelse
                                 </div>
-                                <br>
-                            </div>
-                        </div>
 
-                        <div class="carousel-item">
-                            <div id="orientations-types">
-                                <div id="orientations-types__cards" class="container">
-                                    <div class="row d-flex py-3 mb-2 px-0 justify-content-center">
-                                        <div class="col-8">
-                                            <h2 class="text-orientation text-center">Choisissez <span class="" style="font-weight: bold;"> catégorie de formation ...</span></h2>
-                                        </div>
-                                    </div>
-
-                                    <div class="row d-flex justify-content-center px-3">
-                                        @forelse($type_formations as $type_formation)
-                                        <a href="{{ route('formation.show', ['code' => $type_formation->code])}}" class="card-cover item card shadow-sm col-4 card-enseignement" data-aos="flip-left">
-                                            @if($type_formation->id % 2 == 0)
-                                            <div class="row p-2 card-image description-header-type" style="background-color: #dfdfdf;align-items:center;">
-                                                <div class="col-4 d-flex justify-content-center ">
-                                                    <div style="height: 100px; width: 100px; background-color: #fff;border-radius:50px;">
-                                                        <img src="{{$type_formation->image}}" style="height: 100%;width: 100%;border-radius: 50%;">
-                                                    </div>
-                                                </div>
-                                                <h4 class="col-8 justify-content-center title-type" style="font-size: 15px;text-align:center;">{{$type_formation->libelle}}</h4>
-                                            </div>
-                                            @else
-                                            <div class="row p-2 card-image description-header-type" style="background-color: #243a5e;align-items:center;">
-                                                <div class="col-4 d-flex justify-content-center">
-                                                    <div style="height: 100px; width: 100px; background-color: #fff;border-radius:50px;">
-                                                        <img src="{{$type_formation->image}}" style="height: 100%;width: 100%;border-radius: 50%;">
-                                                    </div>
-                                                </div>
-                                                <h4 class="col-8 justify-content-center title-type text-white" style="font-size: 15px;text-align:center;">{{$type_formation->libelle}}</h4>
-                                            </div>
-                                            @endif
-                                            <p class="card-body card-text text-decoration-none description-type">{{$type_formation->description}}</p>
-                                            <div class="d-flex justify-content-center">
-                                                <button class="btn text-dark col-5 p-2 btn-sm rounded-5 text-uppercase btn-discover mb-5">
-                                                    Decouvrir
-                                                </button>
-                                            </div>
-                                        </a>
-                                        @empty
-                                        <div class="alert alert-warning">
-                                            <span>Aucune donnee !!!</span>
-                                        </div>
-                                        @endforelse
-                                    </div>
-                                </div>
+                                <div class="break"></div>
                             </div>
+                            <br>
                         </div>
                     </div>
                 </div>
+            </div>
         </header>
 
-        <section id="actualites-onglet">
+        <!--<section id="actualites-onglet">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="row">
@@ -190,7 +154,7 @@
             <button class="carousel-control-next" type="button" data-bs-target="#carouselParcours" style="padding-left: 11%;" data-bs-slide="next">
                 <span class="fa fa-chevron-right fa-2x text-dark"></span>
             </button>
-        </section>
+        </section>-->
 
     </div>
     @include('partials.footer')

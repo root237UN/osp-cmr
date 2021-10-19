@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="">
         <nav class="nav-bar navbar navbar-expand-lg nav-top">
-            <a class="col-md-1 title-nav"><span style="color: #38c172;font-size: 15px;">Formation |</span></a>
+            <a class="col-md-1 title-nav"><span style="color: #38c172;font-size: 15px;font-weight:200;">Formation </span></a>
             <ul class="col-md-5 list-options navbar-nav">
                 <li class="dropdown nav-bar-item">
                     <a><span>Type de formation</span></a>

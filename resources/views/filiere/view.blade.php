@@ -11,10 +11,12 @@
 <div class="" id="header-formation">
     <div class="">
         <div class="row mx-4 pt-4">
-            <h1 class="text-white text-capitalize header-title">Decouvrer les filieres et leurs debouches </h1>
+            <h1 class="text-white text-capitalize header-title">Présentation des filières d’enseignement</h1>
         </div>
         <div class="row mx-4 py-4">
-            <p class="header-title-description">Apprennez d'avantage sur les filieres, les enseignements, les metiers ainsi que les diplomes offert par le parcours {{$section->libelle}} au @if($cycle->id ==1) premier @else second @endif cycle.</p>
+            <p class="header-title-description">
+            Apprenez d'avantage sur les filières, les enseignements, les métiers ainsi que les diplômes offert par le parcours {{$section->libelle}} au @if($cycle->id ==1) prémier @else second @endif cycle
+                de l' <span class="text-lowercase">{{$section->OptionEnseignement->TypeEnseignement->libelle}}</span>.</p>
         </div>
     </div>
 </div>
@@ -24,10 +26,10 @@
         <div class="d-flex my-2 mb-4 justify-content-between" style="align-items: center;">
             <nav class="col-md-10" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrum">
                 <ol class="breadcrumb my-1">
-                    <li class="breadcrumb-item breadcrumb-item-first"><a href="{{route('orientation')}}">Orientation</a></li>
-                    <li class="breadcrumb-item"><a href="{{route('enseignement')}}">Enseignement</a></li>
-                    <li class="breadcrumb-item"><a href="{{route('orientation')}}">{{$section->OptionEnseignement->libelle}}</a></li>
-                    <li class="breadcrumb-item"><a href="{{route('orientation')}}">{{$section->libelle}}</a></li>
+                    <li class="breadcrumb-item breadcrumb-item-first"><a href="#">Orientation</a></li>
+                    <li class="breadcrumb-item"><a href="{{route('enseignement.view', ['code' => $section->OptionEnseignement->TypeEnseignement->code ])}}">{{$section->OptionEnseignement->TypeEnseignement->libelle}}</a></li>
+                    <li class="breadcrumb-item"><a href="{{route('parcours.show', ['code' => $section->OptionEnseignement->code ])}}">{{$section->OptionEnseignement->libelle}}</a></li>
+                    <li class="breadcrumb-item"><a href="{{route('section',  ['code' => $section->id ])}}">{{$section->libelle}}</a></li>
                     <li class="breadcrumb-item active" aria-current="page">{{$cycle->libelle}}</li>
                 </ol>
             </nav>
@@ -43,7 +45,7 @@
                     <form>
                         <div class="item-filtre my-2">
                             <h4 class="item-filtre-title">
-                                <span>Localite</span>
+                                <span>Localité</span>
                                 <button class="btn text-dark btn-display" id="btn-display" type="button"> <i class="fas fa-chevron-down"></i></button>
                             </h4>
                             <input type="text" name="search-localite" class="form-control">
@@ -63,27 +65,19 @@
                         </div>
                         <div class="item-filtre  my-2">
                             <h4 class="item-filtre-title">
-                                <span>Specialte</span>
+                                <span>Secteur</span>
                                 <button class="btn text-dark btn-display" type="button"> <i class="fas fa-chevron-down"></i></button>
                             </h4>
+
                             <input type="text" name="search-parcours" class="form-control">
                             <div class="content-item my-2">
+                            @forelse($secteurs as $secteur)
                                 <div class="form-check my-2">
-                                    <input type="checkbox" class="form-check-input" id="parcours-value" name="parcours">
-                                    <label class="form-check-label" for="parcours-value">Genie mecanique</label>
+                                    <input type="checkbox" class="form-check-input" id="{{$secteur->id}}" name="parcours">
+                                    <label class="form-check-label" for="parcours-value">{{$secteur->libelle}}</label>
                                 </div>
-                                <div class="form-check my-2">
-                                    <input type="checkbox" class="form-check-input" id="localite-value" name="parcours">
-                                    <label class="form-check-label" for="localite-value">Restauration</label>
-                                </div>
-                                <div class="form-check my-2">
-                                    <input type="checkbox" class="form-check-input" id="localite-value" name="parcours">
-                                    <label class="form-check-label" for="localite-value">Bois</label>
-                                </div>
-                                <div class="form-check my-2">
-                                    <input type="checkbox" class="form-check-input" id="localite-value" name="parcours">
-                                    <label class="form-check-label" for="localite-value">Genie chimique</label>
-                                </div>
+                            @empty
+                            @endforelse
                             </div>
                         </div>
                         <div class="item-filtre  my-2">
@@ -93,14 +87,13 @@
                             </h4>
                             <input type="text" name="search-ecole" class="form-control">
                             <div class="content-item my-2">
+                            @forelse($ecoles as $ecole)
                                 <div class="form-check my-2">
                                     <input type="checkbox" class="form-check-input" id="ecole-value" name="ecole">
-                                    <label class="form-check-label" for="ecole-value">LYCEE TECHNIQUE DE NGAOUNDAL</label>
+                                    <label class="form-check-label" for="ecole-value">{{$ecole->libelle}}</label>
                                 </div>
-                                <div class="form-check my-2">
-                                    <input type="checkbox" class="form-check-input" id="localite-value" name="parcours">
-                                    <label class="form-check-label" for="localite-value">CETIC DE NGATTI</label>
-                                </div>
+                            @empty
+                            @endforelse
                             </div>
                         </div>
                     </form>
@@ -112,7 +105,7 @@
                         <form class="form form-inline">
                             <div class="row-input">
                                 <input class="form-control" placeholder="Rechercher ..." name="">
-                                <button type="submit" class="btn btn-success">
+                                <button type="button" class="btn btn-success">
                                     <i class="fas fa-search"></i><span class="mr-2">Rechercher</span>
                                 </button>
                             </div>

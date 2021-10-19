@@ -1,6 +1,36 @@
 @extends('layouts.wrapper')
 
 @section('css')
+<style>
+    .card-action {
+        border: none;
+    }
+
+    .form-control:focus,
+    .form-control:active {
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px !important;
+    }
+
+    .select2-container--bootstrap-5 .select2-selection--single .select2-selection__rendered {
+        font-size: 12px !important;
+    }
+    .form label{
+        display: block;
+        margin-bottom: 5px;
+    }
+    .select-cycle *{
+        font-size: 12px !important;
+    }
+    .filiere-cycle1,.filiere-cycle2{
+        display: none;
+        transform: scale(0);
+        transition: all ease-in 350ms;
+    }
+    .filiere-cycle1.visible,.filiere-cycle2.visible{
+        display: block;
+        transform: scale(1);
+    }
+</style>
 @endsection
 
 @section('content')
@@ -69,5 +99,3 @@
 
 @endsection
 
-@push('scripts')
-@endpush

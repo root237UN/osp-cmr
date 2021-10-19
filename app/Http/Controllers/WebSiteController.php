@@ -14,6 +14,7 @@ use App\Models\Localite;
 use App\Models\Structure;
 use App\Models\Formation;
 use App\Models\MenuVisite;
+use App\Models\StructureFormation;
 use App\Models\StructureInsertionPro;
 use Illuminate\Support\Facades\DB;
 
@@ -50,8 +51,8 @@ class WebSiteController extends Controller
         $type = TypeFormation::where('code', $request->code)->firstorfail();
         $formations = Formation::where('type_formation_id', intval($type->id))->paginate(10);
 
-        $localites = Localite::all();
-        $structures = Structure::all();
+        $localites = Localite::orderBy('libelle','asc')->get();
+        $structures = StructureFormation::orderBy('libelle', 'asc')->get();
         return view('formation/presentation', ["localites" => $localites, "structures" => $structures, "type" => $type, "formations" => $formations]);
     }
 
@@ -79,7 +80,8 @@ class WebSiteController extends Controller
 
     public function showMenuFormation()
     {
-        return view('formation/view');
+        $typesFormation = TypeFormation::all();
+        return view('formation/view',['typesFormation' => $typesFormation]);
     }
 
     public function showMenuStructure()
@@ -141,10 +143,12 @@ class WebSiteController extends Controller
         $section = SectionEnseignement::findorFail($id_section);
         $cycle = CycleEnseignement::findorFail($id_cycle);
 
-        $localites = Localite::all();
+        $localites = Localite::orderBy('libelle','asc')->get();
+        $secteurs = SectionEnseignement::orderBy('libelle','asc')->get();
+        $ecoles = Ecole::orderBy('libelle','asc')->get();
 
         $filieres = FiliereEnseignement::where('cycle_enseignement_id', $id_cycle)->where('section_enseignement_id', $id_section)->paginate(10);
-        return view('filiere/view', ["section" => $section, "cycle" => $cycle, "filieres" => $filieres, "localites" => $localites]);
+        return view('filiere/view', ['ecoles'=>$ecoles,'secteurs'=>$secteurs,"section" => $section, "cycle" => $cycle, "filieres" => $filieres, "localites" => $localites]);
         //dd($filieres);
     }
 

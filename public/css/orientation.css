@@ -25,6 +25,9 @@
     .card-enseignement {
         transition: all ease-in-out 300ms;
         border: none;
+        min-width: 280px;
+       background-color: #243a5e !important;
+       color: #fff;
         border-radius: 15px 0 15px 0 !important;
 
     }
@@ -36,7 +39,7 @@
     }
 
     .card-image {
-        min-height: 150px;
+        min-height: 110px;
         border-radius: 13px 0 13px 0 !important;
     }
 
@@ -91,8 +94,9 @@
         text-align: center;
         font-weight: 500;
         font-style: italic;
-        line-height: 20px;
+        line-height: 30px;
         max-height: 140px;
+        text-overflow: ellipsis;
         overflow: hidden;
     }
 

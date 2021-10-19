@@ -30,6 +30,9 @@
                         </ul>
                     </li>
                     <li>
+                        <a href="#"><i class="fas fa-comment-alt icon"></i>Menu</a>
+                    </li>
+                    <li>
                         <a href="#"><i class="fas fa-comment-alt icon"></i>Forum</a>
                     </li>
                     <li>

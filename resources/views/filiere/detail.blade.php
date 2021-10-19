@@ -27,7 +27,7 @@
                 </h1>
             </div>
             <div class="m-4">
-                <p class="header-title-description">@if($filiere->description == NULL) Decouvrer et explorer tout ce qui y'a a savoir sur {{$filiere->libelle}} @else{{$filiere->description}} @endif</p>
+                <p class="header-title-description">@if($filiere->description == NULL) Découvrez les opportunités, les métiers, les débouchées et les compétences destinées aux apprenants en  {{$filiere->libelle}} @else{{$filiere->description}} @endif</p>
             </div>
         </div>
 
@@ -45,10 +45,10 @@
         <div class="row d-flex justify-content-between" style="align-items: center;">
             <nav class="col-md-12" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrum">
                 <ol class="breadcrumb my-1">
-                    <li class="breadcrumb-item breadcrumb-item-first">Orientation</li>
-                    <li class="breadcrumb-item">Enseignement</li>
-                    <li class="breadcrumb-item">{{$filiere->SectionEnseignement->OptionEnseignement->libelle}}</li>
-                    <li class="breadcrumb-item">{{$filiere->SectionEnseignement->libelle}}</li>
+                    <li class="breadcrumb-item breadcrumb-item-first"><a href="">Orientation</a></li>
+                    <li class="breadcrumb-item"><a href="{{route('enseignement.view', ['code' => $filiere->SectionEnseignement->OptionEnseignement->TypeEnseignement->code ])}}">{{$filiere->SectionEnseignement->OptionEnseignement->TypeEnseignement->libelle}}</a></li>
+                    <li class="breadcrumb-item"><a href="{{route('parcours.show', ['code' => $filiere->SectionEnseignement->OptionEnseignement->code ])}}">{{$filiere->SectionEnseignement->OptionEnseignement->libelle}}</a></li>
+                    <li class="breadcrumb-item"><a href="{{route('section',  ['code' => $filiere->SectionEnseignement->id ])}}">{{$filiere->SectionEnseignement->libelle}}</a></li>
                     <li class="breadcrumb-item">{{$filiere->CycleEnseignement->libelle}}</li>
                     <li class="breadcrumb-item active" aria-current="page">{{$filiere->libelle}}</li>
                 </ol>
@@ -61,7 +61,7 @@
             <div class="col-8 d-flex flex-column">
                 <hr style="color: #deb857;">
                 <div class="d-flex justify-content-center">
-                    <p>Presentation detaillee de la filiere </p>
+                    <p>Présentation détaillée de la filière </p>
                 </div>
             </div>
         </div>

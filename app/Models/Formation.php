@@ -11,7 +11,7 @@ class Formation extends Model
 
     public function Structure()
     {
-        return $this->belongsToMany(Structure::class);
+        return $this->belongsToMany(StructureFormation::class);
     }
 
     public function TypeFormation()

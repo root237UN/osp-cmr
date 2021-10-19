@@ -8,10 +8,10 @@
 <div class="" id="header-formation">
     <div class="">
         <div class="row m-4">
-            <h1 class="text-white text-capitalize header-title">Decouvrer les {{$type->libelle}} </h1>
+            <h1 class="text-white text-capitalize header-title">{{$type->libelle}} </h1>
         </div>
         <div class="row m-4">
-            <p class="header-title-description">Apprennez d'avantage sur les formations et leurs debouches.</p>
+            <p class="header-title-description">Apprenez d'avantage sur les formations et leurs débouchées.</p>
         </div>
     </div>
 </div>
@@ -23,7 +23,7 @@
                 <ol class="breadcrumb my-1">
                     <li class="breadcrumb-item breadcrumb-item-first"><a href="{{route('orientation')}}">Orientation</a></li>
                     <li class="breadcrumb-item"><a href="{{route('formation')}}">Formation</a></li>
-                    <li class="breadcrumb-item active" aria-current="page"><a href="{{route('orientation')}}">{{$type->libelle}}</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><a href="#">{{$type->libelle}}</a></li>
                 </ol>
             </nav>
         </div>
@@ -31,12 +31,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-2 py-2 " id="filtre">
-                <p class="title-filtre d-flex justify-content-between">Filtre
-                    <button class="btn btn-validate-filtre">
-                        <i class="fas fa-check text-dark mr-2"></i>
-                        Valide
-                    </button>
-                </p>
+                <p class="title-filtre d-flex justify-content-between">Filtre </p>
                 <div class="content-filtre">
                     <form>
                         <div class="item-filtre my-2">
@@ -84,7 +79,7 @@
                         <form class="form form-inline">
                             <div class="row-input">
                                 <input class="form-control" placeholder="Rechercher ..." name="">
-                                <button type="submit" class="btn btn-success">
+                                <button type="button" class="btn btn-success">
                                     <i class="fas fa-search"></i><span class="mr-2">Rechercher</span>
                                 </button>
                             </div>
@@ -92,7 +87,7 @@
                     </div>
                     <div class="content-body">
                         <p class="result-count my-2">{{$type->Formations->count()}} resultats</p>
-                        <div class="content-card row">
+                        <div class="content-card row px-3">
                             @forelse($formations as $formation)
                             <div class="card card-formation my-2 py-4">
                                 <a href="{{route('formation.details', ['code' => $formation->id])}}">

@@ -100,7 +100,7 @@
                                     </div>
                                     <div class="line line-2"></div>
                                     <div>
-                                        <span class="indicateur me-2">4</span><i class="fas fa-chart-line"></i>
+                                        <span class="indicateur me-2">{{$results[2]}} </span><i class="fas fa-chart-line"></i>
                                     </div>
                                 </li>
                                 <li>
@@ -111,7 +111,7 @@
                                         </div>
                                         <div class="line line-3"></div>
                                         <div>
-                                            <span class="indicateur"> 5 </span><i class="fas fa-chart-line"></i>
+                                            <span class="indicateur"> {{$results[2]}} </span><i class="fas fa-chart-line"></i>
                                         </div>
                                     </a>
                                 </li>

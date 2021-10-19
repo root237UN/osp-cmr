@@ -5,7 +5,7 @@
                 <input class="form-control" style="margin-left: 5px;" type="text" placeholder="Nom de la structure, nom du programme, ...." />
             </div>
             <div class="col-2">
-                <button class="btn btn-success text-white ">
+                <button type="button" class="btn btn-success text-white ">
                     <i class="fas fa-search"></i>
                     <span>Rechercher</span>
                 </button>

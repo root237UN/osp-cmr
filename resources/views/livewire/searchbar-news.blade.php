@@ -12,7 +12,7 @@
                             <div class="form-group col-10 p-0">
                                 <input type="text" class="form-control" value="" name="metier">
                             </div>
-                            <button type="submit" class="p-0 btn btn-xs text-white btn-success col d-flex" style="justify-content: center;align-items: center;">
+                            <button type="button" class="p-0 btn btn-xs text-white btn-success col d-flex" style="justify-content: center;align-items: center;">
                                 <i class="fa fa-search fa-2x"></i>
                             </button>
                         </form>

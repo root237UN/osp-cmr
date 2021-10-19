@@ -56,7 +56,7 @@
                             </div>
                             <div class="d-flex justify-content-start bounce" style="align-items: center;">
                                 <a id="documentation-link" class="btn bounce text-uppercase" style="font-weight: bold;" href="#"> <i class="fas fa-2x fa-book"></i></a>
-                                <a id='arrow-down' href="{{route('orientation')}}" class="text-orientation ml-5 bounce text-white">Orientation - En click</a>
+                                <a id='arrow-down' href="#" class="text-orientation ml-5 bounce text-white">Orientation - En clique</a>
                             </div>
                         </div>
                     </div>

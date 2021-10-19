@@ -411,7 +411,7 @@
                 </h2>
                 <p class="text-description col-md-12 py-2">@if($section->description_full){{$section->description_full}}@else Aucune description pour le moment !!! @endif</p>
                 <div class="line-infos d-flex justify-content-between">
-                    <a class="link-filieres" href="#filieres">Decouvrez les filieres du parcours</a>
+                    <a class="link-filieres" href="#content-filieres">Decouvrez les filieres du parcours</a>
                     <a class="link-ensavoir" href="#" style="color:#38c172">En savoir plus!</a>
                 </div>
                 <hr style="color: #231515">
@@ -430,12 +430,12 @@
 
     <div class="container-fluid">
         <div class="d-flex justify-content-center py-5">
-            <h1 class="title-option">Choisissez <span class="text-capitalize" style="font-weight: bold;">un cycle d'enseignement ...</span></h1>
+            <h1 class="title-option">Optez pour un <span class="text-capitalize" style="font-weight: bold;"> cycle d'enseignement ...</span></h1>
         </div>
 
         <div class="row d-flex justify-content-center">
-            <p class="description-cycle col-md-10">Le parcours {{$section->libelle}} offre une multitude de filieres reparties entre les deux cycles de l'enseignement secondaire.
-                Il est ainsi offert aux apprenants des choix de carrieres precis et conforme a leur besoins et moyens.
+            <p class="description-cycle col-md-10">
+            Le parcours {{$section->libelle}} offre une multitude de filières reparties entre les deux cycles de l'enseignement secondaire. Il est ainsi offert aux apprenants des choix de carrières précis et conforme à leur besoins et moyens.
             </p>
         </div>
 
