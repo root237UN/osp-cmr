@@ -52,7 +52,7 @@
         <div class="row px-5">
             <div class="col-3 py-3 px-4">
                 <div id="filtre-structure">
-                    <h3>Filtre</h3>
+                    <h3></h3>
                 </div>
             </div>
             <div class="col-9 mt-3 mb-3">

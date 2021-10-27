@@ -20,9 +20,9 @@
                                             <th>Nom Ecole</th>
                                             <th>Type Enseignement</th>
                                             <th>Localité</th>
-                                            <th>Cycle 1</th>
-                                            <th>Cycle 2</th>
-                                            <th>Details</th>
+                                            <th>Premier cycle</th>
+                                            <th>Second cycle</th>
+                                            <th>Détails</th>
                                         </tr>
                                     </thead>
                                     <tbody>

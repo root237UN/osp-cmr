@@ -3,8 +3,15 @@
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 25px;
-    color: #fff;
+    font-size: 20px;
+    font-style: italic;
+    color: #243a5e;
+    position: absolute;
+    top: -12px;
+}
+.logo-welcome::first-letter {
+    font-size: 50px;
+    color: #38c172;
 }
 
 header.bg-cover {
@@ -45,15 +52,27 @@ header::before {
 }
 
 header.bg-cover #navbarSupportedContent li>a {
-    color: #fff;
-    text-shadow: 0 0 1px #fff, var(--nav-text-shadow);
+    color: #243a5e;
+    /*  text-shadow: 2px 2px 9px rgba(36,58,94,0.22);*/
+    text-shadow: 2px 2px 9px rgba(255,255,255,0.22);
     padding: 10px 13px;
     display: inline-block;
+    top: 3px;
+    position: relative;
     height: 43px;
     border: 1px solid transparent;
     text-transform: uppercase;
     cursor: pointer;
     font-size: 12px;
+}
+header.bg-cover #navbarSupportedContent li.nav-item.active{
+    background-color: #f2f2f2;
+}
+header.bg-cover #navbarSupportedContent li.nav-item.active a{
+    color: #38c172;
+}
+header.bg-cover #navbarSupportedContent li.nav-item.active span{
+    display: none;
 }
 
 header.bg-cover #navbarSupportedContent li {
@@ -66,8 +85,19 @@ header.bg-cover #navbarSupportedContent li:hover a {
 }
 
 header.bg-cover #navbarSupportedContent li:hover span.decor-link-menu {
-    display: block;
+    transform: scale(1);
 }
+    .decor-link-menu{
+        width: 80%;
+    left: 12px;
+    background-color: #38c172;
+    position: relative;
+    height: 2px;
+    top: -5px;
+    display: block;
+    transform: scale(0);
+    transition: all ease-in 350ms;
+    }
 
 #description {
     display: flex;

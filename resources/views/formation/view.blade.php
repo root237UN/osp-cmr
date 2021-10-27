@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
-@section('content')
-
+@section('css')
 
 <style>
     section.bg-cover {
@@ -173,7 +172,9 @@
         transition: transform 0.15s linear 0s;
     }
 </style>
+@endsection
 
+@section('content')
 <section class="bg-cover">
     <div class="container">
         <div class="row py-4">

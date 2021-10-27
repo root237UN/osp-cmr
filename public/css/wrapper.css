@@ -226,13 +226,13 @@ body {
 
 .remainder-list ul li p {
     font-weight: bold;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .remainder-day {
     opacity: 0.8;
     font-style: italic;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 /** */

@@ -72,7 +72,7 @@
                                 <img class="img img-fluid" src="../images/bg6.jpg" />
                             </div>
                             <div class="user-name text-center my-2">
-                                <p class="my-0">Emmanuel Ivan</p>
+                                <p class="my-0">admin Mac</p>
                                 <span>Admin</span>
                             </div>
                         </div>
@@ -82,20 +82,11 @@
                                 <p class="remainder-title">Rappels</p>
                                 <i class="fas fa-bell"></i>
                             </div>
-                            <div class="remainder-list">
-                                <ul>
+                            <div class="remainder-list ">
+                                <ul class="flex-column d-flex justify-content-between">
                                     <li class="flex-row d-flex">
                                         <span class="alert alert-warning">
                                             <i class="fas fa-envelope-open-text"></i>
-                                        </span>
-                                        <div class="flex-column d-flex justify-content-between">
-                                            <p class="mb-0">Titre du rappel</p>
-                                            <span class="remainder-day">Lundi 14 Mars 2020</span>
-                                        </div>
-                                    </li>
-                                    <li class="flex-row d-flex">
-                                        <span class="alert alert-danger">
-                                            <i class="fas fa-user"></i>
                                         </span>
                                         <div class="flex-column d-flex justify-content-between">
                                             <p class="mb-0">Titre du rappel</p>

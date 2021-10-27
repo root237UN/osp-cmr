@@ -1,9 +1,8 @@
-
 header {
     display: flex;
     flex-direction: column;
-    box-shadow: 0 0 15px rgba(0,0,0,.1);
-    background-color:#fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+    background-color: #fff;
     background-size: cover;
     background-position: 50%;
     background-repeat: no-repeat;
@@ -19,7 +18,8 @@ header::before {
     left: 0;
     opacity: .8;
 }
-#navbar-site{
+
+#navbar-site {
     background-image: url(../images/bg-section.png);
     background-size: cover;
     background-position: 50%;
@@ -28,21 +28,74 @@ header::before {
 }
 
 .logo-welcome {
-    width: 100px;
-    height: 100%;
-    display: block;
-    background-size: 100%;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    position: relative;
-    z-index: 2;
-    transition: none;
     text-align: center;
     text-transform: uppercase;
-    font-family: 'Gelasio', serif;
-    font-size: 25px;
-    color: #56ca87;
+    font-weight: bold;
+    font-size: 20px;
+    font-style: italic;
+    color: #243a5e !important;
+    position: absolute;
+    top: -12px;
 }
+
+.logo-welcome::first-letter {
+    font-size: 50px;
+    color: #38c172;
+}
+
+#navbarSupportedContent li>a {
+    color: #243a5e;
+    /*  text-shadow: 2px 2px 9px rgba(36,58,94,0.22);*/
+    text-shadow: 2px 2px 9px rgba(255, 255, 255, 0.22);
+    padding: 10px 13px;
+    display: inline-block;
+    top: 3px;
+    position: relative;
+    height: 43px;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+#navbarSupportedContent li.nav-item.active {
+    background-color: #f2f2f2;
+}
+
+ #navbarSupportedContent li.nav-item.active a {
+    color: #38c172 !important;
+}
+
+#navbarSupportedContent li.nav-item.active span {
+    display: none;
+}
+
+#navbarSupportedContent li {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#navbarSupportedContent li:hover a {
+    color: #38c172;
+}
+
+#navbarSupportedContent li:hover span.decor-link-menu {
+    transform: scale(1);
+}
+
+.decor-link-menu {
+    width: 80%;
+    left: 12px;
+    background-color: #38c172;
+    position: relative;
+    height: 2px !important;
+    top: -5px;
+    display: block;
+    transform: scale(0);
+    transition: all ease-in 350ms;
+}
+
+/*
 
 #navbarSupportedContent li {
     padding: 0;
@@ -52,49 +105,53 @@ header::before {
 #navbarSupportedContent li:hover {
     background-color: #f2f2f2;
 }
+
 #navbarSupportedContent li:hover a {
     color: #38c172 !important;
-}
+}*/
 
-#navbarSupportedContent a, #navbarSupportedContent li span {
-    padding: 10px 13px;
+#navbarSupportedContent a,
+#navbarSupportedContent li > span {
+    /*padding: 10px 13px;
     display: inline-block;
     border: 1px solid transparent;
     color: #242738;
     text-transform: uppercase;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 12px;*/
 }
 
-#navbarSupportedContent a:hover, #navbarSupportedContent a:focus {
-}
+#navbarSupportedContent a:hover,
+#navbarSupportedContent a:focus {}
 
-.new-dropdown-menu{
+.new-dropdown-menu {
     display: none;
     visibility: hidden;
 }
-@media (min-width: 1100px)
-{
+
+@media (min-width: 1100px) {
     #navbarSupportedContent .dropdown>a {
         border-radius: var(--border-radius)var(--border-radius)0 0;
         position: relative;
         z-index: 2;
         border-bottom: 0;
-        transition-property: box-shadow,border,background-color;
+        transition-property: box-shadow, border, background-color;
         transition-timing-function: ease;
         transition-duration: 0s;
     }
 
     #navbarSupportedContent .new-dropdown:hover {
-        background:#fff;
-        box-shadow: 0 3px 15px rgba(127,127,127,.3);
-        border: 1px solid rgba(0,0,0,.1);
+        background: #fff;
+        box-shadow: 0 3px 15px rgba(127, 127, 127, .3);
+        border: 1px solid rgba(0, 0, 0, .1);
         transform: translateY(-2px);
     }
-    #navbarSupportedContent .new-dropdown:hover> .new-dropdown-menu{
+
+    #navbarSupportedContent .new-dropdown:hover>.new-dropdown-menu {
         visibility: visible;
         opacity: 1;
     }
+
     #navbarSupportedContent .new-dropdown:hover .new-dropdown-menu {
         display: flex;
         padding: 10px 0;
@@ -103,12 +160,12 @@ header::before {
         flex-direction: column;
         white-space: pre;
         border-radius: 5px;
-        border: 1px solid rgba(0,0,0,.1);
+        border: 1px solid rgba(0, 0, 0, .1);
         border-top: 0;
-        box-shadow: 0 3px 15px rgba(127,127,127,.3);
+        box-shadow: 0 3px 15px rgba(127, 127, 127, .3);
         z-index: 1;
-        transition: visibility 0s,opacity .3s ease;
-        background:#fff;
+        transition: visibility 0s, opacity .3s ease;
+        background: #fff;
         min-width: 150%;
     }
 }
