@@ -8,7 +8,7 @@
     }
 
     section.bg-cover {
-        background-image: url(../images/bg2.jpg);
+        background-image: url(../../images/bg2.jpg);
         background-size: cover;
         background-position: 50%;
         background-repeat: no-repeat;
@@ -270,7 +270,7 @@
     <div class="container">
         <div class="row py-4">
             <div class="col-4 d-flex justify-content-center " style="align-items: center;" data-aos="zoom-in-down">
-                <img class="img img-thumbnail m-2" src="../images/bg3.jpg" style="border-radius:50%;border:none" />
+                <img class="img img-thumbnail m-2" src="../../images/bg3.jpg" style="border-radius:50%;border:none" />
             </div>
             <div class="col-8" id="description">
                 <h2 class="my-2 py-4  d-flex justify-content-start" style="align-items: center;">
@@ -315,7 +315,7 @@
                                 <div class="d-flex justify-content-between py-2 card-header  card-header-5">
                                     @endif
                                     <figure class="figure figure-img d-flex justify-content-center">
-                                        <img class="img img-fluid" src="../images/bg3.jpg" style="border-radius: 9px;">
+                                        <img class="img img-fluid" src="../../images/bg3.jpg" style="border-radius: 9px;">
                                     </figure>
                                     <div class="col-6">
                                         <h4 class="title-parcours py-2">{{$parcours->libelle}}</h4>

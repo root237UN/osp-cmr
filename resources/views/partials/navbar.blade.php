@@ -18,11 +18,11 @@
                     <a class="nav-link"  href="#">Orientation</a>
                     <span class="decor-link-menu"></span>
                 </li>
-                <li class="nav-item {{ (request()->is('enseignement')) ? 'active' : '' }} ">
+                <li class="nav-item {{ (request()->is('enseignement*')) ? 'active' : '' }} ">
                     <a class="nav-link" href="{{ route('enseignement')}}">Enseignement</a>
                     <span class="decor-link-menu"></span>
                 </li>
-                <li class="nav-item {{ (request()->is('formation')) ? 'active' : '' }} ">
+                <li class="nav-item {{ (request()->is('formation*')) ? 'active' : '' }} ">
                     <a class="nav-link" href="{{ route('formation') }}">Formation</a>
                     <span class="decor-link-menu"></span>
                 </li>

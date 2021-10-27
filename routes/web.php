@@ -23,23 +23,23 @@ Route::get('/', [WebSiteController::class, 'index'])->name('welcome');
 Route::get('/enseignement', [WebSiteController::class, 'showMenuEnseignement'])->name('enseignement');
 
 Route::get('/enseignement/{code}', [WebSiteController::class, 'showTypeEnseignement'])->name('enseignement.view');
-Route::get('/parcours/{code}', [WebSiteController::class, 'showParcours'])->name('parcours.show');
+Route::get('enseignement/parcours/{code}', [WebSiteController::class, 'showParcours'])->name('parcours.show');
 
 /** Route pour les formations */
 Route::get('/formation', [WebSiteController::class, 'showMenuFormation'])->name('formation');
 Route::get('/formation/{code}', [WebSiteController::class, 'showFormation'])->name('formation.show');
 Route::get('/formation-description/{code}', [WebSiteController::class, 'InfosTypeFormation'])->name('formation.infos');
 Route::get('/formation-presentation/{code}', [WebSiteController::class, 'presentationFormation'])->name('formation.all');
-Route::get('/presentationdelaformation/{code}', [WebSiteController::class, 'detailsFormation'])->name('formation.details');
+Route::get('/formation/presentation/{code}', [WebSiteController::class, 'detailsFormation'])->name('formation.details');
 
 Route::get('/structrure/formation/{code}', [SecondaryController::class, 'presentationStructure'])->name('structure.formation');
 
 Route::get('/structure', [WebSiteController::class, 'showMenuStructure'])->name('structure');
 
 /** Routes pour les sections et les filieres */
-Route::get('/section/{code}', [WebSiteController::class, 'section'])->name('section');
-Route::post('/filiere', [WebSiteController::class, 'filiere'])->name('filiere');
-Route::get('/filiere/{code}', [WebSiteController::class, 'showFiliere'])->name('showFiliere');
+Route::get('enseignement/section/{code}', [WebSiteController::class, 'section'])->name('section');
+Route::post('enseignement/filiere', [WebSiteController::class, 'filiere'])->name('filiere');
+Route::get('enseignement/filiere/{code}', [WebSiteController::class, 'showFiliere'])->name('showFiliere');
 
 /** Routes pour les etablissement proposant des parcours */
 Route::get('/etablissement', [WebSiteController::class, 'showMenuEtablissement'])->name('etablissement');

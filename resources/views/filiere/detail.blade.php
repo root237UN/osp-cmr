@@ -33,7 +33,7 @@
 
         <div class="img-part d-flex justify-content-center col-2">
             <div class="img-decor">
-                <img class="img img-filiere " src="../images/bg2.jpg">
+                <img class="img img-filiere " src="../../images/bg2.jpg">
             </div>
         </div>
     </div>
@@ -71,7 +71,7 @@
                 <div class="header-content-filiere px-2 d-flex flex-row col-6 justify-content-between">
                     <div class="col-2">
                         <div class="ml-2 mt-2 img-decor-1">
-                            <img src="../images/bg2.jpg" class="img ">
+                            <img src="../../images/bg2.jpg" class="img ">
                         </div>
                     </div>
                     <div class="d-flex col-10 mx-4 top-infos flex-column justify-content-between">

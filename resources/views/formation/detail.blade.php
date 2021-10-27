@@ -19,7 +19,7 @@
 
         <div class="img-part d-flex justify-content-center col-2">
             <div class="img-decor">
-                <img class="img img-filiere " src="../images/bg2.jpg">
+                <img class="img img-filiere " src="../../images/bg2.jpg">
             </div>
         </div>
     </div>
@@ -73,7 +73,7 @@
                                     <div class="col-3">
                                         <div class="decor-img-condition mx-3 d-flex flex-row justify-content-center">
                                             <div style="background-color: white; border-radius: 100px;">
-                                                <img class="img img-condition" height="40px" src="../images/bg2.jpg">
+                                                <img class="img img-condition" height="40px" src="../../images/bg2.jpg">
                                             </div>
                                         </div>
                                     </div>
@@ -95,7 +95,7 @@
                                     <div class="col-3">
                                         <div class="decor-img-condition mx-3 d-flex flex-row justify-content-center">
                                             <div style="background-color: white; border-radius: 100px;">
-                                                <img class="img img-condition" height="40px" src="../images/bg2.jpg">
+                                                <img class="img img-condition" height="40px" src="../../images/bg2.jpg">
                                             </div>
                                         </div>
                                     </div>
@@ -119,7 +119,7 @@
                                     <div class="col-3">
                                         <div class="decor-img-condition mx-3 d-flex flex-row justify-content-center">
                                             <div style="background-color: white; border-radius: 100px;">
-                                                <img class="img img-condition" height="40px" src="../images/bg2.jpg">
+                                                <img class="img img-condition" height="40px" src="../../images/bg2.jpg">
                                             </div>
                                         </div>
                                     </div>
@@ -176,7 +176,7 @@
                                     <li>Localites : <a></a></li>
                                 </ul>
                             </div>
-                            <div class="decor-box-img"><img src="../images/bg3.jpg" /></div>
+                            <div class="decor-box-img"><img src="../../images/bg3.jpg" /></div>
                             <div class="decor-box"></div>
                             <i></i>
                         </div>
@@ -187,7 +187,7 @@
                                     <div class="col-3">
                                         <div class="decor-img-condition mx-2 d-flex flex-row justify-content-center">
                                             <div style="background-color: white; border-radius: 100px;">
-                                                <img class="img img-condition" height="40px" src="../images/bg2.jpg">
+                                                <img class="img img-condition" height="40px" src="../../images/bg2.jpg">
                                             </div>
                                         </div>
                                     </div>
@@ -232,7 +232,7 @@
                                     <div class="col-3">
                                         <div class="decor-img-condition mx-2 d-flex flex-row justify-content-center">
                                             <div style="background-color: white; border-radius: 100px;">
-                                                <img class="img img-condition" height="40px" src="../images/bg2.jpg">
+                                                <img class="img img-condition" height="40px" src="../../images/bg2.jpg">
                                             </div>
                                         </div>
                                     </div>
@@ -273,7 +273,7 @@
                                 <div class="col-3">
                                     <div class="decor-img-condition mx-3 d-flex flex-row justify-content-center">
                                         <div style="background-color: white; border-radius: 100px;">
-                                            <img class="img img-condition" height="40px" src="../images/bg2.jpg">
+                                            <img class="img img-condition" height="40px" src="../../images/bg2.jpg">
                                         </div>
                                     </div>
                                 </div>
@@ -287,7 +287,6 @@
                 </div>
             </div>
         </div>
-
 
         <div class="d-flex justify-content-center">
             <div class="col-8 d-flex flex-column">

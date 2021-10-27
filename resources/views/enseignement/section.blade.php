@@ -403,7 +403,7 @@
     <div class="container">
         <div class="row py-4">
             <div class="col-4 d-flex justify-content-center " style="align-items: center;" data-aos="zoom-in-down">
-                <img class="img img-thumbnail m-2" src="../images/bg3.jpg" style="border-radius:50%;border:none" />
+                <img class="img img-thumbnail m-2" src="../../images/bg3.jpg" style="border-radius:50%;border:none" />
             </div>
             <div class="col-8" id="description">
                 <h2 class="my-2 py-4  d-flex justify-content-start" style="align-items: center;">
@@ -461,9 +461,9 @@
                         </div>
                         <div class="decor-cycle-image">
                             @if($cycle->id == 1)
-                            <img class="img img-fluid" src="../images/bg2.jpg">
+                            <img class="img img-fluid" src="../../images/bg2.jpg">
                             @else
-                            <img class="img img-fluid" src="../images/bg3.jpg">
+                            <img class="img img-fluid" src="../../images/bg3.jpg">
                             @endif
                         </div>
                         <div class="decor-cycle"></div>
