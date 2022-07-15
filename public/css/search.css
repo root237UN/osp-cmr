@@ -100,11 +100,10 @@ input[name='metier'] {
 .title-header-actualite{
     color: #242738;
     text-align: center;
-    text-transform: uppercase;
     margin-top: 30px;
     font-style: italic;
-    font-size: 22px;
-        font-family: 'Gelasio', serif;
+    /* font-size: 22px;
+        font-family: 'Gelasio', serif; */
 }
 
 .divider {
@@ -136,9 +135,7 @@ p.text-description-actualite {
     a.lire-actualite{
         color: #38c172;
         font-size: 26px;
-        text-transform: capitalize;
         text-decoration: none;
-        font-style: italic;
         cursor: pointer;
     }
 
@@ -155,7 +152,7 @@ p.text-description-actualite {
     min-height: 90vh;
     position: relative;
     overflow: hidden;
-    background-color: #f8fafc;
+    background-color: #fff;
 }
 
 #actualites-onglet .service-bg {

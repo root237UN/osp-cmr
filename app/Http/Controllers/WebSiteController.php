@@ -2,86 +2,33 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\CycleEnseignement;
 use App\Models\Ecole;
-use App\Models\FiliereEnseignement;
-use App\Models\OptionEnseignement;
-use App\Models\SectionEnseignement;
-use App\Models\TypeEnseignement;
+use App\Models\Abonne;
+use App\Models\contentMenu;
+use App\Models\Localite;
+use App\Models\Formation;
+use App\Models\Structure;
+use App\Models\MenuVisite;
+use App\Models\Reabonnement;
 use Illuminate\Http\Request;
 use App\Models\TypeFormation;
-use App\Models\Localite;
-use App\Models\Structure;
-use App\Models\Formation;
-use App\Models\MenuVisite;
+use App\Models\TypeEnseignement;
+use App\Models\CycleEnseignement;
+use App\Models\OptionEnseignement;
 use App\Models\StructureFormation;
-use App\Models\StructureInsertionPro;
 use Illuminate\Support\Facades\DB;
+use App\Models\FiliereEnseignement;
+use App\Models\SectionEnseignement;
+use App\Models\StructureInsertionPro;
 
 class WebSiteController extends Controller
 {
     //
     public function index()
     {
-        return view('layouts.view');
-    }
-
-    public function showMenuEnseignement()
-    {
-        $type_enseignements =  TypeEnseignement::all();
-        $type_formation = TypeFormation::all();
-
-        return view('enseignement/presentation', ['type_enseignements' => $type_enseignements, "type_formations" => $type_formation]);
-    }
-
-    public function showTypeEnseignement($code)
-    {
-        $type = TypeEnseignement::where('code', '=', $code)->firstorfail();
-        return view('enseignement/types', ['type' => $type]);
-    }
-
-    public function showFormation(Request $request)
-    {
-        $formation = TypeFormation::where('code', $request->code)->firstorfail();
-        return view('formation', ['formation' => $formation]);
-    }
-
-    public function presentationFormation(Request $request)
-    {
-        $type = TypeFormation::where('code', $request->code)->firstorfail();
-        $formations = Formation::where('type_formation_id', intval($type->id))->paginate(10);
-
-        $localites = Localite::orderBy('libelle','asc')->get();
-        $structures = StructureFormation::orderBy('libelle', 'asc')->get();
-        return view('formation/presentation', ["localites" => $localites, "structures" => $structures, "type" => $type, "formations" => $formations]);
-    }
-
-    public function detailsFormation(Request $Request)
-    {
-        //dd($Request);
-        $formation = Formation::find(intval($Request->code));
-        $structures = $formation->Structure()->where('notation', '>=', 4)->orderBy('libelle')->get();
-        //dd($structures);
-        return view('formation.detail', ['formation' => $formation, 'structures' => $structures]);
-    }
-
-
-    public function InfosTypeFormation(Request $request)
-    {
-        $type = TypeFormation::where('code', $request->code)->firstorfail();
-        return view('infosFormation', ['type' => $type]);
-    }
-
-    public function showParcours($code)
-    {
-        $option = OptionEnseignement::where('code', '=', $code)->firstorfail();
-        return view('enseignement/parcours', ['option' => $option]);
-    }
-
-    public function showMenuFormation()
-    {
-        $typesFormation = TypeFormation::all();
-        return view('formation/view',['typesFormation' => $typesFormation]);
+        $content = MenuVisite::where('titre','accueil')->firstorfail();
+        $subContent = $content->content()->get();
+        return view('layouts.view',['content'=>$content,'subContent'=>$subContent]);
     }
 
     public function showMenuStructure()
@@ -92,13 +39,6 @@ class WebSiteController extends Controller
         return view('structure/view', ['menu' => $menuStructure, 'structures' => json_encode($structures)]);
     }
 
-    public function showMenuEtablissement()
-    {
-        //$ecoles = Ecole::all();
-        $menu = MenuVisite::where('titre', "Etablissement")->firstorfail();
-        $nbres = DB::select("SELECT COUNT(*) AS total, `regions`.libelle FROM `ecoles` INNER JOIN `localites` ON `ecoles`.localite_id=`localites`.id INNER JOIN `arrondissements` ON `localites`.arrondissement_id=`arrondissements`.id INNER JOIN `departements` ON `arrondissements`.departement_id=`departements`.id INNER JOIN `regions` ON `departements`.region_id=`regions`.id GROUP BY `regions`.id order by libelle asc ");
-        return view('etablissement/view', ['nbres' => $nbres,"menu"=>$menu]);
-    }
 
     public function showEcoleByRegion(Request $request)
     {
@@ -126,13 +66,6 @@ class WebSiteController extends Controller
     }
 
     /** Rendu des sections pour chaque option d'enseignement */
-    public function section($code)
-    {
-        $section = SectionEnseignement::findorFail(intval($code));
-        $cycles = CycleEnseignement::all();
-        return view('enseignement/section', ['section' => $section, 'cycles' => $cycles]);
-        //dd($section);
-    }
 
 
     public function filiere(Request $request)
@@ -148,7 +81,16 @@ class WebSiteController extends Controller
         $ecoles = Ecole::orderBy('libelle','asc')->get();
 
         $filieres = FiliereEnseignement::where('cycle_enseignement_id', $id_cycle)->where('section_enseignement_id', $id_section)->paginate(10);
-        return view('filiere/view', ['ecoles'=>$ecoles,'secteurs'=>$secteurs,"section" => $section, "cycle" => $cycle, "filieres" => $filieres, "localites" => $localites]);
+        return view('filiere/view', [
+            'ecoles'=>$ecoles,
+            'secteurs'=>$secteurs,
+            "section" => $section,
+            "cycle" => $cycle,
+            "filieres" => $filieres,
+            "localites" => $localites,
+            'id_cycle' =>$id_cycle,
+            'id_section' => $id_section
+        ]);
         //dd($filieres);
     }
 
@@ -163,5 +105,13 @@ class WebSiteController extends Controller
     public function orientation()
     {
         return view('orientation/presentation');
+    }
+
+    public function test()
+    {
+        $abonnes = Abonne::all();
+        $reabonnements = Reabonnement::all();
+        dd(json_encode($reabonnements));
+        return view('test', ['abonnes' => json_encode($abonnes)]) ;
     }
 }

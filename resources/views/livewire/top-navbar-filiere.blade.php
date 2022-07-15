@@ -56,6 +56,7 @@
         visibility: visible;
         opacity: 1;
         display: block;
+        z-index: 30;
     }
 
     #dropmenu1 ul li ul li {
@@ -73,7 +74,7 @@
 
 <nav class="nav-bar navbar navbar-expand-lg nav-top" id="dropmenu1">
 
-    <a class="col-md-1 title-nav"><span style="color: #38c172;">Filiere  </span></a>
+    <a class="col-md-2 title-nav first-item-list"><span>Filière  </span></a>
 
     <ul class="col-md-5 list-options navbar-nav">
         <li class="dropdown nav-bar-item">
@@ -81,7 +82,7 @@
             <i class="fas fa-chevron-down"></i>
             <ul class="dropdown" aria-label="submenu">
                 @forelse($enseignements as $enseignement)
-                <li><a href="#"><span>{{$enseignement->libelle}}</span></a></li>
+                <li><a href="{{route('enseignement.view',['code'=>$enseignement->libelle_1])}}"><span>{{$enseignement->libelle}}</span></a></li>
                 @empty
                 @endforelse
             </ul>
@@ -91,13 +92,13 @@
             <i class="fas fa-chevron-down"></i>
             <ul class="dropdown" aria-label="submenu">
                 @forelse($options as $option)
-                <li><a href="#"><span>{{$option->libelle}}</span></a></li>
+                <li><a href="{{route('parcours.show', ['code' => $option->libelle ]) }}"><span>{{$option->libelle}}</span></a></li>
                 @empty
                 @endforelse
             </ul>
         </li>
         <li class="dropdown nav-bar-item">
-            <a><span>parcours</span></a>
+            <a><span>parcours académique</span></a>
             <i class="fas fa-chevron-down"></i>
             <ul class="dropdown" aria-label="submenu" style="columns: 2;">
                 @forelse($sections as $section)
@@ -105,14 +106,6 @@
                 @empty
                 @endforelse
             </ul>
-        </li>
-        <li class="dropdown nav-bar-item">
-            <a><span>Etablissement</span></a>
-            <i class="fas fa-chevron-down"></i>
-        </li>
-        <li class="dropdown nav-bar-item">
-            <a><span>Localite</span></a>
-            <i class="fas fa-chevron-down"></i>
         </li>
     </ul>
     <br>

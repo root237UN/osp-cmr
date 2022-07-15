@@ -3,67 +3,6 @@
 @section('content')
 
 <style>
-    section.bg-cover {
-        /*--nav-text-shadow: 0 0 20px rgba(0, 0, 0, .5);*/
-    }
-
-    section.bg-cover {
-        background-image: url(../images/bg2.jpg);
-        background-size: cover;
-        background-position: 50%;
-        background-repeat: no-repeat;
-        box-shadow: 0 0 4px rgba(0, 0, 0, .1);
-        background-color: #fff;
-        min-height: 60vh;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-    }
-
-    section.bg-cover::before {
-        /*background: linear-gradient(45deg, #367bf0, #367bf0);
-        background: linear-gradient(45deg, transparent, transparent);*/
-        background: linear-gradient(45deg, #243a5e, #243a5e)
-    }
-
-    section.bg-cover::before {
-        position: absolute;
-        content: '';
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        opacity: 0.8;
-    }
-
-    section.bg-cover h2 {
-        color: #38c172;
-        text-shadow: 0 2px 5px rgba(0, 0, 0, .2);
-    }
-
-    p.text-description {
-        color: #ffffff;
-        font-weight: 200;
-        font-style: italic;
-        font-size: 17.4px;
-        text-align: left;
-        opacity: .8;
-        line-height: 2rem;
-    }
-
-    section.bg-cover img {
-        border: 1px solid transparent;
-        height: 250px;
-        width: 250px;
-        background-color: whitesmoke;
-        border-radius: 400px;
-        opacity: .8;
-    }
-
-    #description {
-        z-index: 10;
-    }
 
     #content-parcours {
         box-shadow: 0 0 15px rgba(0, 0, 0, .1);
@@ -125,22 +64,22 @@
 </style>
 
 <section class="bg-cover">
-    <div class="container">
-        <div class="row py-4">
-            <div class="col-4 d-flex justify-content-center " style="align-items: center;" data-aos="zoom-in-down">
-                <img class="img img-thumbnail m-2" src="../images/bg3.jpg" style="border-radius:50%;border:none" />
+    <div class="container-fluid">
+        <div class="row" id="top-content">
+            <div class="col-md-4 d-flex justify-content-center " style="align-items: center;" data-aos="zoom-in-down">
+                <img class="img img-thumbnail img-cover m-2" src="../images/bg3.jpg" style="border-radius:50%;border:none" />
             </div>
-            <div class="col-8" id="description">
-                <h2 class="my-2 py-4  d-flex justify-content-start">
-                    <span class="text-uppercase m-2 title-type" style="text-align: center;">{{$formation->libelle}}</span>
+            <div class="col-md-8" id="description">
+                <h2 class="my-2 py-4 title-1-1 d-flex justify-content-start">
+                    <span class="" style="">{{$formation->libelle}}</span>
                 </h2>
-                <p class="text-description col-md-12 py-2">{{$formation->description_full}}</p>
+                <div class="text-description site-text col-md-12 text-white py-2">{{$formation->description_full}}</div>
                 <div class="line-infos d-flex justify-content-between">
                     <a class="link-parcours" href="{{route('formation.all',['code' => $formation->code])}}">Découvrez les formations</a>
                     <a class="link-ensavoir" href="#">En savoir plus!</a>
                 </div>
                 <hr>
-                <p style="font-style: italic;font-family: 'Gelasio', serif;color:#fff;">Des questions. Posez les ici !!!</p>
+                <a class="link-question site-text">Des questions. Posez les ici !!!</a>
             </div>
             <div class="col-8 d-flex justify-content-end" style="z-index: 10;">
                 <a id="arrow-down" href="#content-parcours">

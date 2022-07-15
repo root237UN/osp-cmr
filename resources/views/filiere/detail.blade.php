@@ -22,7 +22,7 @@
     <div class="row">
         <div class="col-10">
             <div class="m-4">
-                <h1 class="text-capitalize header-title">
+                <h1 class=" header-title">
                     <a href="#presentation-filiere">{{$filiere->libelle}}</a>
                 </h1>
             </div>
@@ -119,124 +119,54 @@
                         <div class="tab-content" id="nav-tabContent">
                             <div class="tab-pane fade show active" id="nav-enseignement" role="tabpanel" aria-labelledby="nav-enseignement-tab">
                                 <div class="container">
-                                    <h4 class="title-content-1">@if($filiere->Enseignements->count()) Modules d'enseignements professionnels : {{$filiere->Enseignements->count()}} @else Aucun module d'enseignement pour le moment !!! @endif</h4>
-
-                                    <div class="row d-flex justify-content-center">
-                                        <div class="col-md-7">
-                                            <div class="main-timeline5">
-                                                <!--{{$i=0}}-->
-                                                @forelse($filiere->Enseignements as $enseignement)
-                                                <div class="timeline">
-                                                    <div class="timeline-icon"><span class="year">{{$i+=1}}</span></div>
-                                                    <div class="timeline-content">
-                                                        <h3 class="title">{{$enseignement->libelle}}</h3>
-                                                        <p class="description">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia mi ultrices, luctus nunc ut, commodo enim.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                @empty
-                                                @endforelse
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <h4 class="title-content-1">
+                                        Pour en savoir plus sur les differents modules d'enseignement.
+                                        <button class="btn btn-xs btn-save m-0">
+                                            <i class="fas fa-eye"></i>
+                                            En savoir plus
+                                        </button>
+                                    </h4>
                                 </div>
                                 <hr>
                             </div>
 
                             <div class="tab-pane fade" id="nav-debouche" role="tabpanel" aria-labelledby="nav-debouche-tab">
                                 <div class="container">
-                                    <h4 class="title-content-1">@if($filiere->Debouches->count()) Debouches : {{$filiere->Debouches->count()}} @else Aucune debouchee pour le moment !!! @endif</h4>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="main-timeline12">
-                                                @forelse($filiere->Debouches as $debouche)
-                                                @if($debouche->id%2==0)
+                                    <h4 class="title-content-1">
+                                        Pour en savoir plus sur les differents debouchées .
+                                        <button class="btn btn-xs btn-save m-0">
+                                            <i class="fas fa-eye"></i>
+                                            En savoir plus
+                                        </button>
+                                    </h4>
 
-                                                <div class="col-md-2 col-sm-4 timeline">
-                                                    <span class="timeline-icon">
-                                                        <i class="fa fa-key"></i>
-                                                    </span>
-                                                    <div class="border"></div>
-                                                    <div class="timeline-content">
-                                                        <h4 class="title">{{$debouche->libelle}}</h4>
-                                                    </div>
-                                                </div>
-                                                @else
-                                                <div class="col-md-2 col-sm-4 timeline">
-                                                    <div class="timeline-content">
-                                                        <h4 class="title">{{$debouche->libelle}}</h4>
-                                                    </div>
-                                                    <div class="border"></div>
-                                                    <span class="timeline-icon">
-                                                        <i class="fa fa-key"></i>
-                                                    </span>
-                                                </div>
-                                                @endif
-                                                @empty
-                                                @endforelse
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
 
                             <div class="tab-pane fade" id="nav-metier" role="tabpanel" aria-labelledby="nav-metier-tab">
 
                                 <div class="container">
-                                    <h4 class="title-content-1">@if($filiere->Metiers->count()>0) Metiers : {{$filiere->Metiers->count()}} @else Aucun metier pour le moment !!! @endif</h4>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                        </div>
-                                    </div>
+                                    <h4 class="title-content-1">
+                                        Pour en savoir plus sur les differents metiers .
+                                        <button class="btn btn-xs btn-save m-0">
+                                            <i class="fas fa-eye"></i>
+                                            En savoir plus
+                                        </button>
+                                    </h4>
+
                                 </div>
                             </div>
 
                             <div class="tab-pane fade" id="nav-ecole" role="tabpanel" aria-labelledby="nav-ecole-tab">
                                 <div class="container">
-                                    <h4>Ecoles offrant cette filiere d'enseignement</h4>
-                                    <!--<div class="row">
-                                        <div class="col-md-12">
-                                            <div class="main-timeline2">
-                                                <div class="timeline">
-                                                    <span class="icon fa fa-globe"></span>
-                                                    <a href="#" class="timeline-content">
-                                                        <h3 class="title">Web Designer</h3>
-                                                        <p class="description">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada tellus lorem, et condimentum neque commodo quis.
-                                                        </p>
-                                                    </a>
-                                                </div>
-                                                <div class="timeline">
-                                                    <span class="icon fa fa-rocket"></span>
-                                                    <a href="#" class="timeline-content">
-                                                        <h3 class="title">Web Developer</h3>
-                                                        <p class="description">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada tellus lorem, et condimentum neque commodo quis.
-                                                        </p>
-                                                    </a>
-                                                </div>
-                                                <div class="timeline">
-                                                    <span class="icon fa fa-briefcase"></span>
-                                                    <a href="#" class="timeline-content">
-                                                        <h3 class="title">Web Designer</h3>
-                                                        <p class="description">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada tellus lorem, et condimentum neque commodo quis.
-                                                        </p>
-                                                    </a>
-                                                </div>
-                                                <div class="timeline">
-                                                    <span class="icon fa fa-mobile"></span>
-                                                    <a href="#" class="timeline-content">
-                                                        <h3 class="title">Web Developer</h3>
-                                                        <p class="description">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada tellus lorem, et condimentum neque commodo quis.
-                                                        </p>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>-->
+                                    <h4 class="title-content-1">
+                                        Pour en savoir plus sur les differents ecoles .
+                                        <button class="btn btn-xs btn-save m-0">
+                                            <i class="fas fa-eye"></i>
+                                            En savoir plus
+                                        </button>
+                                    </h4>
+
                                 </div>
                                 <hr>
                             </div>

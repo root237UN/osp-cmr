@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Orientaion | OSP - Cameroun</title>
+    <title>Orientation | OSP - Cameroun</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -22,7 +22,6 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
 
@@ -31,71 +30,71 @@
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
-
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 
 <body>
     <div id="app">
         <header class="bg-cover">
-            <livewire:top-navbar-orientation />
+            @include('partials.navbar-home')
 
             <div class="container-fluid" id="description">
                 <div class="row">
-                    <div class="col-6" data-aos="zoom-in-down">
+                    <div class="col-md-7" data-aos="zoom-in-down">
                         <div id="banner-text">
                             <div>
-                                <h1 style="text-transform: capitalize;">La meilleure plateforme d’aide à l’orientation </h1>
-                                <p style="text-align: justify;" class="p my-4 body">
-                                    Une plateforme conçue pour pallier le déficit de conseillers d’orientation au sein de nos institutions scolaires et professionnelles afin de renforcer la prise de décision stratégique pour l’accomplissement d’une carrière.
-                                </p>
+                                <div class="title-1"><h1>{{$content->libelle}}</h1></div>
+                                <div style="text-align: justify;" class="p site-text my-4 body">
+                                    <p>{{$content->description}}</p>
+                                </div>
                             </div>
                             <div class="d-flex justify-content-start bounce" style="align-items: center;">
                                 <a id="documentation-link" class="btn bounce text-uppercase" style="font-weight: bold;" href="#"> <i class="fas fa-2x fa-book"></i></a>
-                                <a id='arrow-down' href="#" class="text-orientation ml-5 bounce text-white">Orientation - En clique</a>
+                                <a id='arrow-down' href="{{route('orientation')}}" class="text-orientation ml-5 site-text bounce">Orientez-vous ici </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-md-5">
                         <div>
-                            <p class="text-center text-uppercase text-white text-option">Optez pour </p>
+                            <p class="text-center title-1-1 text-white text-option">Optez pour </p>
                         </div>
                         <div class="flex-row d-flex justify-content-between">
-                            <div class="card">
+                            <div class="card site-text-medium">
                                 <div class="card-side front">
                                     <div>
-                                        <p><span>Un</span> metier</p>
+                                        <p><span>un</span> metier</p>
                                     </div>
                                 </div>
                                 <div class="card-side back">
                                     <div>
-                                        <p><span>Un</span> parcours</p>
+                                        <p><span>un</span> parcours</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card card-1">
+                            <div class="card site-text-medium card-1">
                                 <a href="{{route('formation')}}" >
                                     <div class="card-side front">
                                         <div>
-                                            <p><span>Une</span> formation</p>
+                                            <p><span>une</span> formation</p>
                                         </div>
                                     </div>
                                     <div class="card-side back">
                                         <div>
-                                            <p><span>Un</span> parcours</p>
+                                            <p><span>un</span> parcours</p>
                                         </div>
                                     </div>
                                 </a>
                             </div>
-                            <div class="card card-1">
+                            <div class="card site-text-medium">
                                 <a href="{{route('etablissement')}}">
                                     <div class="card-side front">
                                         <div>
-                                            <p><span>Une</span> Ecole</p>
+                                            <p><span>une</span> école</p>
                                         </div>
                                     </div>
                                     <div class="card-side back">
                                         <div>
-                                            <p><span>Un</span> centre</p>
+                                            <p><span>un</span> centre</p>
                                         </div>
                                     </div>
                                 </a>
@@ -106,52 +105,24 @@
             </div>
         </header>
 
-        <section id="platform-highlights" class="bg-light">
+        <section id="platform-highlights" class="bg-light mt-4">
             <div class="container-fluid px-0" style="margin-top: -60px;    background: transparent; position: relative;">
                 <ul>
-                    <li class="item card-cover h-100 overflow-hidden rounded-5" data-aos="zoom-out-right">
-                        <div data-aos="zoom-out-right"><a href="#">
-                                <h4 class="card-header text-capitalize">Découvrez vos atouts </h4>
+                    @forelse($subContent as $sub)
+                    <li @class(['item', 'card-cover','h-100','overflow-hidden','card-green'=>$sub->position%2==0,'card-page'=>$sub->position==1, 'card-default'=>$sub->position%2==1 && $sub->position!=1 ,'rounded-5']) data-aos="zoom-out-right">
+                        <div>
+                            <a href="#">
+                                <div class="title-2">
+                                    <h4 class="card-header">{{$sub->libelle}}</h4>
+                                </div>
                             </a>
-                            <p class="card-body"> Une plateforme conçue pour pallier le déficit de conseillers d’orientation au sein de nos institutions scolaires et professionnelles afin de renforcer la prise de décision stratégique pour l’accomplissement d’une carrière. </p>
+                            <p class="card-body site-text">{{$sub->description}}</p>
                         </div>
                         <div class="decor-card"></div>
                     </li>
-                    <li class="item card-cover h-100 overflow-hidden rounded-5">
-                        <a href="#">
-                            <h4 class="card-header text-capitalize">Evaluez les opportunités</h4>
-                        </a>
-                        <p class="card-body"> Une plateforme conçue pour pallier le déficit de conseillers d’orientation au sein de nos institutions scolaires et professionnelles. </p>
-                        <div class="decor-card"></div>
-                    </li>
-                    <li class="item card-cover h-100 overflow-hidden rounded-5">
-                        <a href="#">
-                            <h4 class="card-header text-capitalize">Choisissez un parcours</h4>
-                        </a>
-                        <p class="card-body"> Une plateforme conçue pour pallier le déficit de conseillers d’orientation au sein de nos institutions scolaires et professionnelles. </p>
-                        <div class="decor-card"></div>
-                    </li>
-                    <li class="item  card-cover h-100 overflow-hidden rounded-5">
-                        <a href="#">
-                            <h4 class="card-header text-capitalize">Découvrir un métier</h4>
-                        </a>
-                        <p class="card-body"> Une plateforme conçue pour pallier le déficit de conseillers d’orientation au sein de nos institutions scolaires et professionnelles. </p>
-                        <div class="decor-card"></div>
-                    </li>
-                    <li class="item card-cover h-100 overflow-hidden  rounded-5 ">
-                        <a href="#">
-                            <h4 class="card-header text-capitalize"><i class="ti-comments"></i>Faite vous guider</h4>
-                        </a>
-                        <p class="card-body"> Une plateforme conçue pour pallier le déficit de conseillers d’orientation au sein de nos institutions scolaires et professionnelles. </p>
-                        <div class="decor-card"></div>
-                    </li>
-                    <li class="item card-cover h-100 overflow-hidden  rounded-5 ">
-                        <a href="#">
-                            <h4 class="card-header text-capitalize"><i class="ti-comments"></i>Faite vous guider</h4>
-                        </a>
-                        <p class="card-body"> Une plateforme conçue pour pallier le déficit de conseillers d’orientation au sein de nos institutions scolaires et professionnelles. </p>
-                        <div class="decor-card"></div>
-                    </li>
+                    @empty
+                    @endforelse
+
                 </ul>
             </div>
         </section>

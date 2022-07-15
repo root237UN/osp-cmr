@@ -40,13 +40,15 @@
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
 
     <link href="{{ asset('css/search.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/top-navbar.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/top-content.css') }}" rel="stylesheet">
 
     <!-- AOS Animate -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- Icons -->
-    <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
     @livewireStyles
@@ -55,8 +57,10 @@
 
 <body>
     <div id="app">
-        @include('partials.navbar')
+        <header>
+            @include('partials.navbar')
 
+        </header>
         <main class="flex-shrink-0">
             @yield('content')
         </main>

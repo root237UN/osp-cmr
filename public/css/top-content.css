@@ -1,0 +1,392 @@
+section.bg-cover {
+    background-image: url(../images/bg3.jpg);
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+    background-color: #fff;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+section.bg-cover::before {
+    background: linear-gradient(45deg, #243a5e, #243a5e);
+}
+
+section.bg-cover::before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+}
+
+#top-content {
+    margin-top: 90px;
+    padding-right: 90px;
+    padding: 50px 60px;
+}
+
+section.bg-cover h2 {
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+
+div.text-description {
+    color: #ffffff;
+    font-size: 16.4px;
+    text-align: left;
+    opacity: .8;
+    line-height: 2rem;
+}
+
+section.bg-cover img {
+    border: 1px solid transparent;
+    height: 60px;
+    width: 60px;
+    opacity: .8;
+}
+
+section.bg-cover img.img-cover {
+    border: 1px solid transparent;
+    height: 250px;
+    width: 250px;
+    background-color: whitesmoke;
+    border-radius: 400px;
+    opacity: .8;
+}
+
+#description {
+    z-index: 10;
+    padding: 0;
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, .1); */
+}
+
+.link-question {
+    cursor: pointer;
+    color: #fff;
+}
+
+.link-question:hover {
+    color: #38c172;
+}
+
+#content-option {
+    box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+    background-color: transparent;
+    padding-bottom: 50px;
+}
+
+.title-option {
+    color: #fff;
+    text-align: left;
+    opacity: .8;
+    line-height: 2rem;
+    padding-left: 0px;
+    max-height: 100px;
+}
+
+
+.card-option {
+    transition: all ease-in-out 300ms;
+    border: none;
+    min-height: 250px;
+    width: 300px;
+    text-align: center;
+    border: 1px inset #3cad7442;
+    text-align: center;
+    background-color: #f8fafc0f;
+}
+
+.card-option:hover {
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .15), 0 4px 4px -2px rgba(0, 0, 0, .1) !important;
+    opacity: 1;
+    background: linear-gradient(45deg, #38c17252, #38c17252);
+    transform: translateY(-5px) scale(1);
+}
+
+.option-text {
+    color: #ffffff;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 14.4px;
+    text-align: center;
+    opacity: .8;
+    line-height: 1.5rem;
+}
+
+.option-text::after {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    content: 'Decouvrir';
+    transform: translateX(-50%);
+}
+
+.option-text::after,
+.small-text-banner {
+    display: inline-block;
+    background: #fcfcfc;
+    box-shadow: 0 1px 5px #38c172, inset 0 1px rgba(255, 255, 255, .2);
+    border-radius: 999px;
+    padding: 5px 20px;
+    font-size: 14px;
+    color: #00000096 !important;
+    transition: transform .2s;
+    white-space: nowrap;
+    font-family: 'Gelasio', serif;
+}
+
+.img-option {
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 50px;
+}
+
+a.card-option {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a.card-option .title {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-style: italic;
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5rem;
+}
+
+
+a.link-parcours {
+    color: #38c172;
+    font-size: 26px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.decouvrir-parcours::after,
+.link-parcours::after {
+    content: "›";
+    display: inline-block;
+    margin-left: 0.2em;
+    will-change: transform;
+    transition: transform 0.15s linear 0s;
+}
+
+
+
+#content-parcours .card figure {
+    overflow: hidden;
+    width: 40%;
+    position: relative;
+    margin-bottom: 0rem !important;
+    align-items: center;
+}
+
+#content-parcours .card figure img {
+    margin: 0;
+    transition: transform .3s;
+    width: 100px;
+    height: 100px;
+}
+
+#content-parcours .card:hover figure img {
+    transform: translateY(-3px)scale(1.05)rotateX(15deg);
+}
+
+
+#content-parcours .card:hover figure::after {
+    transform: rotate(25deg);
+    top: -40%;
+    opacity: .15;
+}
+
+#content-parcours .card figure::after {
+    content: '';
+    z-index: 10;
+    width: 200%;
+    height: 100%;
+    top: -90%;
+    left: -20px;
+    opacity: .1;
+    transform: rotate(45deg);
+    background: linear-gradient(to top, rgba(255, 255, 255, 0), #fff 15%, rgba(255, 255, 255, .5));
+    transition-property: transform, top, opacity;
+    transition-duration: .3s;
+    position: absolute;
+}
+
+
+/* Card parcours */
+
+
+.card-parcours ul {
+    list-style-type: none;
+    margin-left: -30px;
+}
+
+.card-parcours ul li {
+    font-size: 12px;
+    padding: 2px;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.card-header {
+    min-height: 150px;
+    border-radius: 15px 0 0 0 !important;
+    border-bottom: none;
+}
+
+.card-header-1 {
+    background-color: #f2d9e3;
+}
+
+.card-header-5 * {
+    color: #243a5e !important;
+}
+
+.card-header-2 {
+    background-color:  rgb(56 193 114);
+}
+
+.card-header-2 * {
+    color: #243a5e !important;
+}
+
+.card-header-3 {
+    background-color: rgb(56 193 114);
+}
+
+.card-header-3 * {
+    color: #243a5e !important;
+}
+
+.card-header-4 {
+    background-color: #243a5e;
+}
+
+.card-header-4 * {
+    color: #fff !important;
+}
+
+.card-header-5 {
+    background-color: #dfdfdf;
+}
+
+
+
+
+#content-parcours {
+    box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+    background-color: #f8fafc;
+    min-height: 100vh;
+    background-image: url(../images/bg-section.png);
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+.card-parcours {
+    transition: all ease-in-out 300ms;
+    border: none;
+    min-height: 380px;
+    margin: 10px;
+    background-color: #fff;
+    background: linear-gradient(45deg, #f3f4f3, #f3f4f3);
+    border-radius: 15px 0 15px 0 !important;
+}
+
+.card-parcours:hover {
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .15), 0 4px 4px -2px rgba(0, 0, 0, .1) !important;
+    opacity: 1;
+    /*background: linear-gradient(45deg, #38c17252, #00000096);*/
+    transform: translateY(-5px)scale(1);
+}
+
+.option-text {
+    color: #fff;
+    font-size: 15px;
+}
+
+.img-option {
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 50px;
+}
+
+a.card-parcours {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a.card-parcours h3 {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-style: italic;
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5rem;
+}
+
+
+
+
+.title-parcours {
+    color: #000000;
+    font-size: 13px;
+    font-style: normal;
+    text-align: left;
+    padding-left: 12px;
+    margin-left: -40px;
+    line-height: 1.2rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.description-parcours {
+    height: 100px;
+    overflow: hidden;
+    margin: 10px;
+    color: #635a5ac7;
+    text-align: center;
+    line-height: 1.7rem;
+}
+
+
+.title-cycle>span {
+    font-style: italic;
+    color:  rgb(56 193 114);
+    text-transform: lowercase;
+}
+
+.title-cycle>span::before {
+    content: '';
+    display: inline-block;
+    vertical-align: baseline;
+    width: 0.5em;
+    height: 0.04em;
+    min-height: 1px;
+    background:  rgb(56 193 114);
+    margin-right: .1em;
+}
+
+
+.title-cycle::after {
+    content: '';
+    display: inline-block;
+    vertical-align: baseline;
+    width: 0.5em;
+    height: 0.04em;
+    min-height: 1px;
+    background:  rgb(56 193 114);
+    margin-right: .1em;
+}

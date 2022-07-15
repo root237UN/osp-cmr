@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\contentMenu;
+use App\Models\MenuVisite;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -16,5 +18,7 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         $this->call([TypeFormationSeeder::class,]);
         $this->call([TypeEnseignementSeed::class,]);
+        $this->call([contentMenu::class,]);
+        $this->call([MenuVisite::class,]);
     }
 }

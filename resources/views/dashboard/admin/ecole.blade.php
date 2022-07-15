@@ -48,7 +48,7 @@
                     </p>
                 </div>
 
-                <div class="card my-2 mx-3 card-welcome">
+                <!-- <div class="card my-2 mx-3 card-welcome">
                     <div class="card-body">
                         <div class="col-7">
                             <h4 class="welcome-text mt-2">Hello {{Auth::user()->name}} !</h4>
@@ -59,7 +59,7 @@
                     <div class="close-card">
                         <span class="fas fa-times-circle"></span>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="px-3 pb-2 pe-3 d-flex justify-content-between">
                     <p class="mb-0 mt-2"><span class="text-menu">Actions</span></p>

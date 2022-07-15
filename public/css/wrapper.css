@@ -32,7 +32,7 @@ body {
     font-size: 20px;
     color: #243a5e !important;
     text-transform: uppercase;
-    font-family: "Gelasio", serif;
+    /* font-family: "Gelasio", serif; */
 }
 
 .sidebar-menu ul {
@@ -364,7 +364,7 @@ tr {
 .text-menu {
     font-weight: bold;
     font-size: large;
-    font-family: "Gelasio", serif;
+    /* font-family: "Gelasio", serif; */
 }
 
 .text-day {

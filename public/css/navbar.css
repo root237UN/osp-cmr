@@ -24,7 +24,8 @@ header::before {
     background-size: cover;
     background-position: 50%;
     background-repeat: no-repeat;
-    position: relative;
+    z-index: 30;
+    background-color: #fff;
 }
 
 .logo-welcome {
@@ -45,7 +46,6 @@ header::before {
 
 #navbarSupportedContent li>a {
     color: #243a5e;
-    /*  text-shadow: 2px 2px 9px rgba(36,58,94,0.22);*/
     text-shadow: 2px 2px 9px rgba(255, 255, 255, 0.22);
     padding: 10px 13px;
     display: inline-block;
@@ -53,17 +53,23 @@ header::before {
     position: relative;
     height: 43px;
     border: 1px solid transparent;
-    text-transform: uppercase;
+    font-family: 'MTNBrighterSans-Regular', sans-serif;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 11px;
 }
 
 #navbarSupportedContent li.nav-item.active {
-    background-color: #f2f2f2;
+    background-color: #38c172;
+    border-radius: 7px;
 }
 
- #navbarSupportedContent li.nav-item.active a {
-    color: #38c172 !important;
+.btn-connect {
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+#navbarSupportedContent li.nav-item.active a {
+    color: #fff !important;
 }
 
 #navbarSupportedContent li.nav-item.active span {
@@ -111,7 +117,7 @@ header::before {
 }*/
 
 #navbarSupportedContent a,
-#navbarSupportedContent li > span {
+#navbarSupportedContent li>span {
     /*padding: 10px 13px;
     display: inline-block;
     border: 1px solid transparent;

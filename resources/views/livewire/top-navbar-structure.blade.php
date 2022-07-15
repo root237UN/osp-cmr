@@ -1,97 +1,44 @@
 
-<style>
-    #dropmenu1 a {
-        text-decoration: none;
-    }
-
-    #dropmenu1 nav {
-        font-family: monospace;
-    }
-
-    #dropmenu1 ul {
-        /*background: #f2f2f2;*/
-        list-style: none;
-        margin: 0;
-        padding-left: 0;
-    }
-
-    #dropmenu1 li {
-        display: block;
-        float: left;
-        padding: 1rem;
-        position: relative;
-        text-decoration: none;
-        transition-duration: 0.5s;
-    }
-
-    #dropmenu1 li a {
-    }
-
-    #dropmenu1 li:hover,
-    #dropmenu1 li:focus-within {
-        background: #f2f2f2;
-        cursor: pointer;
-    }
-
-    #dropmenu1 li:focus-within a {
-        outline: none;
-    }
-
-    #dropmenu1 ul li ul {
-        background: #f2f2f2;
-        visibility: hidden;
-        opacity: 0;
-        min-width: 15rem;
-        position: absolute;
-        transition: all 0.5s ease;
-        margin-top: 1rem;
-        left: 0;
-        display: none;
-    }
-
-    #dropmenu1 ul li:hover>ul,
-    #dropmenu1 ul li:focus-within>ul,
-    #dropmenu1 ul li ul:hover,
-    #dropmenu1 ul li ul:focus {
-        visibility: visible;
-        opacity: 1;
-        display: block;
-    }
-
-    #dropmenu1 ul li ul li {
-        clear: both;
-        width: 85%;
-    }
-    #dropmenu1 ul li ul li:hover a {
-        border-bottom: 2px solid #000;
-    }
-    #dropmenu1 ul li ul li span {
-        font-size: 12px;
-    }
-</style>
-
-
 <nav class="nav-bar navbar navbar-expand-lg nav-top" id="dropmenu1">
 
-    <a class="col-md-1 title-nav"><span style="font-size: 17px;color: #38c172; font-weight: 500;">Structure</span></a>
+    <a class="col-md-3 title-nav">
+        <span class="first-item-list">Aide à l'insertion professionnelle</span></a>
 
     <ul class="col-md-5 list-options navbar-nav">
-        <li class="dropdown nav-bar-item">
-            <a><span>Ministere</span></a>
-            <i class="fas fa-chevron-down"></i>
+        <li class="dropdown nav-bar-item {{ (request()->is('insertion*')) ? 'active' : '' }}">
+            <a class="item-nav"><span>Ministère</span></a>
         </li>
         <li class="dropdown nav-bar-item">
-            <a><span>Programmes</span></a>
+            <a class="item-nav"><span>Programmes d'aide gouvernementaux</span></a>
             <i class="fas fa-chevron-down"></i>
+            {{-- <div class='sub-menu'>
+
+            </div> --}}
         </li>
         <li class="dropdown nav-bar-item">
-            <a><span>Localites</span></a>
-            <i class="fas fa-chevron-down"></i>
-        </li>
-        <li class="dropdown nav-bar-item">
-            <a><span>Aide</span></a>
-            <i class="fas fa-chevron-down"></i>
+            <a class="item-nav"><span>Aide</span></a>
         </li>
     </ul>
     <br>
 </nav>
+
+
+<script>
+    window.addEventListener("load", function(event) {
+        console.log("Toutes les ressources sont chargées !");
+
+        //Affichage des sous menus
+        let menus = document.querySelectorAll('.nav-bar-item');
+        menus.forEach(element => {
+            element.addEventListener('click', (e) => {
+                if (!element.classList.contains('active')) element.classList.add('active');
+                else element.classList.remove('active');
+            });
+        });
+        menus.classList.remove('active');
+
+
+        displayMenu = (e) => {}
+        // console.log(menus);
+    });
+</script>

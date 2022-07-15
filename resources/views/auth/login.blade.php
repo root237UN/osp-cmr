@@ -1,5 +1,9 @@
 @extends('layouts.layout')
 
+@section('title')
+<title>OSP | Cameroun  - Login</title>
+@endsection
+
 @section('content')
 <div class="container d-flex justify-content-center">
     <div class="row col-8 justify-content-center">

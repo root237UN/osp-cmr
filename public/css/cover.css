@@ -17,13 +17,41 @@ hr {
     color: #38c172;
 }
 
+div.text-description {
+    color: #231515;
+    font-size: 17.4px;
+    text-align: left;
+    opacity: .8;
+    line-height: 2rem;
+}
+
 a.link-parcours {
     color: #38c172;
     font-size: 26px;
-    text-transform: capitalize;
     text-decoration: none;
     font-style: italic;
     cursor: pointer;
+}
+.link-question{
+    cursor: pointer;
+}
+a.link-filieres {
+    color: #38c172;
+    font-size: 26px;
+    text-decoration: none;
+    font-style: italic;
+    cursor: pointer;
+}
+
+a.link-filieres:hover {}
+
+.decouvrir-filieres::after,
+.link-filieres::after {
+    content: "›";
+    display: inline-block;
+    margin-left: 0.2em;
+    will-change: transform;
+    transition: transform 0.15s linear 0s;
 }
 
 a.link-parcours:hover {}

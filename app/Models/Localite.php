@@ -18,4 +18,9 @@ class Localite extends Model
     {
         return $this->belongsTo(Arrondissement::class);
     }
+    
+    public function Ecole()
+    {
+        return $this->hasMany(Ecole::class);
+    }
 }

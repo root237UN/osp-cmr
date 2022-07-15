@@ -5,6 +5,11 @@
     margin-left: auto;
     margin-right: auto;
     background-image: url(../images/bg-section.png);
+    position: fixed !important;
+    top: 20px;
+    width: 98%;
+    margin-left: 1%;
+    border-radius: 7px;
 }
 
 /** Animation bounce */
@@ -21,4 +26,13 @@
 #arrow-down {
     animation: bounce 1s cubic-bezier(0.5, 0.05, 1, 0.5) infinite alternate;
     transform-origin: right bottom;
+}
+
+.navbar-top {
+    background-color: #fff;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 30;
 }

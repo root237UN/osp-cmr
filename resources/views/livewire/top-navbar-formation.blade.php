@@ -1,22 +1,14 @@
 <div class="container-fluid">
     <div class="">
-        <nav class="nav-bar navbar navbar-expand-lg nav-top">
-            <a class="col-md-1 title-nav"><span style="color: #38c172;font-size: 15px;font-weight:200;">Formation </span></a>
-            <ul class="col-md-5 list-options navbar-nav">
+        <nav class="nav-bar navbar navbar-expand-lg nav-top" id="dropmenu1">
+            <a class="col-md-3 title-nav first-item-list"><span>Formations professionnelles </span></a>
+            <ul class="col-md-8 list-options navbar-nav">
                 <li class="dropdown nav-bar-item">
                     <a><span>Type de formation</span></a>
                     <i class="fas fa-chevron-down"></i>
                 </li>
                 <li class="dropdown nav-bar-item">
                     <a><span>Formation</span></a>
-                    <i class="fas fa-chevron-down"></i>
-                </li>
-                <li class="dropdown nav-bar-item">
-                    <a><span>Structure de formation</span></a>
-                    <i class="fas fa-chevron-down"></i>
-                </li>
-                <li class="dropdown nav-bar-item">
-                    <a><span>Localites</span></a>
                     <i class="fas fa-chevron-down"></i>
                 </li>
             </ul>

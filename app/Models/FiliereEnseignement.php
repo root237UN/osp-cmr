@@ -34,10 +34,10 @@ class FiliereEnseignement extends Model
         return $this->hasMany(CompetenceProfessionnelle::class);
     }
 
-    public function Metiers()
-    {
-        return $this->belongsToMany(Metiers::class);
-    }
+    // public function Metiers()
+    // {
+    //     return $this->belongsToMany(Metiers::class);
+    // }
 
     public function Debouches()
     {
@@ -47,5 +47,15 @@ class FiliereEnseignement extends Model
     public function ConditionAccess()
     {
         return $this->morphMany(ConditionAccess::class, 'table');
+    }
+
+    public function Ecoles()
+    {
+        return $this->belongsToMany(Ecoles::class);
+    }
+
+    public function metiers()
+    {
+        return $this->morphToMany(Metiers::class,'metier');
     }
 }

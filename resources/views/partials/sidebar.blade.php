@@ -8,7 +8,7 @@
         <div class="body-content-left">
             <nav class="sidebar-menu">
                 <ul>
-                    <li>
+                    <li  class="{{ (request()->is('*dashboard')) ? 'active' : '' }} ">
                         <a href="{{route('admin.dashboard')}}"><i class="fas fa-tachometer-alt icon"></i>Dashboard</a>
                     </li>
                     <li>
@@ -31,6 +31,9 @@
                     </li>
                     <li>
                         <a href="#"><i class="fas fa-comment-alt icon"></i>Menu</a>
+                    </li>
+                    <li  class="{{ (request()->is('*media')) ? 'active' : '' }} ">
+                        <a href="{{route('admin.media')}}"><i class="fas fa-tag icon"></i>Media</a>
                     </li>
                     <li>
                         <a href="#"><i class="fas fa-comment-alt icon"></i>Forum</a>

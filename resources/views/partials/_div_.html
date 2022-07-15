@@ -1,0 +1,105 @@
+<div>
+    <div class="content-filtre">
+        <form>
+            <div class="item-filtre my-2">
+                <h4 class="item-filtre-title">
+                    <span>Localité</span>
+                    <button class="btn text-dark btn-display" id="btn-display-localite" type="button"> <i class="fas fa-chevron-down"></i></button>
+                </h4>
+                <!-- Liste des localites -->
+                <div class='list-localite'>
+                    <input type="text" wire:model='searchLocalite' name="search-localite" class="form-control">
+                    <div class="content-item content-item-1 my-2">
+                        @forelse($localites as $localite)
+                        <div class="form-check my-2">
+                            <input type="checkbox" class="form-check-input" value="{{$localite->libelle}}" id="localite-value" name="localite">
+                            <label class="form-check-label" for="localite-value">{{$localite->libelle}}</label>
+                        </div>
+                        @empty
+                        <div class="form-check my-2">
+                            <input type="checkbox" class="form-check-input" value="" id="localite-value" name="localite">
+                            <label class="form-check-label" for="localite-value">Vide !!!</label>
+                        </div>
+                        @endforelse
+                    </div>
+                </div>
+            </div>
+
+            <!-- Secteur d'activites -->
+            <div class="item-filtre  my-2">
+                <h4 class="item-filtre-title">
+                    <span>Secteur</span>
+                    <button class="btn text-dark btn-display" id='btn-display-secteur' type="button"> <i class="fas fa-chevron-down"></i></button>
+                </h4>
+                <div class='list-secteur'>
+                    <input type="text" name="search-parcours" class="form-control">
+                    <div class="content-item my-2">
+                        @forelse($secteurs as $secteur)
+                        <div class="form-check my-2">
+                            <input type="checkbox" class="form-check-input" id="{{$secteur->id}}" name="parcours">
+                            <label class="form-check-label" for="parcours-value">{{$secteur->libelle}}</label>
+                        </div>
+                        @empty
+                        @endforelse
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- Secteur d'activites -->
+            <div class="item-filtre  my-2">
+                <h4 class="item-filtre-title">
+                    <span>Ecole</span>
+                    <button class="btn text-dark btn-display" id='btn-display-ecole' type="button"> <i class="fas fa-chevron-down"></i></button>
+                </h4>
+                <div class='liste-ecole'>
+                    <input type="text" name="search-ecole" class="form-control">
+                    <div class="content-item my-2">
+                        @forelse($ecoles as $ecole)
+                        <div class="form-check my-2">
+                            <input type="checkbox" class="form-check-input" id="ecole-value" name="ecole">
+                            <label class="form-check-label" for="ecole-value">{{$ecole->libelle}}</label>
+                        </div>
+                        @empty
+                        @endforelse
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+        <!--<section id="actualites-onglet">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-9" id="item-actualite">
+                            <div class="col-10" style="margin-left: 50px;" id="description">
+                                <h2 class="my-2 py-4  d-flex justify-content-start" style="align-items: center;    font-family: 'Gelasio', serif;">
+                                    <span class="text-uppercase m-2 text-actualite">Actualite</span>
+                                </h2>
+                                <p class="text-description-actualite col-md-12 py-2" style="color: #243a5e;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vero culpa, debitis ducimus atque aliquid beatae modi aut distinctio. Pariatur fugit expedita sit ipsum, quos praesentium maxime accusamus eius repudiandae!</p>
+                                <a class="lire-actualite" href="#">Lire l'actualite </a>
+                                <hr style="color: #38c172;">
+                                <time datetime="2021-06-01 00:00:00 +0000 UTC"><i class="ti-alarm-clock"></i>01 June 2021</time>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-actualites">
+                <div class="service-bg"></div>
+                <div class="row" style="justify-content: center;">
+                    <h2 class="title-header-actualite">Actualites enseignements</h2>
+                    <hr class="divider">
+                </div>
+            </div>
+
+            <livewire:searchbar-news />
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselParcours" style="padding-left: 11%;" data-bs-slide="next">
+                <span class="fa fa-chevron-right fa-2x text-dark"></span>
+            </button>
+        </section>-->

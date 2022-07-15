@@ -151,7 +151,7 @@
     <div class="row">
         <div class="col-12">
             <div class="m-4">
-                <h1 class="text-capitalize header-title">
+                <h1 class=" header-title">
                     <a href="#presentation-filiere" style="color: #fff;font-family: 'Gelasio', serif;">{{$menu->libelle}}</a>
                 </h1>
             </div>
@@ -171,7 +171,7 @@
                 <ol class="breadcrumb my-1">
                     <li class="breadcrumb-item breadcrumb-item-first">Orientation</li>
                     <li class="breadcrumb-item">Etablissements</li>
-                    <li class="breadcrumb-item active" aria-current="page">Etablissement d'enseignement secondaire</li>
+                    <li class="breadcrumb-item active" aria-current="page">{{$menu->libelle}}</li>
                 </ol>
             </nav>
         </div>
@@ -181,8 +181,8 @@
         <div class="container">
             <div class="row">
                 <div class="d-flex justify-content-center">
-                    <h2 class="col-8 text-capitalize py-3 text-center" style="font-family: 'Gelasio', serif;">
-                        <a href="#list-ecoles">Cartographie des établissements d’enseignement secondaires </a>
+                    <h2 class="col-8 py-3 text-center" style="font-family: 'Gelasio', serif;">
+                        <a href="#list-ecoles">Cartographie des {{$menu->libelle}} </a>
                     </h2>
                 </div>
             </div>
@@ -190,6 +190,7 @@
                 <div class="row d-flex justify-content-center" id="map">
                     @include('partials.carte')
                     <div class="col-5 map-list" style="margin-top: 145px">
+                        @if($nbres)
                         <ul>
                             <li class="d-flex justify-content-between">
                                 <span id="link_adamaoua"><i class="fas mx-2 fa-check"></i>Region de l'adamaoua </span>
@@ -234,6 +235,14 @@
                                 <span class="badge mx-2 bg-secondary">@if($nbres[1]->libelle == 'Sud-Ouest') {{$nbres[1]->total}} @else 0 @endif</span>
                             </li>
                         </ul>
+                        @else
+
+                        <ul>
+                            <li class="d-flex justify-content-between">
+                                <span id="link_adamaoua"><i class="fas mx-2 fa-check"></i>Vide !!</span>
+                            </li>
+                        </ul>
+                        @endif
                     </div>
                 </div>
             </div>

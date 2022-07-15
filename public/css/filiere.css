@@ -1,390 +1,394 @@
+.nav-bar {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    height: 54px;
+    min-height: 54px;
+    /*justify-content: space-between;*/
+    padding-left: 4%;
+    padding-right: 4%;
+}
 
-    .nav-bar {
-        position: relative;
-        display: flex;
-        align-items: stretch;
-        height: 54px;
-        min-height: 54px;
-        /*justify-content: space-between;*/
-        padding-left: 4%;
-        padding-right: 4%;
-    }
+.nav-bar a {
+    transition: all ease-in-out 300ms;
+}
 
-    .nav-bar a {
-        transition: all ease-in-out 300ms;
-    }
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
 
-    .nav-bar ul {
-        list-style: none;
-        display: flex;
-        margin: 0;
-        padding: 0;
-    }
+.list-options li {
+    display: flex;
+    margin-left: 20px;
+    white-space: nowrap;
+    font-size: .875rem;
+    line-height: normal;
+    cursor: pointer;
+}
 
-    .list-options li {
-        display: flex;
-        margin-left: 20px;
-        text-transform: capitalize;
-        white-space: nowrap;
-        font-size: .875rem;
-        line-height: normal;
-        cursor: pointer;
-    }
+.list-options li i {
+    margin-left: 5px;
+    margin-top: 2px;
+    font-size: 10px;
+    font-style: italic;
+    opacity: .6;
+}
 
-    .list-options li i {
-        margin-left: 5px;
-        margin-top: 2px;
-        font-size: 10px;
-        font-style: italic;
-        opacity: .6;
-    }
+.nav-top {
+    border-top: 2px solid #e6e6e6;
+    align-items: center;
+    align-content: center;
+}
 
-    .nav-top {
-        border-top: 2px solid #e6e6e6;
-        align-items: center;
-        align-content: center;
-    }
+.title-nav {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.125;
+    margin: 0;
+    padding: 0 .5rem;
+}
 
-    .title-nav {
-        font-size: 1.125rem;
-        font-weight: 600;
-        line-height: 1.125;
-        margin: 0;
-        padding: 0 .5rem;
-    }
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
 
-    a {
-        text-decoration: none;
-        color: black;
-        cursor: pointer;
-    }
+a:hover {
+    color: black;
+}
 
-    a:hover {
-        color: black;
-    }
-
-    .nav-bar-item {
-        display: flex;
-        align-items: center;
-        flex-shrink: 0;
-    }
+.nav-bar-item {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
 
 
-    /*body {
+/*body {
         font-family: "Lato";
     }*/
 
-    /** style pour header-formations */
-    #header-formation {
-        min-height: 20ch;
-        border: 1px solid transparent;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-        background-color: #243a5e !important;
-        outline-color: #fff !important;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-        padding-left: 45px;
-        padding-right: 45px;
-    }
-
-    .header-title {
-        color: #fff;
-        padding-left: 0;font-family: 'Gelasio', serif;
-    }
-    .header-title a {
-        color: #fff;
-        transition: all ease-in-out 350ms;
-    }
-    .header-title a:hover {
-        color: #fff;
-    }
-
-    .header-title-description {
-        color: #ffffff;
-        font-weight: 200;
-        font-style: italic;
-        font-size: 17.4px;
-        text-align: left;
-        opacity: .8;
-        line-height: 2rem;
-        padding-left: 0px;
-        max-height: 100px;
-        overflow: hidden;
-    }
-
-    .description-formation {
-        color: #ffffff;
-        font-weight: 200;
-        font-style: italic;
-        font-size: 17.4px;
-        text-align: left;
-        opacity: .8;
-        line-height: 1.5rem;
-        padding-left: 0px;
-        max-height: 100px;
-        overflow: hidden;
-    }
-
-    /** Styles pour la presentation des formations */
-    #filieres, #formations {
-        min-height: 100ch;
-        border: 1px solid transparent;
-        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-        background-image: url(../images/bg-section.png);
-        background-size: cover;
-        background-position: 50%;
-        background-repeat: no-repeat;
-    }
-
-    .row-input {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .row-input input {
-        width: 78%;
-        box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
-        font-family: 'Times New Roman', Times, serif;
-        font-style: italic;
-        opacity: 0.7;
-    }
-
-    .row-input input:active,
-    .row-input input:focus {
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-    }
-
-    .row-input .btn {
-        margin-left: 1%;
-        width: 20%;
-        font-weight: bold;
-        color: #fff;
-        font-style: italic;
-    }
-
-    .row-input .btn>* {
-        margin-left: 5px;
-    }
-
-    .card-formation-img {
-        display: flex;
-        flex: 1;
-        flex-direction: row;
-        justify-content: start;
-    }
-
-    .card-formation-img img {
-        width: 90px;
-        height: 90px;
-    }
-
-    .content-card {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .card-formation {
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 0px !important;
-        width: 49%;
-        padding-left: 20px;
-        padding-right: 15px;
-        font-family: 'Junge', serif;
-        cursor: pointer;
-        border: none;
-        border-radius: 3px 0 3px 0 !important;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
-        transition: all ease-in-out 350ms;
-    }
-
-    .card-formation:hover {
-        box-shadow: 0 5px 20px rgba(0, 0, 0, .15), 0 4px 4px -2px rgba(0, 0, 0, .1) !important;
-        opacity: .9;
-        transform: translateY(-2px)scale(1);
-    }
-
-    .card-formation-content {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        font-size: x-small !important;
-        align-items: center;
-    }
-
-    .card-formation-content .btn {
-        background-color: #f2f2f2;
-        font-size: xx-small;
-        height: 25px;
-        margin-right: 2px;        border-radius: 3px;
-        text-transform: capitalize;
-        text-align: left;
-        transition: all ease-in-out 350ms;
-        width: auto;
-        font-weight: bold;
-    }
-
-    .card-formation-content .btn:hover,
-    .card-formation-content .btn:active,
-    .card-formation-content .btn:focus {
-        box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.2) 0px 0px 0px 1px;
-        border: none;
-    }
-
-    .card-formation-header {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .libelle-formation {
-        font-size: 17.4px;
-        opacity: .9;
-        line-height: 1.4rem;
-        padding-left: 0px;
-        max-height: 100px;
-        min-height: 30px;
-        overflow: hidden;
-        text-transform: capitalize;
-        font-weight: bold;
-        font-style: italic;
-        font-family: 'Lato';
-        padding-left: 0;
-    }
-
-    .diplome-formation {
-        font-weight: bold;
-        font-style: italic;
-        font-family: 'Lato';
-        padding-left: 0;
-    }
-
-    .result-count {
-        font-size: 1.125rem;
-    }
-
-    .description-formation {
-        text-align: left;
-        max-height: 100px;
-        overflow: hidden;
-        margin-left: 10px;
-        color: #000;
-        font-size: 12px;
-    }
-
-    /** Fin Style pour la presentation des formations */
-
-    /**Debut style pour le filtre sur les formations */
-    #filtre {
-        /*box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;*/
-        margin-left: -25px;
-        min-width: 215px;
-        overflow-y: hidden;
-        overflow-x: hidden;
-        max-height: 650px;
-        font-family: 'Jost', sans-serif;
-
-    }
-
-    #filtre input[type="text"] {
-        height: 30px;
-        box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
-        font-style: italic;
-    }
-
-    .form-check label{
-        cursor: pointer;
-    }
-
-    #filtre label {
-        text-transform: capitalize;
-        font-size: 11px;
-    }
-
-    .btn-validate-filtre{
-        color: #243a5e;
-        font-weight: bold;
-        height: 30px;
-        padding-right: 5px;
-        padding-left: 5px;
-        padding-top: 3px;
-        margin-top: 3px;
-        border: 1px solid #38c1721a;
-    }
-
-    .title-filtre {
-        font-size: large;
-        font-weight: bold;
-        text-transform: capitalize;
-        align-items: center;
-        margin-bottom: 0px !important;
-    }
-
-    .item-filtre {}
-
-    .item-filtre-title {}
-
-    .content-item {
-        max-height: 130px;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        padding-left: 15px;
-        font-family: 'Jost', sans-serif;
-        font-weight: bold;
-    }
-
-    .item-filtre-title {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 20px;
-
-    }
-
-    .item-filtre-title button {
-        padding-bottom: 0;
-        height: 22px;
-        padding-top: 0;
-    }
-
-    /**Style footer card */
-    .btn-save {
-        font-size: 12px;
-        height: 30px;
-        margin-top: 5px;
-        color: #243a5e;
-        font-style: italic;
-        transition: all ease-in-out 350ms;
-    }
-    .btn-save:hover,.btn-validate-filtre:hover{
-        background-color: #f2f2f2;
-    }
-    /**Fin style footer card */
-
-    /** Style pour la pagination */
-    ul.pagination{
-        align-items: center;
-        justify-content: center;
-        font-family: 'PT Mono', monospace;
-    }
-    .page-item.active .page-link {
-        z-index: 3;
-        color: #fff;
-        background-color: #243a5e !important;
-        border-color: #243a5e !important;
-    }
-    /** Fin Style pour la pagination */
-
-    /** Style pour breadcrumb */
-.breadcrumb li{
-    cursor: pointer;
-    text-transform: capitalize;
-    transition: all ease-in-out 350ms ;
+/** style pour header-formations */
+#header-formation {
+    min-height: 20ch;
+    border: 1px solid transparent;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    background-color: #243a5e !important;
+    outline-color: #fff !important;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding-left: 45px;
+    padding-right: 45px;
 }
-.breadcrumb li:hover a{
+
+.header-title {
+    color: #fff;
+    padding-left: 0;
+    font-family: 'Gelasio', serif;
+}
+
+.header-title a {
+    color: #fff;
+    transition: all ease-in-out 350ms;
+}
+
+.header-title a:hover {
+    color: #fff;
+}
+
+.header-title-description {
+    color: #ffffff;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 17.4px;
+    text-align: left;
+    opacity: .8;
+    line-height: 2rem;
+    padding-left: 0px;
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.description-formation {
+    color: #ffffff;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 17.4px;
+    text-align: left;
+    opacity: .8;
+    line-height: 1.5rem;
+    padding-left: 0px;
+    max-height: 100px;
+    overflow: hidden;
+}
+
+/** Styles pour la presentation des formations */
+#filieres,
+#formations {
+    min-height: 100ch;
+    border: 1px solid transparent;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    background-image: url(../images/bg-section.png);
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+.row-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.row-input input {
+    width: 78%;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.row-input input:active,
+.row-input input:focus {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.row-input .btn {
+    margin-left: 1%;
+    width: 20%;
+    font-weight: bold;
+    color: #fff;
+    font-style: italic;
+}
+
+.row-input .btn>* {
+    margin-left: 5px;
+}
+
+.card-formation-img {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.card-formation-img img {
+    width: 90px;
+    height: 90px;
+}
+
+.content-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card-formation {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0px !important;
+    width: 49%;
+    padding-left: 20px;
+    padding-right: 15px;
+    font-family: 'Junge', serif;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px 0 3px 0 !important;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    transition: all ease-in-out 350ms;
+}
+
+.card-formation:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .15), 0 4px 4px -2px rgba(0, 0, 0, .1) !important;
+    opacity: .9;
+    transform: translateY(-2px)scale(1);
+}
+
+.card-formation-content {
+    display: flex;
+    flex-direction: row;
+    font-size: x-small !important;
+    align-items: center;
+}
+
+.card-formation-content .btn {
+    background-color: #f2f2f2;
+    font-size: xx-small;
+    height: 25px;
+    margin-right: 2px;
+    border-radius: 3px;
+    text-align: left;
+    transition: all ease-in-out 350ms;
+    width: auto;
+    font-weight: bold;
+}
+
+.card-formation-content .btn:hover,
+.card-formation-content .btn:active,
+.card-formation-content .btn:focus {
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.2) 0px 0px 0px 1px;
+    border: none;
+}
+
+.card-formation-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.libelle-formation {
+    font-size: 17.4px;
+    opacity: .9;
+    line-height: 1.4rem;
+    padding-left: 0px;
+    max-height: 100px;
+    min-height: 30px;
+    overflow: hidden;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Lato';
+    padding-left: 0;
+}
+
+.diplome-formation {
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Lato';
+    padding-left: 0;
+}
+
+.result-count {
+    font-size: 1.125rem;
+}
+
+.description-formation {
+    text-align: left;
+    max-height: 100px;
+    overflow: hidden;
+    margin-left: 10px;
+    color: #000;
+    font-size: 12px;
+}
+
+/** Fin Style pour la presentation des formations */
+
+/**Debut style pour le filtre sur les formations */
+#filtre {
+    /*box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;*/
+    margin-left: -25px;
+    min-width: 215px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    max-height: 650px;
+    font-family: 'Jost', sans-serif;
+
+}
+
+#filtre input[type="text"] {
+    height: 30px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    font-style: italic;
+}
+
+.form-check label {
+    cursor: pointer;
+}
+
+#filtre label {
+    font-size: 11px;
+}
+
+.btn-validate-filtre {
+    color: #243a5e;
+    font-weight: bold;
+    height: 30px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 3px;
+    margin-top: 3px;
+    border: 1px solid #38c1721a;
+}
+
+.title-filtre {
+    font-size: large;
+    font-weight: bold;
+    align-items: center;
+    margin-bottom: 0px !important;
+}
+
+.item-filtre {}
+
+.item-filtre-title {}
+
+.content-item {
+    max-height: 130px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-left: 15px;
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+}
+
+.item-filtre-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+
+}
+
+.item-filtre-title button {
+    padding-bottom: 0;
+    height: 22px;
+    padding-top: 0;
+}
+
+/**Style footer card */
+.btn-save {
+    font-size: 12px;
+    height: 30px;
+    margin-top: 5px;
+    color: #243a5e;
+    font-style: italic;
+    transition: all ease-in-out 350ms;
+}
+
+.btn-save:hover,
+.btn-validate-filtre:hover {
+    background-color: #f2f2f2;
+}
+
+/**Fin style footer card */
+
+/** Style pour la pagination */
+ul.pagination {
+    align-items: center;
+    justify-content: center;
+    font-family: 'PT Mono', monospace;
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #243a5e !important;
+    border-color: #243a5e !important;
+}
+
+/** Fin Style pour la pagination */
+
+/** Style pour breadcrumb */
+.breadcrumb li {
+    cursor: pointer;
+    transition: all ease-in-out 350ms;
+}
+
+.breadcrumb li:hover a {
     border-bottom: 1px solid #243a5e;
 }
+
 /**Fin Style pour breadcrumb */

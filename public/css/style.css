@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'MTNBrighterSans-Bold';
+    src: url('../fonts/MTNBrighterSans-Bold.ttf');
+}
+@font-face {
+    font-family: 'MTNBrighterSans-ExtraBold';
+    src: url('../fonts//MTNBrighterSans-ExtraBold.ttf');
+}
+@font-face {
+    font-family: 'MTNBrighterSans-Regular';
+    src: url('../fonts/MTNBrighterSans-Regular.ttf');
+}
+@font-face {
+    font-family: 'MTNBrighterSans-ExtraBold';
+    src: url('../fonts/MTNBrighterSans-ExtraBold.ttf');
+}
+@font-face {
+    font-family: 'MTNBrighterSans-Medium';
+    src: url('../fonts/MTNBrighterSans-Medium.ttf');
+}
+@font-face {
+    font-family: 'MTNBrighterSans-Light';
+    src: url('../fonts/MTNBrighterSans-Light.ttf');
+}
+@font-face {
+    font-family: 'MTNBrighterSans-ExtraLight';
+    src: url('../fonts/MTNBrighterSans-ExtraLight.ttf');
+}
+.title-1{
+    font-family: 'MTNBrighterSans-Bold',sans-serif;
+}
+.title-2{
+    font-family: 'MTNBrighterSans-Light',sans-serif;
+}
+.title-1-1{
+    font-family: 'MTNBrighterSans-ExtraBold',sans-serif;
+}
+
+.site-text{
+    font-family: 'MTNBrighterSans-Regular',sans-serif;
+}
+.site-text-1{
+    font-family: 'MTNBrighterSans-ExtraLight',sans-serif;
+}
+.site-text-medium{
+    font-family: 'MTNBrighterSans-Medium',sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #262d3d;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #262d3d;
+}

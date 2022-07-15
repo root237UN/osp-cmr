@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Admin | Orientation</title>
+    <title>Admin | OSP - Cameroun</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -31,10 +31,10 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.1.1/dist/select2-bootstrap-5-theme.min.css" />
 
-
-
     <link rel="stylesheet" href="{{asset('datatable/datatables.net-bs4/css/dataTables.bootstrap4.min.css')}}">
     <link rel="stylesheet" href="{{asset('datatable/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css')}}">
+    <!-- Semantic UI -->
+    <link rel="stylesheet" type="text/css" href="{{asset('semantic/dist/semantic.min.css')}}">
     @livewireStyles
     @yield('css')
 </head>
@@ -119,6 +119,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{asset('semantic/dist/semantic.min.js')}}"></script>
 
     <script>
         $('.btn-close-sidebar').click(function() {

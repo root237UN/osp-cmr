@@ -27,4 +27,9 @@ class Ecole extends Model
     {
         return $this->belongsTo(Localite::class);
     }
+    
+    public function filiere()
+    {
+        return $this->belongsToMany(FiliereEnseignement::class);
+    }
 }

@@ -114,10 +114,10 @@
 
     .footer .footer-navLink::before {
         content: '';
-        border-top: .3em solid #deb857;
-        border-bottom: .3em solid #deb857;
-        border-left: .3em solid #deb857;
-        border-right: .3em solid #deb857;
+        border-top: .3em solid #38c172;
+        border-bottom: .3em solid #38c172;
+        border-left: .3em solid #38c172;
+        border-right: .3em solid #38c172;
         display: inline-block;
         vertical-align: baseline;
         margin-right: 0.0rem;
@@ -149,7 +149,7 @@
 
     .title-footer span {
         font-style: italic;
-        color: #deb857;
+        color: #38c172;
     }
 
     .title-footer span::before {
