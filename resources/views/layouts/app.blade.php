@@ -43,6 +43,7 @@
     <link href="{{ asset('css/top-navbar.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/top-content.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/responsive-mobile.css') }}" rel="stylesheet">
 
     <!-- AOS Animate -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">

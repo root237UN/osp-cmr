@@ -31,6 +31,7 @@
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/responsive-mobile.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -40,7 +41,8 @@
 
             <div class="container-fluid" id="description">
                 <div class="row">
-                    <div class="col-md-7" data-aos="zoom-in-down">
+
+                    <div class="col-md-7 col-12" data-aos="zoom-in-down">
                         <div id="banner-text">
                             <div>
                                 <div class="title-1"><h1>{{$content->libelle}}</h1></div>
@@ -48,13 +50,21 @@
                                     <p>{{$content->description}}</p>
                                 </div>
                             </div>
-                            <div class="d-flex justify-content-start bounce" style="align-items: center;">
+                            <div class="d-flex justify-content-start bounce hidden-mobile" style="align-items: center;">
                                 <a id="documentation-link" class="btn bounce text-uppercase" style="font-weight: bold;" href="#"> <i class="fas fa-2x fa-book"></i></a>
                                 <a id='arrow-down' href="{{route('orientation')}}" class="text-orientation ml-5 site-text bounce">Orientez-vous ici </a>
                             </div>
+
+                            <div class="d-flex justify-content-start hidden-web align-items-center" >
+                                <a id="documentation-link" class="btn text-uppercase fw-bold" href="#">
+                                    <i class="fas fa-2x fa-book"></i>
+                                </a>
+                                <a href="{{route('orientation')}}" class="text-orientation ms-5 site-text">Orientez-vous ici </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-5">
+
+                    <div class="col-md-5 hidden-mobile col-12">
                         <div>
                             <p class="text-center title-1-1 text-white text-option">Optez pour </p>
                         </div>
