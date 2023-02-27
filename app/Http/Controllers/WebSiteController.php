@@ -27,6 +27,7 @@ class WebSiteController extends Controller
     public function index()
     {
         $content = MenuVisite::where('titre','accueil')->firstorfail();
+                // dd($content);
         $subContent = $content->content()->get();
         return view('layouts.view',['content'=>$content,'subContent'=>$subContent]);
     }

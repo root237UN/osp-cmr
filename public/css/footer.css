@@ -5,7 +5,7 @@
     #sub-footer {
         background-color: #243a5e;
         background-image: url(../images/bg-section.png);
-        background: linear-gradient(45deg, #464646, #243a5e);
+        background: linear-gradient(45deg, #243a5e, #243a5e);
         box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 
     }
@@ -180,4 +180,8 @@
 
     .bg-footer {
         background-color: #243a5e !important;
+    }
+
+    #footer .accordion-button{
+
     }

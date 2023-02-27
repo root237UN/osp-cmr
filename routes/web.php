@@ -23,7 +23,8 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', [WebSiteController::class, 'index'])->name('welcome');
+Route::get('/', [App\Http\Controllers\WebSiteController::class, 'index'])->name('welcome');
+
 Route::get('/enseignement-secondaire-au-cameroun', [EnseignementController::class, 'index'])->name('enseignement');
 
 Route::get('/enseignement-secondaire-au-cameroun/{code}', [EnseignementController::class, 'showTypeEnseignement'])->name('enseignement.view');

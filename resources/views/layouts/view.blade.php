@@ -22,7 +22,8 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
 
     <!-- Styles -->
@@ -45,21 +46,26 @@
                     <div class="col-md-7 col-12" data-aos="zoom-in-down">
                         <div id="banner-text">
                             <div>
-                                <div class="title-1"><h1>{{$content->libelle}}</h1></div>
+                                <div class="title-1">
+                                    <h1>{{ $content->libelle }}</h1>
+                                </div>
                                 <div style="text-align: justify;" class="p site-text my-4 body">
-                                    <p>{{$content->description}}</p>
+                                    <p>{{ $content->description }}</p>
                                 </div>
                             </div>
                             <div class="d-flex justify-content-start bounce hidden-mobile" style="align-items: center;">
-                                <a id="documentation-link" class="btn bounce text-uppercase" style="font-weight: bold;" href="#"> <i class="fas fa-2x fa-book"></i></a>
-                                <a id='arrow-down' href="{{route('orientation')}}" class="text-orientation ml-5 site-text bounce">Orientez-vous ici </a>
+                                <a id="documentation-link" class="btn bounce text-uppercase" style="font-weight: bold;"
+                                    href="#"> <i class="fas fa-2x fa-book"></i></a>
+                                <a href="{{ route('orientation') }}"
+                                    class="text-orientation ml-5 site-text ">Orientez-vous ici </a>
                             </div>
 
-                            <div class="d-flex justify-content-start hidden-web align-items-center" >
+                            <div class="d-flex justify-content-start hidden-web align-items-center">
                                 <a id="documentation-link" class="btn text-uppercase fw-bold" href="#">
                                     <i class="fas fa-2x fa-book"></i>
                                 </a>
-                                <a href="{{route('orientation')}}" class="text-orientation ms-5 site-text">Orientez-vous ici </a>
+                                <a href="{{ route('orientation') }}"
+                                    class="text-orientation ms-5 site-text">Orientez-vous ici </a>
                             </div>
                         </div>
                     </div>
@@ -70,19 +76,21 @@
                         </div>
                         <div class="flex-row d-flex justify-content-between">
                             <div class="card site-text-medium">
-                                <div class="card-side front">
-                                    <div>
-                                        <p><span>un</span> metier</p>
+                                <a href="{{ route('orientation.metier') }}">
+                                    <div class="card-side front">
+                                        <div>
+                                            <p><span>un</span> metier</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="card-side back">
-                                    <div>
-                                        <p><span>un</span> parcours</p>
+                                    <div class="card-side back">
+                                        <div>
+                                            <p><span>un</span> parcours</p>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                             <div class="card site-text-medium card-1">
-                                <a href="{{route('formation')}}" >
+                                <a href="{{ route('orientation.formation') }}">
                                     <div class="card-side front">
                                         <div>
                                             <p><span>une</span> formation</p>
@@ -96,7 +104,7 @@
                                 </a>
                             </div>
                             <div class="card site-text-medium">
-                                <a href="{{route('etablissement')}}">
+                                <a href="{{ route('orientation.ecole') }}">
                                     <div class="card-side front">
                                         <div>
                                             <p><span>une</span> école</p>
@@ -116,20 +124,29 @@
         </header>
 
         <section id="platform-highlights" class="bg-light mt-4">
-            <div class="container-fluid px-0" style="margin-top: -60px;    background: transparent; position: relative;">
+            <div class="container-fluid px-0"
+                style="margin-top: -60px;    background: transparent; position: relative;">
                 <ul>
                     @forelse($subContent as $sub)
-                    <li @class(['item', 'card-cover','h-100','overflow-hidden','card-green'=>$sub->position%2==0,'card-page'=>$sub->position==1, 'card-default'=>$sub->position%2==1 && $sub->position!=1 ,'rounded-5']) data-aos="zoom-out-right">
-                        <div>
-                            <a href="#">
-                                <div class="title-2">
-                                    <h4 class="card-header">{{$sub->libelle}}</h4>
-                                </div>
-                            </a>
-                            <p class="card-body site-text">{{$sub->description}}</p>
-                        </div>
-                        <div class="decor-card"></div>
-                    </li>
+                        <li @class([
+                            'item',
+                            'card-cover',
+                            'h-100',
+                            'overflow-hidden',
+                            'card-page' => $sub->position % 2 == 0,
+                            'card-default' => $sub->position % 2 == 1 && $sub->position != 1,
+                            'rounded-5',
+                        ]) data-aos="zoom-out-right">
+                            <div>
+                                <a href="#">
+                                    <div class="title-2">
+                                        <h4 class="card-header">{{ $sub->libelle }}</h4>
+                                    </div>
+                                </a>
+                                <p class="card-body site-text">{{ $sub->description }}</p>
+                            </div>
+                            <div class="decor-card"></div>
+                        </li>
                     @empty
                     @endforelse
 

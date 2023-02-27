@@ -1,9 +1,9 @@
-<footer class="footer mt-auto py-3 bg-footer" style="padding-bottom: 0px !important;">
+<footer id="footer" class="footer mt-auto py-3 bg-footer" style="padding-bottom: 0px !important;">
     <div class="container-fluid ps-4  py-4">
         <div class="row">
             <div class="col-md-9 ps-5 group-items-footer pe-0">
                 <h2 class="title-footer" data-aos="fade-right"><span>liens</span> utiles</h2>
-                <ul class="footer-navList" data-aos="zoom-in">
+                <ul class="footer-navList d-none d-sm-block" data-aos="zoom-in" >
                     <li class="footer-navItem"><a class="footer-navLink" target="_self" href="#">Orientation</a></li>
                     <li class="footer-navItem"><a class="footer-navLink" target="_self" href="#">Parcours académiques</a></li>
                     <li class="footer-navItem"><a class="footer-navLink" target="_self" href="#">Formations professionnelles</a></li>
@@ -20,6 +20,49 @@
                     <li class="footer-navItem"><a class="footer-navLink" target="_blank" href="#">Catalogue des filières</a></li>
                     <li class="footer-navItem"><a class="footer-navLink" target="_blank" href="#">Devenir Ambassadeur</a></li>
                 </ul>
+
+                <div class="accordion d-block col-11 ms-2 mb-4 d-sm-none accordion-flush" id="accordionLink">
+                    <div class="accordion-item bg-transparent">
+                      <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                          Orientation
+                        </button>
+                      </h2>
+                      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionLink">
+                        <div class="accordion-body">
+                            <ul class="mt-4">
+                                <li class="footer-navItem"><a class="footer-navLink" target="_self" href="#">Parcours académiques</a></li>
+                                <li class="footer-navItem"><a class="footer-navLink" target="_self" href="#">Formations professionnelles</a></li>
+                                <li class="footer-navItem"><a class="footer-navLink" target="_self" href="#">Etablissements </a></li>
+                                <li class="footer-navItem"><a class="footer-navLink" target="_self" href="#">Métiers</a></li>
+                            </ul>
+                        </div>
+                      </div>
+                    </div>
+                    {{-- <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                          Formation
+                        </button>
+                      </h2>
+                      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionLink">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                          Etablissement
+                        </button>
+                      </h2>
+                      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionLink">
+                        <div class="accordion-body">
+                           
+                        </div>
+                      </div>
+                    </div> --}}
+                    
+                  </div>
             </div>
             <div class="col-md-3" id="nous-contacter">
                 <div class='ms-2'>
