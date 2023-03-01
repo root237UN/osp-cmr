@@ -1,11 +1,23 @@
 .container-header {
-    max-width: 1600px;
     width: 100%;
     padding-right: 3%;
     margin-left: auto;
     margin-right: auto;
     background-image: url(../images/bg-section.png);
     position: fixed !important;
+    top: 20px;
+    width: 98%;
+    margin-left: 1%;
+    border-radius: 7px;
+}
+
+.container-header-relative {
+    width: 100%;
+    padding-right: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../images/bg-section.png);
+    position: relative !important;
     top: 20px;
     width: 98%;
     margin-left: 1%;

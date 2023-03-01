@@ -61,6 +61,15 @@ section.bg-cover img.img-cover {
     opacity: .8;
 }
 
+img.img-cover {
+    border: 1px solid transparent;
+    height: 250px;
+    width: 250px;
+    background-color: whitesmoke;
+    border-radius: 400px;
+    opacity: .8;
+}
+
 #description {
     z-index: 10;
     padding: 0;
@@ -166,7 +175,7 @@ a.card-option .title {
 
 a.link-parcours {
     color: #38c172;
-    font-size: 26px;
+    font-size: 20px;
     text-decoration: none;
     cursor: pointer;
 }

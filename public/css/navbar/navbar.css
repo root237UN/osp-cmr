@@ -41,7 +41,7 @@ header::before {
 
 .logo-welcome::first-letter {
     font-size: 50px;
-    color: #38c172;
+    color: #243a5e;
 }
 
 #navbarSupportedContent li>a {
@@ -59,13 +59,15 @@ header::before {
 }
 
 #navbarSupportedContent li.nav-item.active {
-    background-color: #38c172;
+    background-color: #243a5e;
     border-radius: 7px;
 }
 
 .btn-connect {
     font-size: 12px;
     border-radius: 4px;
+    background-color: #243a5e;
+    border-color: #243a5e;
 }
 
 #navbarSupportedContent li.nav-item.active a {
@@ -82,7 +84,7 @@ header::before {
 }
 
 #navbarSupportedContent li:hover a {
-    color: #38c172;
+    color: #243a5e;
 }
 
 #navbarSupportedContent li:hover span.decor-link-menu {
@@ -92,7 +94,7 @@ header::before {
 .decor-link-menu {
     width: 80%;
     left: 12px;
-    background-color: #38c172;
+    background-color: #243a5e;
     position: relative;
     height: 2px !important;
     top: -5px;
@@ -113,7 +115,7 @@ header::before {
 }
 
 #navbarSupportedContent li:hover a {
-    color: #38c172 !important;
+    color: #243a5e !important;
 }*/
 
 #navbarSupportedContent a,

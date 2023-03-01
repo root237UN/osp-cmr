@@ -51,7 +51,7 @@ class FiliereEnseignement extends Model
 
     public function Ecoles()
     {
-        return $this->belongsToMany(Ecoles::class);
+        return $this->belongsToMany(Ecole::class);
     }
 
     public function metiers()

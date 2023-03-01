@@ -44,6 +44,7 @@ class EnseignementController extends Controller
     public function showParcours($code)
     {
         $option = OptionEnseignement::where('libelle', 'like', '%'.$code.'%')->firstorfail();
+        // dd($option);
         return view('enseignement/parcours', ['content'=>$this->content,'option' => $option]);
     }
 

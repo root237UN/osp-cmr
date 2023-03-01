@@ -37,7 +37,7 @@
                     <form class="form form-inline">
                         <div class="row-input">
                             <input class="form-control" wire:model='searchText' placeholder="Rechercher ...">
-                            <button type="button" class="btn btn-success">
+                            <button type="button" class="btn btn-connect">
                                 <i class="fas fa-search"></i><span class="mr-2">Rechercher</span>
                             </button>
                         </div>
@@ -51,7 +51,7 @@
                             <a href="{{ route('showFiliere', ['code' => $filiere->id ]) }}">
                                 <div class="card-formation-header">
                                     <div class="card-formation-img">
-                                        <img class="img -img-fluid" src="../images/bg3.jpg">
+                                        <img class="img -img-fluid" src="{{asset('images/bg3.jpg')}}">
                                         <p class="description-formation site-text">@if($filiere->description == NULL)Description de la filiere ... @else{{$filiere->description}}@endif</p>
                                     </div>
                                     <h3 class="mt-2 libelle-formation title-2">{{$filiere->libelle}} ({{$filiere->code}})</h3>

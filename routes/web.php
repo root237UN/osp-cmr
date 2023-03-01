@@ -30,12 +30,7 @@ Route::get('/enseignement-secondaire-au-cameroun', [EnseignementController::clas
 Route::get('/enseignement-secondaire-au-cameroun/{code}', [EnseignementController::class, 'showTypeEnseignement'])->name('enseignement.view');
 Route::get('enseignement/parcours/{code}', [EnseignementController::class, 'showParcours'])->name('parcours.show');
 
-/** Route pour les formations */
-Route::get('/formation-professionnelle', [FormationController::class, 'index'])->name('formation');
-Route::get('/formation-professionnelle/{code}', [FormationController::class, 'showFormation'])->name('formation.show');
-Route::get('/formation-description/{code}', [FormationController::class, 'InfosTypeFormation'])->name('formation.infos');
-Route::get('/formation-professionnelle-presentation/{code}', [FormationController::class, 'presentationFormation'])->name('formation.all');
-Route::get('/formation-professionnelle/presentation/{code}', [FormationController::class, 'detailsFormation'])->name('formation.details');
+
 
 Route::get('/structrure/formation/{code}', [SecondaryController::class, 'presentationStructure'])->name('structure.formation');
 

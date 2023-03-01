@@ -12,6 +12,12 @@
     transition: all ease-in-out 300ms;
 }
 
+.hr_divider{
+    color: #243a5e;
+    height: 10px !important;
+    opacity: 1;
+}
+
 .nav-bar a:hover span::after {
     display: flex;
     position: relative;
@@ -137,6 +143,7 @@ a:hover {
 /**Style image filiere */
 .img-decor {
     height: 150px;
+    width: 150px;
     border: 1px solid transparent;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -516,7 +523,8 @@ a:hover {
         max-height: 150px;
         border: 1px solid transparent;
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 0px 2.6px;
-        background-color: #e8eaec94;
+        background-color: #243a5e;
+        color: #fff;
         border-bottom: 0;
     }
 
@@ -540,7 +548,7 @@ a:hover {
     }
 
     .body-content-filiere {
-        border: 1px solid #e8eaec94;
+        border: 1px solid transparent;
         min-height: 450px;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
@@ -550,7 +558,7 @@ a:hover {
     }
 
     .top-content {
-        background-color: #e8eaec94;
+        background-color: #243a5e;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
     }

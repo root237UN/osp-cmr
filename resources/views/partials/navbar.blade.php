@@ -1,6 +1,6 @@
     <nav class="navbar navbar-expand-lg container-header" id="navbar-site" data-aos="fade-down">
         <div class="container-fluid">
-            <a class="navbar-brand col-2 d-flex justify-content-center" href="/">
+            <a class="navbar-brand col-2 d-flex justify-content-center" href="{{route('welcome')}}">
                 <span class="logo-welcome">Orientation</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -11,7 +11,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul id="nav-menu" class="navbar-nav me-auto mb-2 px-4 mx-auto mb-lg-0">
                     <li class="nav-item {{ request()->is('/') ? 'active' : '' }} ">
-                        <a class="nav-link" href="/">Accueil</a>
+                        <a class="nav-link" href="{{route('welcome')}}">Accueil</a>
                         <span class="decor-link-menu"></span>
                     </li>
                     <li class="nav-item {{ request()->is('orientation') ? 'active' : '' }} ">
@@ -23,7 +23,7 @@
                         <span class="decor-link-menu"></span>
                     </li>
                     <li class="nav-item {{ request()->is('formation*') ? 'active' : '' }} ">
-                        <a class="nav-link" href="{{ route('formation') }}">Formation professionnelle</a>
+                        <a class="nav-link" href="{{ route('formation.formation') }}">Formation professionnelle</a>
                         <span class="decor-link-menu"></span>
                     </li>
                     <li class="nav-item {{ request()->is('insertion*') ? 'active' : '' }} ">

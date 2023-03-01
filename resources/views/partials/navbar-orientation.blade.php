@@ -1,8 +1,8 @@
 
 
-<nav class="navbar container-header navbar-light navbar-expand-lg navbar-top" data-aos="fade-down">
+<nav class="navbar container-header-relative navbar-light navbar-expand-lg navbar-top" data-aos="fade-down">
     <div class="container-fluid">
-        <a class="navbar-brand hidden-mobile col-5 col-md-2 d-flex justify-content-center" href="/">
+        <a class="navbar-brand hidden-mobile col-5 col-md-2 d-flex justify-content-center" href="{{route('welcome')}}">
             <span class="logo-welcome hidden-mobile">Orientation</span>
         </a>
 
@@ -18,7 +18,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul id="nav-menu" class="navbar-nav me-auto ps-0 mb-2 ms-0 mx-auto mb-lg-0">
                 <li class="nav-item {{ request()->is('/') ? 'active' : '' }} ">
-                    <a class="nav-link" aria-current="page" href="/">Accueil</a>
+                    <a class="nav-link" aria-current="page" href="{{route('welcome')}}">Accueil</a>
                     <span class="decor-link-menu"></span>
                 </li>
                 <li class="nav-item {{ request()->is('orientation*') ? 'active' : '' }} ">
@@ -45,7 +45,7 @@
 
             <form class="p-0 m-0">
                 <a class="btn btn-outline-success text-white btn-success btn-connect" target="_blank" type="button"
-                    href="{{ route('login') }}">
+                    href="#">
                     <span>Connexion</span>
                 </a>
             </form>

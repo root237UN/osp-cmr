@@ -32,6 +32,7 @@
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/path.scss') }}" rel="stylesheet">
     <link href="{{ asset('css/top-content.css') }}" rel="stylesheet">
     <link href="{{ asset('css/responsive-mobile.css') }}" rel="stylesheet">
 </head>
@@ -39,12 +40,12 @@
 <body>
     <div id="app">
         <header class="bg-cover">
-            @include('partials.navbar-home')
+            @include('partials.navbar-orientation')
 
-            <div class="container-fluid" id="description">
+            <div class="container-fluid" id="path_orientation">
                 @yield('content-header')
             </div>
-        </header>
+        </header>   
 
         @yield('section-body')
     </div>
