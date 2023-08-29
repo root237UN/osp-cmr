@@ -22,7 +22,7 @@
             <nav class="col-md-10" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrum">
                 <ol class="breadcrumb my-1">
                     <li class="breadcrumb-item breadcrumb-item-first"><a href="{{route('orientation')}}">Orientation</a></li>
-                    <li class="breadcrumb-item"><a href="{{route('formation')}}">Formation</a></li>
+                    <li class="breadcrumb-item"><a href="{{route('formation.formation')}}">Formation</a></li>
                     <li class="breadcrumb-item active" aria-current="page"><a href="#">{{$type->libelle}}</a></li>
                 </ol>
             </nav>

@@ -1,17 +1,55 @@
 @extends('layouts.download')
 
+@section('title')
+    <title>OSP - Cameroun | trace</title>
+    <style type="text/css">
+        @page {
+            margin: 0px;
+        }
+        body {
+            margin: 0px;
+        }
+        * {
+            font-family: Verdana, Arial, sans-serif;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        #customers {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            font-size:12px;
+        }
+        td, th {
+            border: 1px solid #000 !important;
+            padding: 3px;
+            font-size: 9px;
+            /* text-align: center; */
+        }
+
+        tfoot tr td {
+            font-weight: bold;
+            font-size:12px;
+        }
+        
+    </style>
+@endsection
+
 @section('content')
     <h3>Votre parcours à l'issue de votre navigation</h3>
 
-    <table class="table table-bordered">
+    <table class="table table-bordered" width="100%">
         <thead class="thead-dark">
             <tr>
                 <th scope="col" colspan="2">
-                    Orintation
+                    Orientation
                 </th>
                 <th colspan="3" scope="col">
                     Orientation primaire
-                    <i class="bi bi-arrow-bar-right"></i>
+                    <!-- <i class="bi bi-arrow-bar-right"></i> -->
+                    vers
                     {{$cycle->libelle}} de l' <?php echo strtolower($type->libelle) ?>
                 </th>
                 
@@ -35,7 +73,7 @@
         </tbody>
     </table>
 
-    <table class="table table-bordered">
+    <table class="table table-bordered" width="100%">
         <thead class="thead-dark">
             <tr>
                 
@@ -59,7 +97,7 @@
                     </ul>
                 </td>
             </tr>
-            <tr>
+            <!-- <tr>
                 <th scope="row">Débouchées</th>
                 <td colspan="3">
                     <ul>
@@ -68,11 +106,11 @@
                         @endforeach
                     </ul>
                 </td>
-            </tr>
+            </tr> -->
         </tbody>
     </table>
 
-    <table class="table table-bordered">
+    <table class="table table-bordered" width="100%">
         <thead class="thead-light">
             <tr>
                 <th scope="col">Etablissement</th>
@@ -80,7 +118,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
+            <!-- <tr>
                 <th scope="row">Enseignements</th>
                 <td colspan="3">
                     <ul style="column-count: 2">
@@ -90,8 +128,8 @@
                     </ul>
                 </td>
 
-            </tr>
-            <tr>
+            </tr> -->
+            <!-- <tr>
                 <th scope="row">Ecoles</th>
                 <td colspan="3">
                     <ul style="column-count: 2">
@@ -100,7 +138,7 @@
                         @endforeach
                     </ul>
                 </td>
-            </tr>
+            </tr> -->
         </tbody>
     </table>
 @endsection

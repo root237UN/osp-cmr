@@ -7,9 +7,7 @@
 
 
 @section('content-header')
-    <div class="row text-center d-flex justify-content-center">
-        <h3 class="pb-4">Voici à présent les choix s'offrant à vous</h3>
-    </div>
+@include('partials.header.header_orientation')
     <div class="row">
         <div class="path_choix justify-content-center d-flex col-12">
             {{-- Options d'enseignements --}}
@@ -19,14 +17,14 @@
                         href="{{ route('orientation.path1.options', ['code' => $item->code]) }}">
                         <div class="path_choix_item_option  col-2">
                             <p> <?php echo ucfirst($item->libelle); ?> </p>
-                            <p class="path_cycle">
+                            <!-- <p class="path_cycle">
                                 <span>CM2</span>
                                 <i class="bi bi-arrow-bar-right"></i>
                                 <span class="text-uppercase"> <span class="text-lowercase"> 1 <sup>er</sup> Cycle</span>
                                 </span>
                                 <i class="bi bi-arrow-bar-right"></i>
                                 <span class="text-uppercase"> {{ $item->code }}</span>
-                            </p>
+                            </p> -->
                         </div>
                     </a>
                 @endforeach

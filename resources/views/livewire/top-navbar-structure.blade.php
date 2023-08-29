@@ -1,7 +1,7 @@
 
 <nav class="nav-bar navbar navbar-expand-lg nav-top" id="dropmenu1">
 
-    <a class="col-md-3 title-nav">
+    <a class="col-md-4 title-nav">
         <span class="first-item-list">Aide à l'insertion professionnelle</span></a>
 
     <ul class="col-md-5 list-options navbar-nav">

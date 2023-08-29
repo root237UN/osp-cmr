@@ -34,7 +34,7 @@
     <footer class="footer">
         <div class="sub-footer" id="sub-footer">
             <div class="u-wrapper" style="font-size: 11px;">
-                <p class="copyright m-0 py-2">©&nbsp;KCorp Systems&nbsp;2021&nbsp;|&nbsp;<a href="/mentions-legales.php">Mentions légales</a>&nbsp;|&nbsp;<a href="/plan-du-site.php">Plan du site</a>&nbsp;|&nbsp;<a href="/index?tpl=2" target="_blank" rel="nofollow">Imprimer</a>&nbsp;|&nbsp;Mise à jour :&nbsp;21/07/2021</p>
+                <p class="copyright m-0 py-2">©&nbsp;Systems&nbsp;2021&nbsp;|&nbsp;<a href="/mentions-legales.php">Mentions légales</a>&nbsp;|&nbsp;<a href="/plan-du-site.php">Plan du site</a>&nbsp;|&nbsp;<a href="/index?tpl=2" target="_blank" rel="nofollow">Imprimer</a>&nbsp;|&nbsp;Mise à jour :&nbsp;21/07/2021</p>
             </div>
         </div>
     </footer>

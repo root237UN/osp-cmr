@@ -17,6 +17,7 @@ class FormationController extends Controller
     {
         $content = MenuVisite::where('titre','like', '%formation professionnelle%')->firstorfail();
         $typesFormation = TypeFormation::all();
+        // dd($typesFormation);
         return view('formation/view',['typesFormation' => $typesFormation,'content'=>$content]);
     }
     public function showFormation(Request $request)

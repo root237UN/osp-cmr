@@ -74,14 +74,7 @@
                     <div class="d-flex align-items-center mb-2 justify-content-between">
                         <h5 class="mb-0">Présentation détaillée de la filière </h5>
                         <div>
-                            <form class="form form-inline" method="post" action="{{ route('orientation.path1.trace') }}">
-                                @csrf
-                                <input type="number" name="id" hidden value="{{ $filiere->id }}">
-                                <button type="submit"
-                                    class="btn btn-connect text-white">
-                                    <i class="bi bi-text-paragraph me-2"></i>Tracer mon parcours
-                                </button>
-                            </form>
+                            @livewire('o-s-p-trace-parcours',['filiere'=>$filiere])
                         </div>
                     </div>
                 </div>

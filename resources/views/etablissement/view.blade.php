@@ -142,7 +142,7 @@
 
 @section('content')
 <div class="container-fluid">
-    <div class="">
+    <div class="mt-5 pt-5">
         <livewire:top-navbar-etablissement />
     </div>
 </div>

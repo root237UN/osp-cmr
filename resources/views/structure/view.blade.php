@@ -17,7 +17,7 @@
 
 @section('content')
     <div class="container-fluid">
-        <div>
+        <div class="mt-5 pt-5">
             <livewire:top-navbar-structure />
         </div>
     </div>

@@ -1,10 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.screen')
 
 @section('css')
+    {{-- <link href="{{ asset('css/top-content.css') }}" rel="stylesheet"> --}}
     <style>
-
-
-
         .card-option {
             transition: all ease-in-out 300ms;
             border: none;
@@ -14,6 +12,11 @@
             border: 1px inset #3cad7442;
             text-align: center;
             background-color: #f8fafc0f;
+        }
+
+        img.img-option {
+            width: 50px !important;
+            height: 50px !important;
         }
 
         .card-option:hover {
@@ -62,73 +65,79 @@
             border-radius: 50px;
         }
 
+        .text-description {
+            text-align: justify;
+            line-height: 30px;
+            font-size: 16px;
+            color: #fff !important;
+        }
     </style>
 @endsection
 
-@section('content')
-    <section class="bg-cover">
-        <div class="container-fluid">
-            <div class="row" id='top-content'>
-                <div class="col-6" id="description">
-                    <h2 class="my-2 py-4 title-1  d-flex justify-content-start" style="align-items: center;">
-                        <span class="title-type">{{$content->libelle}}</span>
-                    </h2>
-                    <div class="text-description site-text col-md-12">
-                        {{$content->description}}
-                    </div>
-                    <div class="line-infos mt-3 site-text d-flex justify-content-between">
-                        <a class="link-parcours" href="#">Des questions !</a>
-                        <a class="link-ensavoir" href="#">En savoir plus!</a>
-                    </div>
-                    <hr>
-                    <p class="link-question site-text text-white">Des questions. Posez les ici !!!</p>
+@section('content-header')
+    <div id="description" class="container-fluid">
+        <div class="row" id='top-content'>
+            <div class="col-6 me-0" id="banner-text">
+                <div class=" title-1 ">
+                    <h1 class="mb-4 d-flex justify-content-start" style="align-items: center;">
+                        <span class="title-type">{{ $content->libelle }}</span>
+                    </h1>
                 </div>
 
-                <div class="col-6 pt-4" id="content-option">
-                    <div class="">
-                        <div class="d-flex justify-content-center pt-0 py-3">
-                            <h3 class="title-option title-1-1">Choisissez <span class=""
-                                    style="font-weight: bold;">une formation ...</span>
-                                </h3>
-                        </div>
+                <div class="text-description text-white site-text col-md-12">
+                    {{ $content->description }}
+                </div>
+                <div class="line-infos mt-3 site-text d-flex justify-content-between">
+                    <a class="link-parcours" href="#">Des questions !</a>
+                    <a class="link-ensavoir" href="#">En savoir plus!</a>
+                </div>
+                <hr>
+                <p class="link-question site-text text-white">Des questions. Posez les ici !!!</p>
+            </div>
 
-                        <div class="row d-flex justify-content-center" id='options'>
+            <div class="col-5" id="content-option">
+                <div class="">
+                    <div class="d-flex justify-content-center pt-0 py-5">
+                        <h3 class="title-option title-1-1">Choisissez <span class="" style="font-weight: bold;">une
+                                formation ...</span>
+                        </h3>
+                    </div>
 
-                            @forelse($typesFormation as $type)
-                                <div class="col-8 d-flex justify-content-center">
-                                    <a class="card card-option rounded-3"
-                                        href="{{ route('formation.show', ['code' => $type->libelle]) }}">
+                    <div class="row d-flex justify-content-center" id='options'>
+
+                        @forelse($typesFormation as $type)
+                            <div class="col-8 d-flex justify-content-center">
+                                <a class=" "
+                                    href="{{ route('formation.formation.show', ['code' => $type->libelle]) }}">
+                                    <div class="card-body">
+                                        <img class="img img-thumbail img-option" height="50px" src="{{ $type->image }}" />
+                                        <h6 class="py-4 mb-0 text-white title-2">{{ $type->libelle }}</h6>
+                                        <p class="option-text site-text">{{ $type->description }}</p>
+                                    </div>
+                                </a>
+                            </div>
+                        @empty
+                            <div class='row d-flex justify-content-center'>
+                                <div class="col-5 d-flex justify-content-center">
+                                    <a class="card card-option rounded-3" style="min-height: 150px;">
                                         <div class="card-body">
-                                            <img class="img img-fluid img-option " src="{{ $type->image }}" />
-                                            <h6 class="py-4 mb-0 text-white title-2">{{ $type->libelle }}</h6>
-                                            <p class="option-text site-text">{{ $type->description }}</p>
+                                            <h3 class="py-4 mt-4">Aucune option trouvee !!!</h3>
                                         </div>
                                     </a>
                                 </div>
-                            @empty
-                                <div class='row d-flex justify-content-center'>
-                                    <div class="col-5 d-flex justify-content-center">
-                                        <a class="card card-option rounded-3" style="min-height: 150px;">
-                                            <div class="card-body">
-                                                <h3 class="py-4 mt-4">Aucune option trouvee !!!</h3>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            @endforelse
-                        </div>
+                            </div>
+                        @endforelse
                     </div>
                 </div>
+            </div>
 
-                <div class="col-8 d-flex justify-content-end" style="z-index: 10;">
-                    <a id="arrow-down" href="#options">
-                        <i data-feather="arrow-down" class="text-light"></i>
-                    </a>
-                </div>
+            <div class="col-8 d-flex justify-content-end" style="z-index: 10;">
+                <a id="arrow-down" href="#options">
+                    <i data-feather="arrow-down" class="text-light"></i>
+                </a>
             </div>
         </div>
-    </section>
+    </div>
 
-    @livewire('section-actualite',['menu'=>$content])
-
+    {{-- @livewire('section-actualite',['menu'=>$content]) --}}
 @endsection

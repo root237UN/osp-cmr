@@ -7,9 +7,7 @@
 
 
 @section('content-header')
-<div class="row text-center d-flex justify-content-center">
-    <h3 class="pb-4">Voici à présent les choix qui s'offrant à vous</h3>
-</div>
+@include('partials.header.header_orientation')
     <div class="row">
         <div class="path_choix justify-content-center d-flex col-12">
             {{-- Type d'enseignements --}}
@@ -18,11 +16,11 @@
                     <a class="d-block path_choix_block mr-4" href="{{ route('orientation.path1.parcours',["code"=>$item->code]) }}">
                         <div class="path_choix_item  col-2">
                             <p>{{ $item->libelle }} </p>
-                            <p class="path_cycle">
+                            <!-- <p class="path_cycle">
                                 <span>CM2</span>
                                 <i class="bi bi-arrow-bar-right"></i>
                                 <span class="text-uppercase"> {{ $item->code }}</span>
-                            </p>
+                            </p> -->
                         </div>
                     </a>
                 @endforeach
@@ -31,11 +29,11 @@
                     <a href="{{ route('orientation.path1') }}">
                         <div class="path_choix_item  col-2">
                             <p>{{ $item->libelle }} </p>
-                            <p class="path_cycle">
+                            <!-- <p class="path_cycle">
                                 <span>CM2</span>
                                 <i class="bi bi-arrow-bar-right"></i>
                                 <span class="text-uppercase"> {{ $item->code }}</span>
-                            </p>
+                            </p> -->
                         </div>
                     </a>
                 @endforeach

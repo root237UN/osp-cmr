@@ -2,7 +2,7 @@
 
 <nav class="navbar container-header navbar-light navbar-expand-lg navbar-top" data-aos="fade-down">
     <div class="container-fluid">
-        <a class="navbar-brand hidden-mobile col-5 col-md-2 d-flex justify-content-center" href="/">
+        <a class="navbar-brand hidden-mobile col-5 col-md-2 d-flex justify-content-center" href="{{route('welcome')}}">
             <span class="logo-welcome hidden-mobile">Orientation</span>
         </a>
 
@@ -33,11 +33,11 @@
                     <a class="nav-link" href="{{ route('formation.formation') }}">Formation professionnelle</a>
                     <span class="decor-link-menu"></span>
                 </li>
-                <li class="nav-item {{ request()->is('structure') ? 'active' : '' }} ">
+                <li class="nav-item {{ request()->is('insertion*') ? 'active' : '' }} ">
                     <a class="nav-link" href="{{ route('structure') }}">Aide à l'insertion professionnelle</a>
                     <span class="decor-link-menu"></span>
                 </li>
-                <li class="nav-item {{ request()->is('etablissement') ? 'active' : '' }} ">
+                <li class="nav-item {{ request()->is('etablissement*') ? 'active' : '' }} ">
                     <a class="nav-link" href="{{ route('etablissement') }}">Etablissement</a>
                     <span class="decor-link-menu"></span>
                 </li>

@@ -75,7 +75,7 @@
                 </h2>
                 <div class="text-description site-text col-md-12 text-white py-2">{{$formation->description_full}}</div>
                 <div class="line-infos d-flex justify-content-between">
-                    <a class="link-parcours" href="{{route('formation.all',['code' => $formation->code])}}">Découvrez les formations</a>
+                    <a class="link-parcours" href="{{route('formation.formation.all',['code' => $formation->code])}}">Découvrez les formations</a>
                     <a class="link-ensavoir" href="#">En savoir plus!</a>
                 </div>
                 <hr>

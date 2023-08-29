@@ -16,6 +16,6 @@ Route::prefix('orientation')->name('orientation.')->group(function(){
         Route::get('/path_1/option/{code}/', [OSPController::class,'options'])->name('path1.options');
         Route::get('/path_1/end/{libelle}/', [OSPController::class,'orientation'])->name('path1.end');
 
-        Route::post('/trace', [OSPController::class,'trace'])->name('path1.trace');
+        Route::get('/trace', [OSPController::class,'trace'])->name('path1.trace');
     });
 });

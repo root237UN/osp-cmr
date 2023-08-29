@@ -49,6 +49,8 @@
     <!-- AOS Animate -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="{{asset('js/libs/toastr/toastr.min.css')}}" rel="stylesheet" />
+
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
@@ -71,5 +73,27 @@
     @stack('scripts')
     @include('partials.footer')
     @stack('script-carte')
+
+    <script src="{{asset('js/libs/jquery/jquery.js')}}"> </script>
+    <script src="{{asset('js/libs/toastr/toastr.min.js')}}"> </script>
+       
+    <script>
+      window.addEventListener('showToastr',function (event) {
+        toastr.remove();
+        if(event.detail.type==='info'){
+          toastr.info(event.detail.message);
+        }
+        else if(event.detail.type==='success'){
+          toastr.success(event.detail.success);
+        }
+        else if(event.detail.type==='error'){
+          toastr.error(event.detail.message)
+        }
+        else if(event.detail.type==='warning'){
+          toastr.warning(event.detail.message)
+        }
+        else return false;
+      });
+    </script>
 </body>
 </html>

@@ -4,7 +4,7 @@
             <div class="col-md-9 ps-5 group-items-footer pe-0">
                 <h2 class="title-footer" data-aos="fade-right"><span>liens</span> utiles</h2>
                 <ul class="footer-navList d-none d-sm-block" data-aos="zoom-in" >
-                    <li class="footer-navItem"><a class="footer-navLink" target="_self" href="#">Orientation</a></li>
+                    <li class="footer-navItem"><a class="footer-navLink" target="_self" href="{{route('orientation')}}">Orientation</a></li>
                     <li class="footer-navItem"><a class="footer-navLink" target="_self" href="#">Parcours académiques</a></li>
                     <li class="footer-navItem"><a class="footer-navLink" target="_self" href="#">Formations professionnelles</a></li>
                     <li class="footer-navItem"><a class="footer-navLink" target="_self" href="#">Etablissements secondaires</a></li>
@@ -57,11 +57,11 @@
                       </h2>
                       <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionLink">
                         <div class="accordion-body">
-                           
+
                         </div>
                       </div>
                     </div> --}}
-                    
+
                   </div>
             </div>
             <div class="col-md-3" id="nous-contacter">
@@ -74,7 +74,7 @@
 
     <div class="sub-footer container-fluid py-2" id="sub-footer">
         <div class="u-wrapper row " data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
-            <p class="copyright align-items-center text-center mt-2 mb-1">©&nbsp;KCorp Systems&nbsp;2021&nbsp;|&nbsp;<a href="#">Mentions légales</a>&nbsp;|&nbsp;<a href="#">Plan du site</a>&nbsp;|&nbsp;<a href="#" target="_blank" rel="nofollow">Imprimer</a>&nbsp;|&nbsp;Mise à jour :&nbsp;21/09/2021</p>
+            <p class="copyright align-items-center text-center mt-2 mb-1">©&nbsp;Systems&nbsp;2021&nbsp;|&nbsp;<a href="#">Mentions légales</a>&nbsp;|&nbsp;<a href="#">Plan du site</a>&nbsp;|&nbsp;<a href="#" target="_blank" rel="nofollow">Imprimer</a>&nbsp;|&nbsp;Mise à jour :&nbsp;21/09/2021</p>
             {{-- <div class="production">
                 <div class="production-text">Réalisé par&nbsp;KCorp</div>
             </div> --}}

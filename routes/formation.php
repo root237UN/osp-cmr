@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use \App\Http\Controllers\OSPController;
+use App\Http\Controllers\OSPController;
+use App\Http\Controllers\FormationController;
 
 Route::prefix('formation')->name('formation.')->group(function () {
     Route::middleware(['guest:web'])->group(function () {

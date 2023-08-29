@@ -12,6 +12,7 @@ use App\Models\TypeEnseignement;
 use App\Models\TypeFormation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use PDF;
 
 class OSPController extends Controller
 {
@@ -87,7 +88,20 @@ class OSPController extends Controller
         // $competences= DB::select("SELECT `ecoles`.libelle FROM `ecoles` INNER JOIN `filiere_enseignement_ecole` ON `filiere_enseignement_ecole`.ecole_id=`ecoles`.id INNER JOIN `filiere_enseignements` ON `filiere_enseignements`.id=`filiere_enseignement_ecole`.filiere_enseignement_id WHERE `filiere_enseignements`.id=$filiere->id"); 
         // "Ecole::whereBelongsTo($filiere)->get();
         // dd($ecoles);
-        return view('orientation.parcours.pdf_trace', [
+        // return view('orientation.parcours.pdf_trace', [
+        //     "filiere" => $filiere,
+        //     "section" => $section,
+        //     "option" => $option,
+        //     "type" => $type,
+        //     "cycle" => $cycle,
+        //     "enseignements" => $enseignements,
+        //     "competences" => $competences,
+        //     "ecoles" => $ecoles,
+        //     "debouches" => $debouches
+        // ]);
+        // $this->showToastr("Téléchargement encours ...",'success');
+
+        $pdf = PDF::loadView('orientation.parcours.pdf_trace',[
             "filiere" => $filiere,
             "section" => $section,
             "option" => $option,
@@ -98,7 +112,13 @@ class OSPController extends Controller
             "ecoles" => $ecoles,
             "debouches" => $debouches
         ]);
+        return $pdf->download('trace_pdf.pdf');
 
         // dd($filiere,$section,$cycle,$option,$type,$enseignements,$ecoles,$competences,$debouches);
+    }
+
+    public function showToastr($message, $type)
+    {
+        return $this->dispatchBrowserEvent('showToastr',['type'=>$type, 'message'=>$message]);
     }
 }
