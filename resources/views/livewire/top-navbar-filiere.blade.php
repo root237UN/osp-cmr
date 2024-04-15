@@ -72,9 +72,9 @@
 </style>
 
 
-<nav class="nav-bar navbar navbar-expand-lg mt-4 nav-top" id="dropmenu1">
-    <a class="col-md-2 title-nav first-item-list"><span>Filière  </span></a>
-    <ul class="col-md-5 list-options navbar-nav">
+<nav class="nav-bar row navbar navbar-expand-lg mt-4 nav-top" id="dropmenu1">
+    <a class="col-md-2 col-xs-12 title-nav first-item-list"><span>Filière  </span></a>
+    <ul class="col-md-5 col-xs-12 d-flex flex-row list-options navbar-nav">
         <li class="dropdown nav-bar-item">
             <a><span>Enseignement</span></a>
             <i class="fas fa-chevron-down"></i>

@@ -8,12 +8,12 @@
 
 @section('content-header')
 @include('partials.header.header_orientation')
-    <div class="row">
-        <div class="path_choix justify-content-center d-flex col-12">
+    <div class="row mb-4">
+        {{-- <div class="path_choix justify-content-center d-flex col-12"> --}}
             {{-- Options d'enseignements --}}
-            <div class="justify-content-between mb-2 d-flex">
+            {{-- <div class="justify-content-between mb-2 d-flex"> --}}
                 @foreach ($options as $item)
-                    <a class="d-block path_choix_block mr-4"
+                    <a class="path_choix_bloc d-flex justify-content-center col-xs-12 col-md-6"
                         href="{{ route('orientation.path1.options', ['code' => $item->code]) }}">
                         <div class="path_choix_item_option  col-2">
                             <p> <?php echo ucfirst($item->libelle); ?> </p>
@@ -33,5 +33,5 @@
     </div>
 
     {{-- Search --}}
-    @livewire('search-bar-orientation')
+    {{-- @livewire('search-bar-orientation') --}}
 @endsection

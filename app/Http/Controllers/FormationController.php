@@ -20,6 +20,7 @@ class FormationController extends Controller
         // dd($typesFormation);
         return view('formation/view',['typesFormation' => $typesFormation,'content'=>$content]);
     }
+
     public function showFormation(Request $request)
     {
         $formation = TypeFormation::where('libelle', 'like', '%'.$request->code.'%')->firstorfail();

@@ -7,17 +7,17 @@
 
 
 @section('content-header')
-    <div class="d-flex row">
-        <div class="col-md-4 col-xs-12 d-flex justify-content-center " style="align-items: center;" data-aos="zoom-in-down">
+    <div class="d-flex">
+        <div class="col-4 d-flex justify-content-center " style="align-items: center;" data-aos="zoom-in-down">
             <img class="img img-thumbnail img-cover m-2" src="{{ asset('images/bg3.jpg') }}"
                 style="border-radius:50%;border:none" />
         </div>
-        <div class="col-md-8 col-xs-12" id="description_option">
+        <div class="col-8 pe-5" id="description_option">
             <h2 class="my-2 py-4 title-1 d-flex justify-content-start" style="align-items: center;">
                 <span class="text-white">{{ $option->libelle }}</span>
             </h2>
             <div class="text-description site-text col-md-12 py-2">{{ $option->description_full }}</div>
-            <div class="line-infos align-items-center site-text d-flex justify-content-between">
+            <div class="line-infos site-text d-flex justify-content-between">
                 <a class="link-parcours text-white" href="#parcours">Decouvrez les parcours</a>
                 <a class="link-ensavoir" href="#" style="color:#fff">En savoir plus!</a>
             </div>
@@ -39,9 +39,9 @@
 
             <div class="row d-flex justify-content-center" id="parcours">
                 @forelse($sections as $parcours)
-                    <div class="col-md-4 col-xs-12">
+                    <div class="col-4">
                         <a class="card card-cover w-100 card-parcours"
-                            href="{{ route('orientation.path1.end', ['libelle' => $parcours->libelle]) }}">
+                            href="#">
                             <div class="d-flex justify-content-between py-2 card-header  card-header-4">
                                 <figure class="figure figure-img d-flex justify-content-center">
                                     <img class="img img-fluid" src="{{ asset('images/bg3.jpg') }}"

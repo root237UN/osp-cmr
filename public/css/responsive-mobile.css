@@ -1,4 +1,28 @@
 @media (max-width: 768px) {
+    #description_option {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    div.text-description {
+        font-size: 13px;
+        text-align: justify;
+        line-height: 1.8rem;
+    }
+
+    a.link-parcours {
+        font-size: 14px;
+    }
+
+    img.img-cover {
+        height: 80px;
+        width: 80px;
+    }
+
+    a.link-ensavoir {
+        font-size: 10px;
+    }
+
     .hidden-mobile {
         display: none !important;
         visibility: hidden;
@@ -12,23 +36,30 @@
         padding-right: 30px;
         padding-left: 30px;
     }
-    #banner-text .site-text > * {
+
+    #banner-text .site-text>* {
         line-height: 35px;
         text-align: left;
         font-size: 20px;
     }
+
     .text-orientation {
         opacity: 1;
+        font-size: 16px;
     }
+
     .group-items-footer {
         padding-left: 0px !important;
     }
+
     .footer .footer-navList {
         columns: 2;
     }
+
     .footer .footer-navLink {
         font-size: 15px;
     }
+
     .title-footer {
         font-weight: bold;
         text-align: left;
@@ -36,20 +67,53 @@
 
     .logo-welcome {
         position: absolute;
-        top: 0;
+        top: -19px;
         text-transform: lowercase;
+        /* left: -50px; */
     }
 
     .logo-welcome::first-letter {
-        font-size: 30px;
-        color: #38c172;
+        font-size: 50px;
+        color: #243a5e;
     }
 
-    .card{
+    .card {
         width: auto;
     }
-    #orientations-types__cards div.card-cover{
+
+    #orientations-types__cards div.card-cover {
         margin: 0px;
+    }
+
+    .menu-2 {
+        padding-top: 0px !important;
+        margin-top: 30px;
+    }
+
+    .list-options li {
+        margin-left: 0px !important;
+    }
+
+    .nav-bar {
+        height: auto !important;
+    }
+
+    #header-formation,
+    #header-filiere {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .header-title-description {
+        max-height: max-content;
+    }
+
+    .header-content-filiere {
+        margin-top: 30px;
+        max-height: max-content;
+    }
+    .img-decor-1 > img{
+        height: 30px;
     }
 }
 

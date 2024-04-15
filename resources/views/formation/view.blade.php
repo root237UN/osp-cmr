@@ -92,7 +92,7 @@
                     <a class="link-ensavoir" href="#">En savoir plus!</a>
                 </div>
                 <hr>
-                <p class="link-question site-text text-white">Des questions. Posez les ici !!!</p>
+                <p class="link-question site-text text-white">Des questions. Posez-les ici !!!</p>
             </div>
 
             <div class="col-5" id="content-option">

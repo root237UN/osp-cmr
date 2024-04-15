@@ -18,13 +18,13 @@ class ContentMenuSeeder extends Seeder
         contentMenu::create(
             [
                 'libelle'=>"Faites éclore votre potentiel",
-                'description'=>"L'offre éducative regorge d'inombrables spécificités. En as-tu conscience ?",
+                'description'=>"L'offre éducative regorge d'inombrables spécificités. En avez-vous conscience ?",
                 'menu_visite_id'=>3,
                 'position'=>1
             ]);
             contentMenu::create([
-                'libelle'=>"Evaluez les opportunités",
-                'description'=>"Disposez de la bonne information vous permet de capitaliser vos idées. ",
+                'libelle'=>"Evaluez des opportunités",
+                'description'=>"Disposer de la bonne information vous permet de capitaliser vos idées. ",
                 'menu_visite_id'=>3,
                 'position'=>2
             ]);
@@ -36,19 +36,19 @@ class ContentMenuSeeder extends Seeder
             ]);
             contentMenu::create([
                 'libelle'=>"Découvrir un métier",
-                'description'=>"Il existe plusieurs métiers pour se batir une carrière professionnelle. Quel est le tien ?",
+                'description'=>"Il existe plusieurs métiers pour se batir une carrière professionnelle. Quel est le vôtre ?",
                 'menu_visite_id'=>3,
                 'position'=>4
             ]);
             contentMenu::create([
-                'libelle'=>"Faite vous guider",
+                'libelle'=>"Faites-vous guider",
                 'description'=>"Une bonne orientation vaut mieux qu'une progression aléatoire.",
                 'menu_visite_id'=>3,
                 'position'=>5
             ]);
             contentMenu::create([
-                'libelle'=>"Pour un avenir mieux préparer",
-                'description'=>"Anticiper sur des choix scolaires et un avenir professionnel.",
+                'libelle'=>"Pour un avenir mieux préparé",
+                'description'=>"Anticipez sur des choix scolaires et un avenir professionnel.",
                 'menu_visite_id'=>3,
                 'position'=>6
             ]);

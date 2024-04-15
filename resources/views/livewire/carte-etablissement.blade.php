@@ -11,7 +11,7 @@
                     </h2>
                     <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                         <div class="accordion-body" style="font-size: 16px; text-align: center; ">
-                            Bénéficier de plus d'informations sur les établissements en nous contactant.
+                            Bénéficiez de plus d'informations sur les établissements en nous contactant.
                             <button class="btn btn-xs btn-save m-0">
                                 <i class="fas fa-eye"></i>
                                 En savoir plus

@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    @yield('title')
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -55,7 +55,7 @@
     <!-- Icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    
+
     @livewireStyles
     @yield('css')
 </head>
@@ -76,7 +76,7 @@
 
     <script src="{{asset('js/libs/jquery/jquery.js')}}"> </script>
     <script src="{{asset('js/libs/toastr/toastr.min.js')}}"> </script>
-       
+
     <script>
       window.addEventListener('showToastr',function (event) {
         toastr.remove();

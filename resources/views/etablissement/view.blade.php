@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('title')
+    <title>OSP - Cameroun  | Etablissement d'enseignement</title>
+@endsection
 
 @section('css')
 

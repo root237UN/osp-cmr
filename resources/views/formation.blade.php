@@ -79,7 +79,7 @@
                     <a class="link-ensavoir" href="#">En savoir plus!</a>
                 </div>
                 <hr>
-                <a class="link-question site-text">Des questions. Posez les ici !!!</a>
+                <a class="link-question site-text">Des questions. Posez-les ici !!!</a>
             </div>
             <div class="col-8 d-flex justify-content-end" style="z-index: 10;">
                 <a id="arrow-down" href="#content-parcours">

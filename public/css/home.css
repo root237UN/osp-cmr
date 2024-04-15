@@ -8,6 +8,7 @@
     position: absolute;
     top: -12px;
 }
+
 .logo-welcome::first-letter {
     font-size: 50px;
     color: #243a5e;
@@ -50,7 +51,7 @@ header::before {
     opacity: 0.9;
 }
 
-header.bg-cover #navbarSupportedContent li > a {
+header.bg-cover #navbarSupportedContent li>a {
     color: #243a5e;
     text-shadow: 2px 2px 9px rgba(255, 255, 255, 0.22);
     padding: 10px 13px;
@@ -59,17 +60,20 @@ header.bg-cover #navbarSupportedContent li > a {
     position: relative;
     height: 43px;
     border: 1px solid transparent;
-     font-family: 'MTNBrighterSans-Regular',sans-serif;
+    font-family: 'MTNBrighterSans-Regular', sans-serif;
     cursor: pointer;
     font-size: 11px;
 }
+
 header.bg-cover #navbarSupportedContent li.nav-item.active {
     background-color: #243a5e;
     border-radius: 7px;
 }
+
 header.bg-cover #navbarSupportedContent li.nav-item.active a {
     color: #fff;
 }
+
 header.bg-cover #navbarSupportedContent li.nav-item.active span {
     display: none;
 }
@@ -86,6 +90,7 @@ header.bg-cover #navbarSupportedContent li:hover a {
 header.bg-cover #navbarSupportedContent li:hover span.decor-link-menu {
     transform: scale(1);
 }
+
 .decor-link-menu {
     width: 80%;
     left: 12px;
@@ -244,7 +249,7 @@ header.bg-cover #navbarSupportedContent li:hover span.decor-link-menu {
 
 /* Card style */
 .card-side p,
-.side > p {
+.side>p {
     background: #fff;
     color: #243a5e;
     text-transform: capitalize;
@@ -263,7 +268,7 @@ header.bg-cover #navbarSupportedContent li:hover span.decor-link-menu {
 
 
 .card-side.front p,
-.side > p {
+.side>p {
     color: #fff;
     text-transform: capitalize;
     font-size: 16px;
@@ -276,19 +281,21 @@ header.bg-cover #navbarSupportedContent li:hover span.decor-link-menu {
 }
 
 .card-side p span,
-.side > p > span {
+.side>p>span {
     display: block;
 }
 
-.card-green{
+.card-green {
     background-color: #243a5e !important;
     color: #fff;
 }
-.card-default{
-    background:#f5f6f6 !important;
+
+.card-default {
+    background: #f5f6f6 !important;
 }
-.card-page{
-    background-color: #243a5e  !important;
+
+.card-page {
+    background-color: #243a5e !important;
     color: #fff;
 }
 
@@ -315,54 +322,62 @@ header.bg-cover #navbarSupportedContent li:hover span.decor-link-menu {
 .card-1 {
     margin-top: 50px;
 }
-.card-2{
 
+.card-2 {}
+
+
+@media (min-width: 768px) {
+    .card-side {
+        border-radius: 3px;
+        transition: all 0.8s ease;
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: white;
+        align-items: center;
+        height: 160px;
+        justify-content: center;
+        padding: 32px;
+        width: 150px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        cursor: pointer;
+    }
+
+    .card-side.back {
+        transform: rotateY(-180deg);
+        background-color: #4158d0;
+        background: center no-repeat #243a5e;
+        background-size: 110px auto;
+    }
+
+    .card-side.front {
+        /* background-color: #0093e9; */
+        background: center no-repeat #243a5e;
+        background-size: 110px auto;
+        display: block;
+        width: 165px;
+        height: 180px;
+        border-radius: 30% 30% 30% 30% / 60% 60% 40% 40%;
+    }
+    .card:hover .card-side.front {
+        transform: rotateY(180deg);
+    }
+
+    .card:hover .card-side.back {
+        transform: rotateY(0deg);
+    }
 }
 
-.card-side {
-    border-radius: 3px;
-    transition: all 0.8s ease;
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: white;
-    align-items: center;
-    height: 160px;
-    justify-content: center;
-    padding: 32px;
-    width: 150px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    cursor: pointer;
-}
-.card-side p{
+
+
+.card-side p {
     text-transform: capitalize;
 }
 
-.card-side.back {
-    transform: rotateY(-180deg);
-    background-color: #4158d0;
-    background: center no-repeat #243a5e;
-    background-size: 110px auto;
-}
 
-.card-side.front {
-    /* background-color: #0093e9; */
-    background: center no-repeat #243a5e;
-    background-size: 110px auto;
-    display: block;
-    width: 165px;
-    height: 180px;
-    border-radius: 30% 30% 30% 30% / 60% 60% 40% 40%;
-}
 
-.card:hover .card-side.front {
-    transform: rotateY(180deg);
-}
 
-.card:hover .card-side.back {
-    transform: rotateY(0deg);
-}
 
 #platform-highlights {
     background-image: url(images/bg-section.png);
@@ -380,7 +395,7 @@ header.bg-cover #navbarSupportedContent li:hover span.decor-link-menu {
 }
 
 #platform-highlights li:last-child {
-    background-color: #243a5e  !important;
+    background-color: #243a5e !important;
     color: #fff;
 }
 
@@ -408,7 +423,7 @@ ul {
     box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.075) !important;
 }
 
-#plateform-highlights a > h4 {
+#plateform-highlights a>h4 {
     color: var(--text-color-dark);
 }
 
@@ -448,6 +463,3 @@ a:focus {
     right: 0;
     transition: all ease-in-out 350ms;
 }
-
-
-

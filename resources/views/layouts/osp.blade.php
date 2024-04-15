@@ -32,7 +32,7 @@
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/path.scss') }}" rel="stylesheet">
+    <link href="{{ asset('css/path.css') }}" rel="stylesheet">
     <link href="{{ asset('css/top-content.css') }}" rel="stylesheet">
     <link href="{{ asset('css/responsive-mobile.css') }}" rel="stylesheet">
 </head>
@@ -45,13 +45,13 @@
             <div class="container-fluid" id="path_orientation">
                 @yield('content-header')
             </div>
-        </header>   
+        </header>
 
         @yield('section-body')
     </div>
 
     @include('partials.footer')
-    
+
     @stack('scripts')
 </body>
 

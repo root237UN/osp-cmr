@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+    <title>OSP - Cameroun | Filière d'enseignement</title>
+@endsection
+
 @section('content')
 
 <div class="menu-2 mx-4" style="margin-top: 50px;padding-top:30px">

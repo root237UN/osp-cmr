@@ -473,7 +473,7 @@ a:hover {
 
     /** Styles pour la presentation des filieres */
     #content-filiere {
-        min-height: 100ch;
+        min-height: 0ch;
         border: 1px solid transparent;
         box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
         background-image: url(../images/bg-section.png);

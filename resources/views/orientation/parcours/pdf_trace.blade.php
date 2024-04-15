@@ -33,7 +33,7 @@
             font-weight: bold;
             font-size:12px;
         }
-        
+
     </style>
 @endsection
 
@@ -52,7 +52,7 @@
                     vers
                     {{$cycle->libelle}} de l' <?php echo strtolower($type->libelle) ?>
                 </th>
-                
+
             </tr>
         </thead>
         <tbody>
@@ -76,10 +76,10 @@
     <table class="table table-bordered" width="100%">
         <thead class="thead-dark">
             <tr>
-                
+
                 <th scope="col" colspan="2">Spécialité</th>
                 <th scope="col" colspan="3">{{$filiere->libelle}}</th>
-                
+
             </tr>
         </thead>
         <tbody>
@@ -113,8 +113,8 @@
     <table class="table table-bordered" width="100%">
         <thead class="thead-light">
             <tr>
-                <th scope="col">Etablissement</th>
-                <th scope="col" colspan="3"></th>
+                <th scope="row" colspan="2">Etablissement</th>
+                <th colspan="3"></th>
             </tr>
         </thead>
         <tbody>

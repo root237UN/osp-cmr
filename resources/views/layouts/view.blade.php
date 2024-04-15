@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Orientation | OSP - Cameroun</title>
+    <title>OSP - Cameroun | Orientation</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -80,6 +80,56 @@
                                     <div class="card-side front">
                                         <div>
                                             <p><span>un</span> metier</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-side back">
+                                        <div>
+                                            <p><span>un</span> parcours</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card site-text-medium card-1">
+                                <a href="{{ route('orientation.formation') }}">
+                                    <div class="card-side front">
+                                        <div>
+                                            <p><span>une</span> formation</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-side back">
+                                        <div>
+                                            <p><span>un</span> parcours</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card site-text-medium">
+                                <a href="{{ route('orientation.ecole') }}">
+                                    <div class="card-side front">
+                                        <div>
+                                            <p><span>une</span> école</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-side back">
+                                        <div>
+                                            <p><span>un</span> centre</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 mt-5 hidden-web">
+                        <div class="my-4">
+                            <p class="text-center title-1-1 text-white text-option">Optez pour </p>
+                        </div>
+                        <div class="">
+                            <div class="card site-text-medium">
+                                <a href="{{ route('orientation.metier') }}">
+                                    <div class="card-side front">
+                                        <div>
+                                            <p><span>un</span> métier</p>
                                         </div>
                                     </div>
                                     <div class="card-side back">

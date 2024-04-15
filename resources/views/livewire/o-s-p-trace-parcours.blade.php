@@ -1,5 +1,5 @@
 <div>
-    <form class="form form-inline" method="post"  wire:submit.prevent='traceParcours()'>
+    <form class="form form-inline" method="get"  wire:submit.prevent='traceParcours()'>
         @csrf
         <input type="number"  wire:model='filiere_id' name="id" hidden value="{{ $filiere->id }}">
         <button type="submit"

@@ -1,0 +1,117 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+#path_orientation {
+    z-index: 10;
+    padding-right: 80px;
+    padding-left: 80px;
+    padding-top: 80px;
+    color: #fff;
+}
+
+.path_origin {
+    text-transform: uppercase;
+    /* // color: #2f9765; */
+    font-weight: bolder;
+    margin-bottom: 14px;
+}
+
+.path_sub_titlte {
+    opacity: .777;
+}
+
+.path_choix {
+    color: #fff;
+
+}
+
+@media (min-width: 768px) {
+
+    .path_choix_item,
+    .path_choix_item_option {
+        border: 1px solid transparent;
+        width: 240px;
+        height: 240px;
+        font-size: 20px;
+        background-color: #243a5e;
+        text-align: center;
+        padding: 40px;
+        border-radius: 30% 30% 30% 30% / 60% 60% 40% 40%;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        line-height: 1.4;
+        display: flex;
+        align-content: center;
+        align-items: center;
+    }
+}
+
+
+
+/* // .path_choix_item_option {
+//     border: 1px solid transparent;
+//     width: 240px;
+//     height: 240px;
+//     font-size: 20px;
+//     background-color: #243a5e;
+//     text-align: center;
+//     padding: 30px;
+//     border-radius: 30% 30% 30% 30% / 60% 60% 40% 40%;
+//     -webkit-backdrop-filter: blur(10px);
+//     backdrop-filter: blur(10px);
+// } */
+
+.path_choix_item_2 {
+    margin-left: 150px;
+    /* padding: 30px; */
+
+}
+
+.path_choix_item>p {
+    width: 100%;
+}
+
+.path_cycle {
+    font-size: 18px;
+}
+
+
+.path_choix_block {
+    margin-right: 50px;
+}
+
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+    #path_orientation {
+        padding-right: 0px;
+        padding-left: 0px;
+        padding-top: 40px;
+    }
+
+    .path_choix_item_2 {
+        margin-left: 0px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .path_choix_item,
+    .path_choix_item_option {
+        border: 1px solid transparent;
+        width: 210px;
+        height: 210px;
+         /*font-size: 20px; */
+        background-color: #243a5e;
+        text-align: center;
+        padding: 40px;
+        border-radius: 30% 30% 30% 30% / 60% 60% 40% 40%;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        line-height: 1.4;
+        display: flex;
+        align-content: center;
+        align-items: center;
+    }
+    .path_choix_bloc{
+        margin-bottom: 30px;
+    }
+}

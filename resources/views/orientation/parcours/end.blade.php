@@ -1,7 +1,11 @@
 @extends('layouts.end')
 
+@section('title')
+    <title>OSP - Cameroun | Filière d'enseignement</title>
+@endsection
+
 @section('content')
-    <div class="menu-2 mx-4" style="padding-top:20px">
+    <div class="menu-2 px-4" style="padding-top:20px">
         <div class="row">
             @livewire('top-navbar-filiere')
         </div>

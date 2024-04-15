@@ -31,14 +31,14 @@
                 </form>
             </div>
         </div> --}}
-        <div class="col-md-12" style="padding-left: 35px;">
+        <div class="col-md-12 px-4">
             <div class="content site-text">
                 <div class="content-header ">
                     <form class="form form-inline">
                         <div class="row-input">
                             <input class="form-control" wire:model='searchText' placeholder="Rechercher ...">
                             <button type="button" class="btn btn-connect">
-                                <i class="fas fa-search"></i><span class="mr-2">Rechercher</span>
+                                <i class="fas fa-search"></i><span class="mr-2 d-none d-sm-block">Rechercher</span>
                             </button>
                         </div>
                     </form>

@@ -19,7 +19,7 @@
                     <a class="link-ensavoir" href="#" style="color:#38c172">En savoir plus!</a>
                 </div>
                 <hr style="color: #fff">
-                <a class="link-question site-text">Des questions. Posez les ici !!!</a>
+                <a class="link-question site-text">Des questions. Posez-les ici !!!</a>
             </div>
             <div class="col-8 d-flex justify-content-end" style="z-index: 10;">
                 <a id="arrow-down" href="#content-parcours">

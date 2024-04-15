@@ -59,7 +59,7 @@
                     <div class="col-2 d-flex justify-content-end">
                         <button class="btn btn-app-2 btn-xs btn-save">
                             <i class="fas fa-eye"></i>
-                            <span style="font-size: xx-small;">Consulter toutes les condition</span>
+                            <span style="font-size: xx-small;">Consultez toutes les condition</span>
                         </button>
                     </div>
                 </div>
@@ -148,7 +148,7 @@
                 <div class="col-2 d-flex justify-content-end">
                     <button class="btn btn-app-2  btn-xs btn-save">
                         <i class="fas fa-eye"></i>
-                        <span style="font-size: xx-small;">Consulter toute les ecoles</span>
+                        <span style="font-size: xx-small;">Consultez toute les ecoles</span>
                     </button>
                 </div>
             </div>
@@ -261,7 +261,7 @@
                 <div class="col-2 d-flex justify-content-end">
                     <button class="btn btn-app-2  btn-xs btn-save">
                         <i class="fas fa-eye"></i>
-                        <span style="font-size: xx-small;">Consulter un exemplaire </span></button>
+                        <span style="font-size: xx-small;">Consultez un exemplaire </span></button>
                 </div>
             </div>
 

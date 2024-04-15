@@ -1,5 +1,9 @@
 @extends('layouts.end')
 
+@section('title')
+    <title>OSP - Cameroun | Filière d'enseignement</title>
+@endsection
+
 @section('content')
     <style>
         .top-content button {
@@ -69,12 +73,12 @@
 
         <div class="container" id="presentation-filiere">
             <div class="d-flex justify-content-center">
-                <div class="col-8 d-flex flex-column">
+                <div class="col-md-8 col-xs-12 d-flex flex-column">
                     <hr class="hr_divider">
                     <div class="d-flex align-items-center mb-2 justify-content-between">
                         <h5 class="mb-0">Présentation détaillée de la filière </h5>
                         <div>
-                            @livewire('o-s-p-trace-parcours',['filiere'=>$filiere])
+                            @livewire('o-s-p-trace-parcours', ['filiere' => $filiere])
                         </div>
                     </div>
                 </div>
@@ -82,13 +86,13 @@
 
             <div class="content-filiere">
                 <div class="d-flex justify-content-center row">
-                    <div class="header-content-filiere px-2 d-flex flex-row col-6 justify-content-between">
+                    <div class="header-content-filiere px-2 d-flex flex-row col-md-6 col-xs-12 justify-content-between">
                         <div class="col-2">
                             <div class="ml-2 mt-2 img-decor-1">
                                 <img src="{{ asset('images/bg2.jpg') }}" class="img ">
                             </div>
                         </div>
-                        <div class="d-flex col-10 ms-2 py-2 top-infos flex-column justify-content-between">
+                        <div class="d-flex col-md-10 col-xs-12 ms-2 py-2 top-infos flex-column justify-content-between">
                             <div>
                                 <h3 style="font-size: 23px;">{{ $filiere->libelle }}</h3>
                             </div>
@@ -103,7 +107,7 @@
                                 </p>
                             </div>
                             <div class="row">
-                                <div class="col-10">
+                                <div class="col-md-10 col-xs-12">
                                     <span>Diplome</span>
                                     <p class="text-diplome">{{ $filiere->CycleEnseignement->libelle }} / @if ($filiere->Diplome)
                                             {{ $filiere->Diplome->libelle }}
@@ -113,13 +117,13 @@
                                     </p>
                                 </div>
                                 <!--<div class="col-6">
-                                        <span>Notation</span>
-                                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-                                    </div>-->
+                                                            <span>Notation</span>
+                                                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                                        </div>-->
                             </div>
                         </div>
                     </div>
-                    <div class="body-content-filiere mb-4">
+                    {{-- <div class="body-content-filiere mb-4">
                         <div class="col-12">
                             <div class="top-content">
                                 <nav>
@@ -210,8 +214,93 @@
                                 </div>
                             </div>
                         </div>
+                    </div> --}}
+                    <div class="header-content-filiere px-2 d-flex flex-row row col-md-6 col-xs-12 justify-content-between">
+                        <div class="nav nav-tabs mb-3 d-flex col-md-12 col-xs-12 justify-content-between" id="nav-tab" role="tablist">
+                            <button class="nav-link active" id="nav-enseignement-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-enseignement" type="button" role="tab" aria-controls="nav-home"
+                                aria-selected="true">
+                                <i class="fas fa-graduation-cap"></i>
+                                Enseignement professionnels
+                            </button>
+                            <button class="nav-link" id="nav-debouche-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-debouche" type="button" role="tab" aria-controls="nav-profile"
+                                aria-selected="false">
+                                <i class="fas fa-tags mx-2"></i>
+                                Débouches
+                            </button>
+                            <button class="nav-link" id="nav-metier-tab" data-bs-toggle="tab" data-bs-target="#nav-metier"
+                                type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
+                                <i class="fas fa-tags mx-2"></i>
+                                Metiers
+                            </button>
+                            <button class="nav-link" id="nav-ecole-tab" data-bs-toggle="tab" data-bs-target="#nav-ecole"
+                                type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
+                                <i class="fas fa-school mx-2"></i>
+                                Etablissements
+                            </button>
+                        </div>
+
+                        <div class="col-md-12 col-xs-12">
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="nav-enseignement" role="tabpanel"
+                                    aria-labelledby="nav-enseignement-tab">
+                                    <div class="container">
+                                        <h4 class="title-content-1">
+                                            <button class="btn text-white btn-xs btn-connect m-0">
+                                                <i class="fas fa-eye"></i>
+                                                Générer des informations complémentaires
+                                            </button>
+                                        </h4>
+                                    </div>
+                                    <hr>
+                                </div>
+
+                                <div class="tab-pane fade" id="nav-debouche" role="tabpanel"
+                                    aria-labelledby="nav-debouche-tab">
+                                    <div class="container">
+                                        <h4 class="title-content-1">
+                                            <button class="btn text-white btn-xs btn-connect m-0">
+                                                <i class="fas fa-eye"></i>
+                                                Générer des informations complémentaires
+                                            </button>
+                                        </h4>
+                                    </div>
+                                    <hr>
+                                </div>
+
+                                <div class="tab-pane fade" id="nav-metier" role="tabpanel"
+                                    aria-labelledby="nav-metier-tab">
+
+                                    <div class="container">
+                                        <h4 class="title-content-1">
+                                            <button class="btn text-white btn-xs btn-connect m-0">
+                                                <i class="fas fa-eye"></i>
+                                                Générer des informations complémentaires
+                                            </button>
+                                        </h4>
+                                    </div>
+                                    <hr>
+                                </div>
+
+                                <div class="tab-pane fade" id="nav-ecole" role="tabpanel"
+                                    aria-labelledby="nav-ecole-tab">
+                                    <div class="container">
+                                        <h4 class="title-content-1">
+                                            <button class="btn text-white btn-xs btn-connect m-0">
+                                                <i class="fas fa-eye"></i>
+                                                Générer des informations complémentaires
+                                            </button>
+                                        </h4>
+                                    </div>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+
             </div>
             <div class="d-flex justify-content-center">
                 <div class="col-8 my-3 d-flex flex-column">

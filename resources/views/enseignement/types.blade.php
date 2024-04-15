@@ -14,7 +14,7 @@
                     <a class="link-ensavoir">En savoir plus!</a>
                 </div>
                 <hr>
-                <a class="link-question site-text">Des questions. Posez les ici !!!</a>
+                <a class="link-question site-text">Des questions. Posez-les ici !!!</a>
             </div>
             <div class="col-6 pt-4" id="content-option">
                 <div class="">
