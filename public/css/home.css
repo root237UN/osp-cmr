@@ -9,9 +9,22 @@
     top: -12px;
 }
 
-.logo-welcome::first-letter {
+.logo-welcome {
     font-size: 50px;
     color: #243a5e;
+}
+.logo_osp{
+    font-size: 30px;
+    color: #243a5e;
+}
+
+.content_logo_osp{
+    position: relative;
+}
+.logo_osp_cmr{
+    position: absolute;
+    bottom: 0;
+    font-size: 9px;
 }
 
 header.bg-cover {
@@ -34,11 +47,12 @@ header {
 }
 
 header.bg-cover::before {
-    background: linear-gradient(45deg, #000000c7, #fcfdfd);
+    /* background: linear-gradient(45deg, #000000c7, #fcfdfd); */
+    background: linear-gradient(45deg, #243a5e, #243a5e);
 }
 
 header::before {
-    filter: brightness(0.4);
+    /* filter: brightness(0.4); */
 }
 
 header::before {
@@ -54,7 +68,7 @@ header::before {
 header.bg-cover #navbarSupportedContent li>a {
     color: #243a5e;
     text-shadow: 2px 2px 9px rgba(255, 255, 255, 0.22);
-    padding: 10px 13px;
+    /* padding: 10px 13px; */
     display: inline-block;
     top: 3px;
     position: relative;
@@ -250,20 +264,14 @@ header.bg-cover #navbarSupportedContent li:hover span.decor-link-menu {
 /* Card style */
 .card-side p,
 .side>p {
-    background: #fff;
-    color: #243a5e;
+    color: #fff;
     text-transform: capitalize;
-    padding-left: 5px;
-    padding-right: 5px;
     font-size: 16px;
     font-style: initial;
     text-align: center;
-    margin-bottom: 0px;
     flex: 1;
     margin-top: 25px;
     line-height: 20px;
-    padding-top: 2px;
-    padding-bottom: 2px;
 }
 
 
@@ -302,7 +310,7 @@ header.bg-cover #navbarSupportedContent li:hover span.decor-link-menu {
 /* End card style */
 
 .text-option {
-    opacity: 0.5;
+    /* opacity: 0.5; */
     font-weight: 300;
     letter-spacing: 2px;
     font-size: 27px;
@@ -349,6 +357,8 @@ header.bg-cover #navbarSupportedContent li:hover span.decor-link-menu {
         background-color: #4158d0;
         background: center no-repeat #243a5e;
         background-size: 110px auto;
+        border: 6px solid #fff;
+        border-radius: 30% 30% 30% 30% / 60% 60% 40% 40%;
     }
 
     .card-side.front {
@@ -358,6 +368,7 @@ header.bg-cover #navbarSupportedContent li:hover span.decor-link-menu {
         display: block;
         width: 165px;
         height: 180px;
+        border: 6px solid #fff;
         border-radius: 30% 30% 30% 30% / 60% 60% 40% 40%;
     }
     .card:hover .card-side.front {

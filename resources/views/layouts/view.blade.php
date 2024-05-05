@@ -76,7 +76,7 @@
                         </div>
                         <div class="flex-row d-flex justify-content-between">
                             <div class="card site-text-medium">
-                                <a href="{{ route('orientation.metier') }}">
+                                <a href="#">
                                     <div class="card-side front">
                                         <div>
                                             <p><span>un</span> metier</p>
@@ -90,7 +90,7 @@
                                 </a>
                             </div>
                             <div class="card site-text-medium card-1">
-                                <a href="{{ route('orientation.formation') }}">
+                                <a href="#">
                                     <div class="card-side front">
                                         <div>
                                             <p><span>une</span> formation</p>
@@ -104,7 +104,7 @@
                                 </a>
                             </div>
                             <div class="card site-text-medium">
-                                <a href="{{ route('orientation.ecole') }}">
+                                <a href="#">
                                     <div class="card-side front">
                                         <div>
                                             <p><span>une</span> école</p>
@@ -126,7 +126,7 @@
                         </div>
                         <div class="">
                             <div class="card site-text-medium">
-                                <a href="{{ route('orientation.metier') }}">
+                                <a href="#">
                                     <div class="card-side front">
                                         <div>
                                             <p><span>un</span> métier</p>
@@ -140,7 +140,7 @@
                                 </a>
                             </div>
                             <div class="card site-text-medium card-1">
-                                <a href="{{ route('orientation.formation') }}">
+                                <a href="#">
                                     <div class="card-side front">
                                         <div>
                                             <p><span>une</span> formation</p>
@@ -154,7 +154,7 @@
                                 </a>
                             </div>
                             <div class="card site-text-medium">
-                                <a href="{{ route('orientation.ecole') }}">
+                                <a href="#">
                                     <div class="card-side front">
                                         <div>
                                             <p><span>une</span> école</p>

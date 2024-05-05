@@ -2,8 +2,9 @@
 
 <nav class="navbar container-header-relative navbar-light navbar-expand-lg navbar-top" data-aos="fade-down">
     <div class="container-fluid">
-        <a class="navbar-brand hidden-mobile col-5 col-md-2 d-flex justify-content-center" href="{{route('welcome')}}">
-            <span class="logo-welcome hidden-mobile">Orientation</span>
+        <a class="navbar-brand content_logo_osp hidden-mobile col-5 col-md-2 d-flex justify-content-center" href="{{route('welcome')}}">
+            <span class="logo_osp hidden-mobile">OSP</span>
+            <span class="logo_osp_cmr">Cameroun</span>
         </a>
 
         <a class="navbar-brand col-5  hidden-web" href="{{route('welcome')}}">
