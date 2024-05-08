@@ -44,10 +44,27 @@ header::before {
     color: #243a5e;
 }
 
+/*  Logo OSP */
+
+.logo_osp{
+    font-size: 30px;
+    color: #243a5e;
+}
+
+.content_logo_osp{
+    position: relative;
+}
+.logo_osp_cmr{
+    position: absolute;
+    bottom: 0;
+    font-size: 9px;
+}
+/* Logo OSP */
+
 #navbarSupportedContent li>a {
     color: #243a5e;
     text-shadow: 2px 2px 9px rgba(255, 255, 255, 0.22);
-    padding: 10px 13px;
+    /* padding: 10px 13px; */
     display: inline-block;
     top: 3px;
     position: relative;

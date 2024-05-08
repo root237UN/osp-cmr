@@ -84,24 +84,24 @@
 
                                         <a href="{{ route('enseignement.view', ['code' => $type->libelle_1 ])}}">
                                             @if($type->id % 2 != 0)
-                                            <div class="flex-row p-2 d-flex justify-content-between card-image description-header-type" style="background-color: #515151;align-items:center;">
+                                            <div class="flex-row p-2 d-flex justify-content-between card-image description-header-type" style="background-color: #fff;align-items:center;">
                                                 <div class="col-4 d-flex justify-content-center ">
                                                     <div style="height: 60px; width: 60px;border-radius:50px;">
                                                         <img src="{{$type->image}}" style="height: 100%;width: 100%;border-radius: 50%;">
                                                     </div>
                                                 </div>
                                                 <div class="title-2">
-                                                    <h4 class="col-8 justify-content-center title-type text-white" style="font-size: 14px;">{{$type->libelle}}</h4>
+                                                    <h4 class="col-8 justify-content-center title-type " style="font-size: 14px; color: #243a5e;">{{$type->libelle}}</h4>
                                                 </div>
                                             </div>
                                             @else
-                                            <div class="flex-row p-2 d-flex justify-content-between card-image description-header-type" style="background-color: #515151;align-items:center;">
+                                            <div class="flex-row p-2 d-flex justify-content-between card-image description-header-type" style="background-color: #fff;align-items:center;">
                                                 <div class="col-4 d-flex justify-content-center">
                                                     <div style="height: 60px; width: 60px;border-radius:50px;">
                                                         <img src="{{$type->image}}" style="height: 100%;width: 100%;border-radius: 50%;">
                                                     </div>
                                                 </div>
-                                                <h4 class="col-8 justify-content-center title-type text-white" style="font-size: 15px;text-align:center;">{{$type->libelle}}</h4>
+                                                <h4 class="col-8 justify-content-center title-type " style="font-size: 15px;text-align:center;color: #243a5e;">{{$type->libelle}}</h4>
                                             </div>
                                             @endif
                                             <div class="card-body mb-0 site-text card-text text-decoration-none description-type">

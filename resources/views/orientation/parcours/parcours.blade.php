@@ -7,6 +7,14 @@
 
 
 @section('content-header')
+<ul class="breadcrumbs">
+    <li><a href="#" class="breadcrumbs__pointer breadcrumbs__pointer--first"><i
+                class="fa-solid fa-house-chimney"></i><span>Orientation</span></a></li>
+    {{-- {{-- <li><a href="#" class="breadcrumbs__pointer"><i class="fa-solid fa-bag-shopping"></i><span>Products</span></a></li> --}}
+        <li><a href="#" class="breadcrumbs__pointer"><i class="fa-solid fa-cart-plus"></i><span>Je viens du primaire (C.E.P, F.S.L.C)</span></a></li>
+    <li><a href="#" class="breadcrumbs__pointer breadcrumbs__pointer--last breadcrumbs__pointer--current"><i
+        class="fa-solid fa-credit-card"></i><span>{{$type->libelle}}</span></a></li>
+</ul>
 @include('partials.header.header_orientation')
     <div class="row mb-4">
         {{-- <div class="path_choix justify-content-center d-flex col-12"> --}}

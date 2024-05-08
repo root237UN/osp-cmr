@@ -38,7 +38,7 @@
     <link href="{{ asset('css/orientation.css') }}" rel="stylesheet">
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/navbar/end.scss') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('css/navbar/end.scss') }}" rel="stylesheet"> --}}
 
     <link href="{{ asset('css/search.css') }}" rel="stylesheet">
     <link href="{{ asset('css/top-navbar.css') }}" rel="stylesheet">

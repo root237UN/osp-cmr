@@ -40,7 +40,7 @@ section.bg-cover h2 {
 div.text-description {
     color: #ffffff;
     font-size: 16.4px;
-    text-align: left;
+    text-align: justify;
     opacity: .8;
     line-height: 2rem;
 }
@@ -373,8 +373,9 @@ a.card-parcours h3 {
 
 .title-cycle>span {
     font-style: italic;
-    color:  rgb(56 193 114);
-    text-transform: lowercase;
+    color: rgb(36 58 94);
+    font-weight: bold;
+    text-transform: capitalize;
 }
 
 .title-cycle>span::before {

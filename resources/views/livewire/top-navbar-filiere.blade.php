@@ -29,8 +29,17 @@
 
     #dropmenu1 li:hover,
     #dropmenu1 li:focus-within {
-        background: #f2f2f2;
+        background: #243a5e;
         cursor: pointer;
+        color: #fff;
+    }
+
+    #dropmenu1 li:hover ul li:hover,
+    #dropmenu1 li:focus-within ul li:hover {
+        background: #fff;
+        cursor: pointer;
+        margin-left: 0px;
+        /* color: #fff; */
     }
 
     #dropmenu1 li:focus-within a {

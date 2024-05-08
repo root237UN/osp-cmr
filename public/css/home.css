@@ -218,11 +218,7 @@ header.bg-cover #navbarSupportedContent li:hover span.decor-link-menu {
 }
 
 .text-orientation:hover {
-    color: #243a5e !important;
-}
-
-.text-orientation:hover {
-    color: #fff;
+    color: #007766  !important;
 }
 
 .side {

@@ -50,6 +50,8 @@ class OSPController extends Controller
     {
         $type = TypeEnseignement::where('code', $code)->firstorfail();
         $options = OptionEnseignement::whereBelongsTo($type)->get();
+
+        // dd($options,$type);
         return view("orientation.parcours.parcours", ["type" => $type, "options" => $options]);
     }
 
@@ -85,7 +87,7 @@ class OSPController extends Controller
 
         $ecoles = DB::select("SELECT `ecoles`.libelle, `localites`.libelle AS localite FROM `localites` INNER JOIN  `ecoles` ON `localites`.id=`ecoles`.localite_id INNER JOIN `filiere_enseignement_ecole` ON `filiere_enseignement_ecole`.ecole_id=`ecoles`.id INNER JOIN `filiere_enseignements` ON `filiere_enseignements`.id=`filiere_enseignement_ecole`.filiere_enseignement_id WHERE `filiere_enseignements`.id=$filiere->id");
         $debouches = DB::select("SELECT `debouches`.libelle,`debouches`.description  FROM `debouches` INNER JOIN `debouches_filiere_enseignement` ON `debouches_filiere_enseignement`.debouches_id=`debouches`.id INNER JOIN `filiere_enseignements` ON `filiere_enseignements`.id=`debouches_filiere_enseignement`.filiere_enseignement_id WHERE `filiere_enseignements`.id=$filiere->id");
-        // $competences= DB::select("SELECT `ecoles`.libelle FROM `ecoles` INNER JOIN `filiere_enseignement_ecole` ON `filiere_enseignement_ecole`.ecole_id=`ecoles`.id INNER JOIN `filiere_enseignements` ON `filiere_enseignements`.id=`filiere_enseignement_ecole`.filiere_enseignement_id WHERE `filiere_enseignements`.id=$filiere->id"); 
+        // $competences= DB::select("SELECT `ecoles`.libelle FROM `ecoles` INNER JOIN `filiere_enseignement_ecole` ON `filiere_enseignement_ecole`.ecole_id=`ecoles`.id INNER JOIN `filiere_enseignements` ON `filiere_enseignements`.id=`filiere_enseignement_ecole`.filiere_enseignement_id WHERE `filiere_enseignements`.id=$filiere->id");
         // "Ecole::whereBelongsTo($filiere)->get();
         // dd($ecoles);
         // return view('orientation.parcours.pdf_trace', [

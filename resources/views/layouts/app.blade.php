@@ -28,6 +28,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
 
+    {{-- <link href="{{ asset('css/home.css') }}" rel="stylesheet"> --}}
     <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
     <link href="{{ asset('css/filiere.css') }}" rel="stylesheet">
     <link href="{{ asset('css/detail.css') }}" rel="stylesheet">
@@ -52,6 +53,21 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <style>
+
+.logo_osp{
+    font-size: 30px;
+    color: #243a5e;
+}
+
+.content_logo_osp{
+    position: relative;
+}
+.logo_osp_cmr{
+    position: absolute;
+    bottom: 0;
+    font-size: 9px;
+}
+
         .logo-welcome {
             text-align: center;
             text-transform: uppercase;

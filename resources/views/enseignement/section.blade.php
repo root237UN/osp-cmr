@@ -5,7 +5,6 @@
         #content-filieres {
             box-shadow: 0 0 15px rgba(0, 0, 0, .1);
             background-color: #f8fafc;
-            min-height: 100vh;
             background-image: url(../images/bg-section.png);
             background-size: cover;
             background-position: 50%;
@@ -243,7 +242,7 @@
 
         .cycle p {
             text-align: center;
-            color: #fff;
+            color: #000;
             font-weight: 200;
             font-style: italic;
             font-size: 17.4px;
@@ -352,13 +351,13 @@
                         </form>
                     </div>
             </div>
-            <div class="decor-cycle-image">
+            {{-- <div class="decor-cycle-image">
                 @if ($cycle->id == 1)
                     <img class="img img-fluid" src="../../images/bg2.jpg">
                 @else
                     <img class="img img-fluid" src="../../images/bg3.jpg">
                 @endif
-            </div>
+            </div> --}}
             <div class="decor-cycle"></div>
         </div>
         @endforeach
@@ -366,6 +365,6 @@
         </div>
     </section>
 
-    @livewire('section-actualite',['menu'=>$content])
+    {{-- @livewire('section-actualite',['menu'=>$content]) --}}
 
 @endsection

@@ -58,6 +58,6 @@
 </section>
 
 
-@livewire('section-actualite',['menu'=>$content])
+{{-- @livewire('section-actualite',['menu'=>$content]) --}}
 
 @endsection

@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="menu-2 px-4" style="padding-top:20px">
+    <div class="menu-2 px-4">
         <div class="row">
             @livewire('top-navbar-filiere')
         </div>

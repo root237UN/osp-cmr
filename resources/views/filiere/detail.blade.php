@@ -86,7 +86,7 @@
 
             <div class="content-filiere">
                 <div class="d-flex justify-content-center row">
-                    <div class="header-content-filiere px-2 d-flex flex-row col-md-6 col-xs-12 justify-content-between">
+                    <div class="header-content-filiere px-2 d-flex flex-row col-md-4 col-xs-12 justify-content-between">
                         <div class="col-2">
                             <div class="ml-2 mt-2 img-decor-1">
                                 <img src="{{ asset('images/bg2.jpg') }}" class="img ">
@@ -215,7 +215,7 @@
                             </div>
                         </div>
                     </div> --}}
-                    <div class="header-content-filiere px-2 d-flex flex-row row col-md-6 col-xs-12 justify-content-between">
+                    <div class="header-content-filiere px-2 d-flex flex-row row col-md-8 col-xs-12 justify-content-between">
                         <div class="nav nav-tabs mb-3 d-flex col-md-12 col-xs-12 justify-content-between" id="nav-tab" role="tablist">
                             <button class="nav-link active" id="nav-enseignement-tab" data-bs-toggle="tab"
                                 data-bs-target="#nav-enseignement" type="button" role="tab" aria-controls="nav-home"
