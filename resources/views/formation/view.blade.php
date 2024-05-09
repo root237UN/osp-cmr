@@ -84,7 +84,7 @@
                     </h1>
                 </div>
 
-                <div class="text-description text-white site-text col-md-12">
+                <div class="text-description text-white site-text col-md-12" style="text-align: justify">
                     {{ $content->description }}
                 </div>
                 <div class="line-infos mt-3 site-text d-flex justify-content-between">
@@ -98,7 +98,7 @@
             <div class="col-5" id="content-option">
                 <div class="">
                     <div class="d-flex justify-content-center pt-0 py-5">
-                        <h3 class="title-option title-1-1">Choisissez <span class="" style="font-weight: bold;">une
+                        <h3 class="title-option text-white title-1-1">Choisissez <span class="" style="font-weight: bold;">une
                                 formation ...</span>
                         </h3>
                     </div>
@@ -106,13 +106,13 @@
                     <div class="row d-flex justify-content-center" id='options'>
 
                         @forelse($typesFormation as $type)
-                            <div class="col-8 d-flex justify-content-center">
+                            <div class="col-8 d-flex justify-content-center" style="background: #253b5f;">
                                 <a class=" "
                                     href="{{ route('formation.formation.show', ['code' => $type->libelle]) }}">
                                     <div class="card-body">
                                         <img class="img img-thumbail img-option" height="50px" src="{{ $type->image }}" />
-                                        <h6 class="py-4 mb-0 text-white title-2">{{ $type->libelle }}</h6>
-                                        <p class="option-text site-text">{{ $type->description }}</p>
+                                        <h6 style="font-weight: bold;" class="py-4 mb-0 text-white title-2">{{ $type->libelle }}</h6>
+                                        <p class="option-text site-text text-white" style="text-align: justify">{{ $type->description }}</p>
                                     </div>
                                 </a>
                             </div>

@@ -39,6 +39,8 @@
 @endsection
 
 @section('content')
+ <!-- Watermark -->
+ <div class="watermark">OSP - Cameroun</div>
     <h3 class="text-center">Votre parcours à l'issue de votre navigation</h3>
 
     <table class="table table-bordered" width="100%">
@@ -98,7 +100,7 @@
                     </ul>
                 </td>
             </tr>
-            <!-- <tr>
+             <tr>
                 <th scope="row">Débouchées</th>
                 <td colspan="3">
                     <ul>
@@ -107,7 +109,7 @@
                         @endforeach
                     </ul>
                 </td>
-            </tr> -->
+            </tr>
         </tbody>
     </table>
 
@@ -119,7 +121,7 @@
             </tr>
         </thead>
         <tbody>
-            <!-- <tr>
+             <tr>
                 <th scope="row">Enseignements</th>
                 <td colspan="3">
                     <ul style="column-count: 2">
@@ -129,8 +131,8 @@
                     </ul>
                 </td>
 
-            </tr> -->
-            <!-- <tr>
+            </tr>
+             <tr>
                 <th scope="row">Ecoles</th>
                 <td colspan="3">
                     <ul style="column-count: 2">
@@ -139,7 +141,7 @@
                         @endforeach
                     </ul>
                 </td>
-            </tr> -->
+            </tr>
         </tbody>
     </table>
 @endsection

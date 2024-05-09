@@ -53,20 +53,20 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <style>
+        .logo_osp {
+            font-size: 30px;
+            color: #243a5e;
+        }
 
-.logo_osp{
-    font-size: 30px;
-    color: #243a5e;
-}
+        .content_logo_osp {
+            position: relative;
+        }
 
-.content_logo_osp{
-    position: relative;
-}
-.logo_osp_cmr{
-    position: absolute;
-    bottom: 0;
-    font-size: 9px;
-}
+        .logo_osp_cmr {
+            position: absolute;
+            bottom: 0;
+            font-size: 9px;
+        }
 
         .logo-welcome {
             text-align: center;
@@ -87,7 +87,6 @@
         header.bg-cover #navbarSupportedContent li>a {
             color: #243a5e;
             text-shadow: 2px 2px 9px rgba(255, 255, 255, 0.22);
-            padding: 10px 13px;
             display: inline-block;
             top: 3px;
             position: relative;
