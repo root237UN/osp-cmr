@@ -1,0 +1,23 @@
+name: build, deploy
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup php
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+      - name: copy .env
+        run: cp .env.test .env
+      - name: install app
+        run: composer install
+      - name: Test phpunit
+        run: ./vendor/bin/phpunit
+
